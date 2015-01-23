@@ -2,12 +2,12 @@
 #Visualization Project Design 
 
 
-Team-Members  
--Huynh Duy-Hung Nguyen (ING 24M)
--Geoffray Bories (MS BGD)
--Adrien Dutertre (MS BGD)
--Yoann Janvier (MS BGD)
--Jonathan Ohayon (MS BGD)
+Team-Members :
+- Huynh Duy-Hung Nguyen (ING 24M)
+- Geoffray Bories (MS BGD)
+- Adrien Dutertre (MS BGD)
+- Yoann Janvier (MS BGD)
+- Jonathan Ohayon (MS BGD)
 
 ##Datasets
 As part of this project we are going to leverage 3 datasets containing the airports, airlines and routes over the world.
