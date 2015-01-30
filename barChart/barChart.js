@@ -1,5 +1,5 @@
 // Les variables globales 
-var csvDataFilePath = "../data/dataForBarChartVisualization.csv"
+var csvDataFilePath = "dataForBarChartVisualization.csv"
 var alldata = new Array();
 var data = [];
 var chart = null;
@@ -62,6 +62,7 @@ function drawGraph()
             d3.selectAll(".nv-series")[0][1].onclick = selectMediumFlight;
             d3.selectAll(".nv-series")[0][2].onclick = selectLongFlight;
             sortGraphData();
+            filterGraphDataByTotalOfRoutes(500, 1500);
         }
     )    
 }

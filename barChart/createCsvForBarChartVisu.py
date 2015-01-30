@@ -65,7 +65,7 @@ def getFlightType(row, thresholds) :
 airlinesDataFile = "../data/airlines.csv"
 airportsDataFile = "../data/airports.csv"
 routesDataFile = "../data/routes.csv"
-csvOutputFilename = "../data/dataForBarChartVisualization.csv"
+csvOutputFilename = "dataForBarChartVisualization.csv"
 thresholds = [1500, 3000]
 
 # Récupération des données brutes
