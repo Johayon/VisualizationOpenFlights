@@ -1,20 +1,52 @@
-<head>
-<link rel="stylesheet" type="text/css" href="../lib/nvd3.css">
-</head>
+<!DOCTYPE html>
 
-<style>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8" />
 
-#chart svg 
-{
-  height: 400px;
-}
+    <title>Airlines bar chart</title>
 
-</style>
+    <link rel="stylesheet" type="text/css" href="../lib/nvd3.css">
+    <link rel="stylesheet" href="../lib/d3Slider.css" />
+    <link rel="stylesheet" href="../lib/ourCss.css" /> 
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />  
+    <link rel="stylesheet" href="../lib/bootstrap-theme.min.css" />   
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="../lib/nvd3.js" charset="utf-8"></script>
-<script src="barChart.js" charset="utf-8"></script>
+  </head>
 
-<div id="chart">
-  <svg></svg>
-</div>
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-8">
+          <div id="chart">
+            <svg></svg>
+          </div>
+          <div id='slider'></div>
+        </div>
+        
+        <div class="col-md-4">
+          <!-- C'est ce div qu'il faut utiliser pour créer le panel  -->
+          <div id="panel">
+            <h2 style="text-align:center;">Yoann's panel</h2>
+              <img src="http://media.rtl.fr/online/image/2013/0911/7764468762_zlatan-ibrahimovic.jpg" />
+          </div> 
+          <!-- Fin du div panel  -->  
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+  </body>
+
+  <script src="../lib/d3min.js" charset="utf-8"></script>
+  <script src="../lib/d3Slider.js" charset="utf-8"></script>
+  <script src="../lib/nvd3.js" charset="utf-8"></script>
+  <script src="barChart.js" charset="utf-8"></script>
+  <script src="slider.js" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,28 @@
+#slider 
+{
+  margin-left: 20px;
+  width : 100%;
+}
+
+#chart svg 
+{
+  height: 400px;
+  width: 100%;
+}
+
+.d3-slider-range
+{
+  top:0px;
+}
+
+.d3-slider-axis
+{
+  left:-49px;
+  height: 50px;
+}
+
+.d3-slider-axis-bottom
+{
+    width: 100%;
+    height: 50px;
+}
