@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <script src="../lib/raphael.2.1.0.min.js"></script>
+  <script src="../lib/justgage.1.0.1.min.js"></script>
   <head>
     
     <meta charset="utf-8" />
@@ -25,22 +27,38 @@
             <svg></svg>
           </div>
           <div id='slider'></div>
-        </div>
-        
-        <div class="col-md-4">
-          <!-- C'est ce div qu'il faut utiliser pour créer le panel  -->
-          <div id="panel">
-            <h2 style="text-align:center;">Yoann's panel</h2>
-              <img src="http://media.rtl.fr/online/image/2013/0911/7764468762_zlatan-ibrahimovic.jpg" />
-          </div> 
-          <!-- Fin du div panel  -->  
-        </div>
-      
       </div>
+      
+        
+   
+        <div class="col-md-4"> 
+          <div id="generalInformation">
+            <h5 style="text-align:center;">General Information</h5>
+           <div id="gaugeAirports" class="200x160px" style="width:150px; height:120px"></div>
+           <div id="gaugeRoutes" class="200x160px" style="width:150px; height:120px"></div>
+                    
+         </div>
+         <div class="span4">
+         <div id="airlineInformation">
+     
+            <h5 style="text-align:center;">Airline Information</h5>
+              <div id="gaugeCountries" class="200x160px" style="width:150px; height:120px"></div>
+              <h5 id="airlineName" style="text-align:left;">Airline Name: </h5>
+              <h5 id="country" style="text-align:left;">Country:</h5>
+              <h5 id="mainAirport" style="text-align:left;">Main Airport: </h5>
+            
+         </div>
+            
+         </div>
+       </div>
 
+        
+                
+              
+      </div>
+     
     </div>
-    
-
+      
   </body>
 
   <script src="../lib/d3min.js" charset="utf-8"></script>
@@ -48,5 +66,7 @@
   <script src="../lib/nvd3.js" charset="utf-8"></script>
   <script src="barChart.js" charset="utf-8"></script>
   <script src="slider.js" charset="utf-8"></script>
+  
 
 </html>
+

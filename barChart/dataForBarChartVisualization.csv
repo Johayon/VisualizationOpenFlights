@@ -1,540 +1,540 @@
-Airline,Name,0,1,2
-2B,Aerocondor,34.0,6.0,0.0
-2G,Cargoitalia,16.0,3.0,0.0
-2I,Star Peru (2I),18.0,0.0,0.0
-2J,Air Burkina,20.0,2.0,0.0
-2K,Aerolineas Galapagos (Aerogal),12.0,0.0,0.0
-2L,Helvetic Airways,6.0,4.0,4.0
-2N,NextJet,41.0,0.0,0.0
-2O,Air Salone,10.0,0.0,0.0
-2P,Air Philippines,32.0,0.0,2.0
-2Z,Changan Airlines,46.0,0.0,0.0
-3E,Air Choice One,10.0,0.0,0.0
-3F,Fly Colombia ( Interliging Flights ),12.0,0.0,0.0
-3G,Atlant-Soyuz Airlines,18.0,6.0,6.0
-3J,Zip,4.0,1.0,0.0
-3K,Jetstar Asia Airways,14.0,14.0,8.0
-3L,Intersky,26.0,0.0,0.0
-3O,Air Arabia Maroc,14.0,28.0,2.0
-3P,Tiara Air,6.0,0.0,0.0
-3R,Moskovia Airlines,4.0,16.0,0.0
-3S,Air Antilles Express,24.0,0.0,0.0
-3U,Sichuan Airlines,286.0,96.0,10.0
-4D,Air Sinai,2.0,0.0,0.0
-4G,Gazpromavia,8.0,12.0,0.0
-4H,United Airways,20.0,4.0,8.0
-4K,Askari Aviation,2.0,0.0,0.0
-4M,LAN Argentina,2.0,0.0,8.0
-4N,Air North Charter - Canada,7.0,4.0,2.0
-4O,Interjet (ABC Aerolineas),86.0,22.0,4.0
-4Q,Safi Airlines,10.0,4.0,0.0
-4T,Belair Airlines,4.0,2.0,6.0
-4U,Germanwings,366.0,100.0,4.0
-4Y,Airbus France,29.0,0.0,2.0
-5C,CAL Cargo Air Lines,29.0,0.0,0.0
-5G,Skyservice Airlines,2.0,0.0,0.0
-5H,Fly540,18.0,0.0,0.0
-5J,Cebu Pacific,132.0,44.0,6.0
-5M,Sibaviatrans,2.0,0.0,0.0
-5N,Aeroflot-Nord,22.0,0.0,0.0
-5P,Pal airlines,4.0,0.0,0.0
-5Q,BQB Lineas Aereas,14.0,4.0,0.0
-5T,Canadian North,63.0,2.0,0.0
-5Z,VivaColombia,4.0,0.0,0.0
-6E,IndiGo Airlines,179.0,48.0,0.0
-6H,Israir,6.0,6.0,0.0
-6I,Fly 6ix,2.0,0.0,0.0
-6R,Alrosa Mirny Air Enterprise,18.0,4.0,8.0
-6T,Air Mandalay,22.0,0.0,0.0
-6W,Saratov Aviation Division,8.0,2.0,0.0
-6Y,SmartLynx Airlines,0.0,0.0,2.0
-7C,Jeju Air,20.0,5.0,8.0
-7E,Aeroline GmbH,2.0,0.0,0.0
-7F,First Air,72.0,2.0,0.0
-7G,Star Flyer,6.0,0.0,0.0
-7H,Era Alaska,218.0,0.0,2.0
-7I,Insel Air (7I/INC) (Priv),37.0,8.0,0.0
-7J,Tajik Air,6.0,22.0,6.0
-7M,Mongolian International Air Lines ,8.0,0.0,0.0
-7P,Metro Batavia,22.0,0.0,2.0
-7R,BRA-Transportes Aereos,64.0,8.0,0.0
-8B,BusinessAir,2.0,4.0,6.0
-8D,Astair,8.0,0.0,0.0
-8E,Bering Air,74.0,0.0,0.0
-8I,Myway Airlines,4.0,2.0,0.0
-8L,Cargo Plus Aviation,98.0,32.0,0.0
-8M,Maxair,4.0,6.0,2.0
-8P,Pacific Coastal Airline,30.0,0.0,0.0
-8Q,Onur Air,30.0,6.0,0.0
-8R,TRIP Linhas A,35.0,0.0,0.0
-8T,Air Tindi,8.0,0.0,0.0
-8U,Afriqiyah Airways,25.0,18.0,1.0
-8V,Astral Aviation,37.0,0.0,0.0
-9C,China SSS,95.0,50.0,6.0
-9E,Pinnacle Airlines,36.0,6.0,0.0
-9K,Cape Air,86.0,0.0,0.0
-9Q,PB Air,4.0,0.0,0.0
-9R,SATENA,76.0,0.0,0.0
-9U,Air Moldova,24.0,10.0,4.0
-9W,Jet Airways,182.0,68.0,42.0
-A2,Cielos Airlines,10.0,0.0,0.0
-A3,Aegean Airlines,121.0,97.0,4.0
-A4,Southern Winds Airlines,20.0,0.0,0.0
-A5,Airlinair,150.0,0.0,0.0
-A8,Benin Golf Air,2.0,0.0,0.0
-A9,Georgian Airways,5.0,9.0,4.0
-AA,American Airlines,1276.0,545.0,530.0
-AB,Air Berlin,408.0,245.0,145.0
-ABJ,Abaet,3.0,0.0,0.0
-AC,Air Canada,353.0,155.0,197.0
-AD,Azul,355.0,36.0,2.0
-AE,Mandarin Airlines,46.0,10.0,0.0
-AF,Air France,697.0,109.0,265.0
-AH,Air Algerie,177.0,37.0,14.0
-AI,Air India Limited,235.0,63.0,95.0
-AK,AirAsia,104.0,76.0,0.0
-AM,AeroMéxico,266.0,118.0,47.0
-AP,Air One,64.0,24.0,0.0
-AR,Aerolineas Argentinas,111.0,25.0,18.0
-AS,Alaska Airlines,298.0,118.0,114.0
-AT,Royal Air Maroc,76.0,116.0,46.0
-AV,Avianca - Aerovias Nacionales de Colombia,148.0,68.0,70.0
-AW,Asian Wings Airways,6.0,0.0,0.0
-AY,Finnair,131.0,58.0,139.0
-AZ,Alitalia,571.0,135.0,171.0
-B2,Belavia Belarusian Airlines,40.0,40.0,2.0
-B5,Flightline,26.0,0.0,0.0
-B6,JetBlue Airways,112.0,197.0,90.0
-B7,Uni Air,34.0,16.0,0.0
-B9,Air Bangladesh,46.0,0.0,0.0
-BA,British Airways,263.0,70.0,214.0
-BB,Seaborne Airlines,32.0,0.0,2.0
-BC,Skymark Airlines,54.0,4.0,0.0
-BE,Flybe,256.0,12.0,0.0
-BF,Aero-Service,4.0,0.0,0.0
-BG,Biman Bangladesh Airlines,15.0,8.0,23.0
-BH,Hawkair,8.0,0.0,0.0
-BI,Royal Brunei Airlines,14.0,8.0,8.0
-BJ,Nouvel Air Tunisie,15.0,21.0,0.0
-BK,Potomac Air,84.0,22.0,0.0
-BL,Jetstar Pacific,18.0,0.0,0.0
-BM,Air Sicilia,34.0,0.0,0.0
-BP,Air Botswana,22.0,2.0,0.0
-BR,EVA Air,40.0,46.0,32.0
-BT,Air Baltic,70.0,32.0,10.0
-BU,Baikotovitchestrian Airlines ,29.0,4.0,0.0
-BV,Blue Panorama Airlines,34.0,2.0,13.0
-BW,Caribbean Airlines,30.0,18.0,16.0
-BX,Air Busan,14.0,12.0,2.0
-C8,Chicago Express,8.0,0.0,0.0
-CA,Air China,845.0,276.0,135.0
-CC,Air Atlanta Icelandic,13.0,0.0,0.0
-CE,Nationwide Airlines,10.0,0.0,0.0
-CG,Airlines PNG,79.0,2.0,0.0
-CI,China Airlines,61.0,63.0,48.0
-CM,Copa Airlines,100.0,41.0,43.0
-CN,Canadian National Airways,8.0,2.0,0.0
-CU,Cubana de Aviación,21.0,26.0,12.0
-CX,Cathay Pacific,70.0,56.0,87.0
-CY,Cyprus Airways,15.0,14.0,2.0
-CZ,China Southern Airlines,1028.0,310.0,92.0
-D3,Daallo Airlines,4.0,2.0,0.0
-D6,Interair South Africa,2.0,0.0,0.0
-D7,AirAsia X,0.0,2.0,34.0
-DC,Golden Air,20.0,0.0,0.0
-DD,Nok Air,46.0,0.0,0.0
-DE,Condor Flugdienst,34.0,160.0,140.0
-DG,South East Asian Airlines,16.0,6.0,0.0
-DH,Dennis Sky,13.0,0.0,0.0
-DL,Delta Air Lines,1063.0,463.0,453.0
-DN,Senegal Airlines,26.0,4.0,2.0
-DT,TAAG Angola Airlines,47.0,8.0,16.0
-DV,Scat Air,66.0,12.0,0.0
-DX,DAT Danish Air Transport,16.0,0.0,0.0
-DY,Norwegian Air Shuttle,234.0,254.0,88.0
-DZ,Starline.kz,4.0,0.0,0.0
-E2,Kampuchea Airlines,12.0,0.0,0.0
-E5,Air Arabia Egypt,4.0,6.0,0.0
-E7,Estafeta Carga Aerea,4.0,0.0,0.0
-E8,Alpi Eagles,2.0,4.0,0.0
-E9,Compagnie Africaine d\\'Aviation,0.0,0.0,4.0
-EF,Far Eastern Air Transport,8.0,0.0,0.0
-EG,Japan Asia Airways,1.0,4.0,4.0
-EI,Aer Lingus,134.0,70.0,22.0
-EK,Emirates,34.0,69.0,186.0
-EL,Air Nippon,2.0,4.0,0.0
-EN,Air Dolomiti,12.0,0.0,0.0
-EO,Express One International,10.0,2.0,0.0
-EP,Iran Aseman Airlines,159.0,8.0,2.0
-EQ,TAME,40.0,2.0,2.0
-ET,Ethiopian Airlines,210.0,39.0,84.0
-EU,Empresa Ecuatoriana De Aviacion,66.0,12.0,0.0
-EW,Eurowings,1.0,0.0,0.0
-EY,Etihad Airways,57.0,57.0,114.0
-F2,Fly Air,14.0,0.0,0.0
-F5,Cosmic Air,5.0,0.0,0.0
-F7,Flybaboo,38.0,0.0,0.0
-F9,Frontier Airlines,126.0,88.0,8.0
-FB,Bulgaria Air,30.0,26.0,0.0
-FD,Thai AirAsia,60.0,32.0,0.0
-FE,Primaris Airlines,8.0,10.0,0.0
-FG,Ariana Afghan Airlines,13.0,8.0,1.0
-FI,Icelandair,5.0,30.0,18.0
-FJ,Air Pacific,40.0,10.0,16.0
-FL,AirTran Airways,465.0,220.0,41.0
-FM,Shanghai Airlines,153.0,34.0,4.0
-FO,Airlines Of Tasmania,28.0,6.0,0.0
-FR,Ryanair,1346.0,1060.0,78.0
-FS,Servicios de Transportes A,10.0,6.0,1.0
-FV,Rossiya-Russian Airlines,3.0,2.0,0.0
-FW,Ibex Airlines,32.0,0.0,0.0
-FY,Firefly,40.0,0.0,0.0
-FZ,Fly Dubai,41.0,73.0,34.0
-G3,City Connexion Airlines,242.0,76.0,14.0
-G4,Allegiant Air,175.0,197.0,4.0
-G5,Huaxia,92.0,0.0,0.0
-G8,Go Air,71.0,6.0,0.0
-G9,Air Arabia,36.0,70.0,24.0
-GA,Garuda Indonesia,152.0,36.0,60.0
-GE,TransAsia Airways,68.0,24.0,0.0
-GF,Gulf Air Bahrain,32.0,28.0,17.0
-GK,Genesis,26.0,2.0,0.0
-GL,Air Greenland,60.0,0.0,4.0
-GQ,Big Sky Airlines,36.0,0.0,0.0
-GR,Aurigny Air Services,20.0,0.0,0.0
-GS,Air Foyle,322.0,12.0,4.0
-GV,Aero Flight,30.0,0.0,0.0
-GY,Gabon Airlines,0.0,2.0,0.0
-GZ,Air Rarotonga,13.0,0.0,0.0
-H2,Sky Airline,47.0,2.0,0.0
-H7,Eagle Air,2.0,0.0,0.0
-HA,Hawaiian Airlines,21.0,0.0,53.0
-HD,Hokkaido International Airlines,26.0,0.0,0.0
-HF,Hapagfly,19.0,6.0,0.0
-HG,Niki,59.0,36.0,16.0
-HI,Papillon Grand Canyon Helicopters,2.0,0.0,0.0
-HK,Yangon Airways,2.0,0.0,4.0
-HM,Air Seychelles,2.0,2.0,6.0
-HN,Hankook Airline,6.0,0.0,0.0
-HO,Juneyao Airlines,109.0,28.0,4.0
-HQ,Harmony Airways,33.0,50.0,5.0
-HR,China United Airlines,2.0,0.0,0.0
-HU,Hainan Airlines,399.0,110.0,46.0
-HV,Transavia Holland,99.0,116.0,18.0
-HW,Hello,10.0,0.0,0.0
-HX,Hong Kong Airlines,36.0,11.0,2.0
-HY,Uzbekistan Airways,31.0,68.0,52.0
-HZ,Sat Airlines,14.0,1.0,0.0
-I4,Interstate Airline,2.0,0.0,0.0
-I6,MexicanaLink,20.0,0.0,0.0
-I8,IzAvia,6.0,2.0,0.0
-I9,Air Italy,2.0,0.0,2.0
-IB,Iberia Airlines,509.0,138.0,184.0
-ID,Interlink Airlines,10.0,4.0,2.0
-IE,Solomon Airlines,54.0,4.0,0.0
-IG,Meridiana,139.0,25.0,9.0
-IL,Illinois Airways,19.0,0.0,0.0
-IOS,Isles of Scilly Skybus,46.0,26.0,0.0
-IR,Iran Air,145.0,15.0,26.0
-IX,Air India Express,22.0,46.0,8.0
-IY,Yemenia,54.0,33.0,9.0
-IZ,Arkia Israel Airlines,14.0,0.0,6.0
-J2,Azerbaijan Airlines,14.0,28.0,12.0
-J3,Northwestern Air,18.0,0.0,0.0
-J4,ALAK,8.0,0.0,0.0
-J5,Alaska Seaplane Service,15.0,0.0,0.0
-J8,Berjaya Air,4.0,0.0,0.0
-J9,Jazeera Airways,18.0,12.0,0.0
-JA,Air Bosna,10.0,0.0,0.0
-JB,Helijet,2.0,0.0,0.0
-JD,Japan Air System,158.0,52.0,0.0
-JE,Mango,16.0,2.0,0.0
-JH,Fuji Dream Airlines,24.0,0.0,0.0
-JJ,TAM Brazilian Airlines,193.0,80.0,60.0
-JL,Japan Airlines,217.0,61.0,110.0
-JN,Excel Airways,8.0,0.0,0.0
-JP,Adria Airways,38.0,2.0,0.0
-JQ,Jetstar Airways,60.0,57.0,46.0
-JS,Air Koryo,6.0,0.0,2.0
-JT,Lion Mentari Airlines,222.0,20.0,3.0
-JU,Jat Airways,63.0,12.0,2.0
-JV,Bearskin Lake Air Service,39.0,0.0,0.0
-JW,Arrow Air,4.0,4.0,0.0
-JY,Aereonautica militare,28.0,0.0,0.0
-K2,Eurolot,36.0,0.0,0.0
-K5,SeaPort Airlines,39.0,0.0,0.0
-K6,Cambodia Angkor Air (K6),18.0,4.0,0.0
-K8,Zambia Skyways,8.0,0.0,0.0
-KA,Dragonair,58.0,32.0,6.0
-KB,Druk Air,12.0,8.0,0.0
-KC,Air Astana,50.0,32.0,36.0
-KE,Korean Air,136.0,35.0,121.0
-KK,Atlasjet,24.0,8.0,0.0
-KL,KLM Royal Dutch Airlines,510.0,110.0,210.0
-KM,Air Malta,36.0,48.0,0.0
-KN,China United,72.0,18.0,0.0
-KQ,Kenya Airways,63.0,46.0,33.0
-KR,Comores Airlines,4.0,16.0,2.0
-KS,Peninsula Airways,28.0,0.0,0.0
-KU,Kuwait Airways,32.0,23.0,24.0
-KX,Cayman Airways,19.0,4.0,0.0
-KY,KSY,38.0,14.0,0.0
-L6,Mauritania Airlines International,16.0,8.0,0.0
-LA,LAN Airlines,176.0,44.0,63.0
-LC,Varig Log,6.0,4.0,4.0
-LF,FlyNordic,4.0,0.0,0.0
-LG,Luxair,66.0,38.0,6.0
-LH,Lufthansa,515.0,111.0,297.0
-LI,Leeward Islands Air Transport,62.0,0.0,0.0
-LJ,Jin Air,10.0,6.0,10.0
-LM,Linhas A,20.0,0.0,0.0
-LN,Libyan Arab Airlines,54.0,20.0,0.0
-LO,LOT Polish Airlines,96.0,16.0,8.0
-LR,LACSA,24.0,0.0,0.0
-LS,Jet2.com,48.0,188.0,66.0
-LT,LTU International,10.0,2.0,0.0
-LV,Albanian Airlines,0.0,0.0,4.0
-LW,Pacific Wings,10.0,0.0,0.0
-LX,Swiss International Air Lines,166.0,50.0,74.0
-LY,El Al Israel Airlines,5.0,34.0,34.0
-M3,ABSA - Aerolinhas Brasileiras,6.0,0.0,0.0
-M4,Marysya Airlines,19.0,0.0,0.0
-M5,Kenmore Air,14.0,0.0,0.0
-M6,Amerijet International,7.0,0.0,0.0
-M9,Motor Sich,6.0,0.0,0.0
-MD,Air Madagascar,63.0,6.0,6.0
-ME,Middle East Airlines,33.0,20.0,12.0
-MF,Xiamen Airlines,306.0,70.0,8.0
-MH,Malaysia Airlines,192.0,47.0,97.0
-MI,SilkAir,39.0,32.0,22.0
-MJ,L,17.0,14.0,21.0
-MK,Air Mauritius,13.0,2.0,28.0
-MM,Peach Aviation,24.0,8.0,0.0
-MN,Comair,14.0,0.0,0.0
-MO,Abu Dhabi Amiri Flight,50.0,1.0,1.0
-MR,Homer Air,15.0,2.0,2.0
-MS,Egyptair,75.0,76.0,54.0
-MU,China Eastern Airlines,936.0,231.0,76.0
-MW,Maya Island Air,19.0,0.0,0.0
-MY,Midwest Airlines (Egypt),18.0,0.0,0.0
-N3,Omskavia Airline,4.0,0.0,0.0
-NF,Air Vanuatu,84.0,8.0,0.0
-NH,All Nippon Airways,322.0,100.0,123.0
-NHG,NHT Lineas Aereas,34.0,0.0,0.0
-NK,Spirit Airlines,108.0,122.0,12.0
-NL,Shaheen Air International,20.0,36.0,8.0
-NP,Nile Air,14.0,2.0,0.0
-NS,Caucasus Airlines,52.0,8.0,0.0
-NT,Binter Canarias,40.0,6.0,0.0
-NU,Japan Transocean Air,16.0,6.0,0.0
-NX,Air Macau,34.0,20.0,2.0
-NY,Air Iceland,10.0,0.0,0.0
-NZ,Air New Zealand,131.0,48.0,52.0
-O6,Oceanair,80.0,24.0,0.0
-OA,Olympic Airlines,94.0,16.0,0.0
-OB,Astrakhan Airlines,21.0,5.0,2.0
-OC,Catovair,8.0,0.0,0.0
-OD,Malindo Air,28.0,12.0,6.0
-OJ,Overland Airways,0.0,6.0,2.0
-OK,Czech Airlines,63.0,38.0,10.0
-OM,MIAT Mongolian Airlines,2.0,6.0,4.0
-ON,Nauru Air Corporation,6.0,0.0,2.0
-OR,Arkefly,9.0,0.0,15.0
-OS,Austrian Airlines,172.0,40.0,28.0
-OU,Croatia Airlines,106.0,6.0,0.0
-OV,Estonian Air,20.0,6.0,0.0
-OX,Orient Thai Airlines,2.0,4.0,0.0
-OY,Omni Air International,4.0,0.0,0.0
-OZ,Asiana Airlines,142.0,49.0,70.0
-P0,Proflight Commuter Services,14.0,0.0,0.0
-P4,Patriot Airways,21.0,0.0,0.0
-P9,Peruvian Airlines,16.0,0.0,0.0
-PC,Pegasus Airlines,144.0,92.0,6.0
-PD,Porter Airlines,34.0,0.0,0.0
-PE,Air Europe,2.0,0.0,0.0
-PG,Bangkok Airways,54.0,9.0,12.0
-PI,Piedmont Airlines (1948-1989),6.0,2.0,0.0
-PJ,Air Saint Pierre,6.0,0.0,0.0
-PK,Pakistan International Airlines,113.0,69.0,60.0
-PL,Aeroper,14.0,0.0,0.0
-PM,Tropic Air,14.0,0.0,0.0
-PN,West Air China,76.0,14.0,0.0
-PQ,LSM Airlines,6.0,0.0,0.0
-PR,Philippine Airlines,70.0,36.0,38.0
-PS,Ukraine International Airlines,62.0,51.0,14.0
-PV,PAN Air,6.0,0.0,0.0
-PW,Precision Air,29.0,0.0,0.0
-PX,Air Niugini,74.0,8.0,14.0
-PY,Surinam Airways,12.0,4.0,4.0
-PZ,TAM Mercosur,10.0,8.0,0.0
-Q2,Maldivian,22.0,2.0,0.0
-Q3,SOCHI AIR CHATER,2.0,0.0,0.0
-Q5,40-Mile Air,2.0,0.0,0.0
-Q6,Aero Condor Peru,58.0,0.0,0.0
-Q8,Pacific East Asia Cargo Airlines,10.0,4.0,0.0
-Q9,Arik Niger,20.0,0.0,0.0
-QB,Georgian National Airlines,10.0,0.0,0.0
-QC,Camair-co,23.0,0.0,2.0
-QF,Qantas,186.0,81.0,163.0
-QG,Citilink Indonesia,54.0,4.0,0.0
-QH,Air Florida,10.0,18.0,6.0
-QL,Aero Lanka,14.0,0.0,0.0
-QN,Air Armenia,2.0,12.0,2.0
-QR,Qatar Airways,81.0,51.0,145.0
-QS,Travel Service,50.0,11.0,6.0
-QU,East African,4.0,0.0,0.0
-QV,Lao Airlines,42.0,2.0,2.0
-QZ,Indonesia AirAsia,42.0,20.0,0.0
-R2,Orenburg Airlines,4.0,5.0,0.0
-R3,Aircompany Yakutia,29.0,32.0,14.0
-R7,Aserca Airlines,26.0,0.0,0.0
-RA,Nepal Airlines,0.0,4.0,4.0
-RC,Atlantic Airways,9.0,0.0,0.0
-RG,VRG Linhas Aereas,10.0,0.0,0.0
-RI,Mandala Airlines,10.0,4.0,2.0
-RJ,Royal Jordanian,50.0,40.0,30.0
-RL,Royal Falcon,7.0,0.0,0.0
-RO,Tarom,62.0,28.0,2.0
-RQ,Kam Air,3.0,2.0,0.0
-RX,Rainbow Air Polynesia,14.0,6.0,0.0
-RZ,Euro Exec Express,17.0,0.0,0.0
-S2,Air Sahara,172.0,8.0,0.0
-S3,Santa Barbara Airlines,2.0,2.0,2.0
-S4,SATA International,37.0,29.0,15.0
-S5,Shuttle America,14.0,0.0,0.0
-S6,Salmon Air,6.0,0.0,0.0
-S7,S7 Airlines,82.0,128.0,71.0
-S9,Starbow Airlines,8.0,0.0,0.0
-SA,South African Airways,114.0,35.0,53.0
-SB,Air Caledonie International,10.0,6.0,6.0
-SC,Shandong Airlines,276.0,34.0,4.0
-SD,Sudan Airways,20.0,14.0,0.0
-SE,XL Airways France,10.0,2.0,20.0
-SG,Spicejet,178.0,16.0,0.0
-SH,Sharp Airlines,10.0,0.0,0.0
-SI,Skynet Airlines,20.0,0.0,0.0
-SJ,Sriwijaya Air,94.0,12.0,0.0
-SK,Scandinavian Airlines System,344.0,114.0,46.0
-SN,Brussels Airlines,111.0,32.0,47.0
-SP,SATA Air Acores,28.0,0.0,0.0
-SQ,Singapore Airlines,59.0,47.0,106.0
-SS,Corsairfly,11.0,0.0,19.0
-ST,Germania,24.0,46.0,26.0
-SU,Aeroflot Russian Airlines,145.0,216.0,112.0
-SV,Saudi Arabian Airlines,180.0,68.0,131.0
-SW,Air Namibia,27.0,4.0,4.0
-SX,SkyWork Airlines ,24.0,0.0,0.0
-SY,Sun Country Airlines,10.0,26.0,2.0
-SZ,Salzburg arrows,2.0,36.0,10.0
-T3,Eastern Airways,32.0,0.0,0.0
-T5,Turkmenistan Airlines,2.0,8.0,6.0
-T7,Twin Jet,24.0,0.0,0.0
-TA,Grupo TACA,4.0,2.0,8.0
-TCX,Thomas Cook Airlines,5.0,58.0,62.0
-TD,Atlantis European Airways,0.0,4.0,0.0
-TE,FlyLal,11.0,0.0,0.0
-TF,Malmö Aviation,36.0,0.0,0.0
-TG,Thai Airways International,64.0,46.0,83.0
-TJ,T.J. Air,14.0,0.0,0.0
-TK,Turkish Airlines,313.0,212.0,127.0
-TL,Airnorth,27.0,6.0,0.0
-TM,Air Mozambique,48.0,6.0,0.0
-TN,Air Tahiti Nui,3.0,6.0,8.0
-TO,Transavia France,97.0,285.0,106.0
-TOM,Thomsonfly,9.0,73.0,57.0
-TP,TAP Portugal,71.0,83.0,75.0
-TR,Tiger Airways,26.0,34.0,16.0
-TS,Air Transat,13.0,40.0,85.0
-TT,Tiger Airways Australia,22.0,18.0,2.0
-TU,Tunisair,75.0,60.0,16.0
-TV,Virgin Express,30.0,12.0,0.0
-TW,Tway Airlines,14.0,0.0,2.0
-TX,Air Caraïbes,14.0,0.0,14.0
-TY,Iberworld,23.0,0.0,0.0
-TZ,Scoot,6.0,4.0,14.0
-U2,easyJet,710.0,364.0,56.0
-U6,Ural Airlines,33.0,145.0,54.0
-U7,Northern Dene Airways,16.0,0.0,0.0
-UA,United Airlines,1153.0,488.0,539.0
-UD,Hex'Air,2.0,0.0,0.0
-UE,Nasair,11.0,5.0,0.0
-UG,Tuninter,24.0,0.0,0.0
-UJ,AlMasria Universal Airlines,28.0,4.0,0.0
-UL,SriLankan Airlines,26.0,22.0,43.0
-UM,Air Zimbabwe,12.0,0.0,0.0
-UN,Transaero Airlines,68.0,104.0,128.0
-UO,Hong Kong Express Airways,4.0,16.0,0.0
-UP,Bahamasair,52.0,6.0,0.0
-UR,UTair-Express,74.0,0.0,0.0
-US,US Airways,1105.0,479.0,376.0
-UU,Air Austral,14.0,6.0,4.0
-UX,Air Europa,84.0,34.0,40.0
-UY,Cameroon Airlines,4.0,0.0,0.0
-V0,Conviasa,70.0,4.0,4.0
-V3,Carpatair,6.0,0.0,0.0
-V4,Reem Air,2.0,0.0,0.0
-V7,Air Senegal International,128.0,8.0,0.0
-V9,Star1 Airlines,8.0,0.0,0.0
-VA,Virgin Australia,133.0,88.0,67.0
-VB,Birmingham European,98.0,4.0,0.0
-VF,Valuair,4.0,2.0,0.0
-VH,Virgin Pacific,12.0,0.0,0.0
-VJ,Royal Air Cambodge,34.0,0.0,0.0
-VN,Vietnam Airlines,128.0,42.0,41.0
-VQ,Viking Hellas,8.0,0.0,0.0
-VR,TACV,20.0,10.0,8.0
-VS,Virgin Atlantic Airways,85.0,24.0,86.0
-VT,Air Tahiti,92.0,1.0,0.0
-VW,Aeromar,42.0,0.0,0.0
-VX,Virgin America,14.0,16.0,36.0
-VY,Formosa Airlines,290.0,80.0,14.0
-W2,Maastricht Airlines,34.0,16.0,12.0
-W3,Arik Air,56.0,6.0,6.0
-W4,AeroWorld ,10.0,0.0,0.0
-W5,Mahan Air,6.0,8.0,10.0
-W6,Wizz Air,293.0,158.0,6.0
-W9,Air Bagan,29.0,0.0,0.0
-WB,Rwandair Express,24.0,6.0,10.0
-WF,Widerøe,210.0,0.0,0.0
-WJ,WebJet Linhas A,26.0,0.0,0.0
-WM,Windward Islands Airways,25.0,0.0,0.0
-WN,Southwest Airlines,703.0,394.0,48.0
-WP,Island Air (WP),6.0,0.0,0.0
-WS,WestJet,131.0,140.0,70.0
-WU,Wizz Air Ukraine,24.0,18.0,0.0
-WW,bmibaby,0.0,8.0,2.0
-WX,CityJet,30.0,0.0,0.0
-WY,Oman Air,28.0,48.0,22.0
-X3,TUIfly,37.0,131.0,58.0
-X7,Chitaavia,2.0,0.0,0.0
-XK,Corse-Mediterranee,42.0,0.0,0.0
-XL,Aerolane,8.0,2.0,4.0
-XQ,SunExpress,21.0,78.0,0.0
-XV,BVI Airways,6.0,0.0,0.0
-XY,Nas Air,68.0,28.0,14.0
-Y4,Volaris,93.0,102.0,2.0
-Y5,Asia Wings,2.0,2.0,0.0
-Y7,NordStar Airlines,27.0,28.0,19.0
-Y8,Marusya Airways,30.0,0.0,0.0
-Y9,Kish Air,23.0,0.0,0.0
-YC,Ciel Canadien,36.0,24.0,0.0
-YI,TUR Avrupa Hava YollarÄ±,27.0,0.0,0.0
-YK,Cyprus Turkish Airlines,8.0,20.0,6.0
-YM,Montenegro Airlines,20.0,6.0,0.0
-YO,TransHolding System,2.0,2.0,0.0
-YQ,Polet Airlines (Priv),12.0,2.0,0.0
-YR,SENIC AIRLINES,2.0,0.0,0.0
-YT,Yeti Airways,16.0,0.0,0.0
-Z2,Zest Air,18.0,12.0,2.0
-Z3,Avient Aviation,10.0,0.0,0.0
-Z4,Zoom Airlines,8.0,0.0,2.0
-Z6,ZABAIKAL AIRLINES,20.0,0.0,0.0
-Z8,Amaszonas,36.0,0.0,0.0
-Z9,Flightlink Tanzania,6.0,2.0,0.0
-ZB,Air Bourbon,38.0,126.0,46.0
-ZE,Eastar Jet,16.0,2.0,4.0
-ZH,Shenzhen Airlines,609.0,200.0,2.0
-ZI,Aigle Azur,52.0,18.0,2.0
-ZK,Great Lakes Airlines,61.0,0.0,0.0
-ZL,Regional Express,86.0,2.0,0.0
-ZM,Apache Air,2.0,2.0,0.0
+Airline,Name,Country,0,1,2,Number Countries,Favorite Airport ID,Favorite Airport Name,Favorite Airport City,Favorite Airport Country
+2B,Aerocondor,Portugal,34.0,6.0,0.0,2,2990.0,Kazan,Kazan,Russia
+2G,Cargoitalia,Italy,16.0,3.0,0.0,1,2937.0,Irkutsk,Irkutsk,Russia
+2I,Star Peru (2I),Peru,18.0,0.0,0.0,1,2789.0,Jorge Chavez Intl,Lima,Peru
+2J,Air Burkina,Burkina Faso,20.0,2.0,0.0,8,246.0,Ouagadougou,Ouagadougou,Burkina Faso
+2K,Aerolineas Galapagos (Aerogal),Ecuador,12.0,0.0,0.0,2,2673.0,Jose Joaquin De Olmedo Intl,Guayaquil,Ecuador
+2L,Helvetic Airways,Switzerland,6.0,4.0,4.0,7,1678.0,Zurich,Zurich,Switzerland
+2N,NextJet,Sweden,41.0,0.0,0.0,3,737.0,Arlanda,Stockholm,Sweden
+2O,Air Salone,Sierra Leone,10.0,0.0,0.0,1,3531.0,Kodiak,Kodiak,United States
+2P,Air Philippines,Philippines,32.0,0.0,2.0,2,2397.0,Ninoy Aquino Intl,Manila,Philippines
+2Z,Changan Airlines,China,46.0,0.0,0.0,1,2613.0,Leite Lopes,Ribeirao Preto,Brazil
+3E,Air Choice One,United States,10.0,0.0,0.0,1,3678.0,Lambert St Louis Intl,St. Louis,United States
+3F,Fly Colombia ( Interliging Flights ),Colombia,12.0,0.0,0.0,1,3808.0,Ketchikan Intl,Ketchikan,United States
+3G,Atlant-Soyuz Airlines,Russia,18.0,6.0,6.0,11,1084.0,Leopold Sedar Senghor Intl,Dakar,Senegal
+3J,Zip,Canada,4.0,1.0,0.0,5,4119.0,Ambouli International Airport,Djibouti,Djibouti
+3K,Jetstar Asia Airways,Singapore,14.0,14.0,8.0,12,3316.0,Changi Intl,Singapore,Singapore
+3L,Intersky,Austria,26.0,0.0,0.0,5,382.0,Friedrichshafen,Friedrichshafen,Germany
+3O,Air Arabia Maroc,Morocco,14.0,28.0,2.0,9,1074.0,Mohammed V Intl,Casablanca,Morocco
+3P,Tiara Air,Aruba,6.0,0.0,0.0,3,2895.0,Reina Beatrix Intl,Oranjestad,Aruba
+3R,Moskovia Airlines,Russia,4.0,16.0,0.0,3,4029.0,Domododevo,Moscow,Russia
+3S,Air Antilles Express,Guadeloupe,24.0,0.0,0.0,9,2881.0,Le Raizet,Pointe-a-pitre,Guadeloupe
+3U,Sichuan Airlines,China,286.0,96.0,10.0,9,3395.0,Shuangliu,Chengdu,China
+4D,Air Sinai,Egypt,2.0,0.0,0.0,2,1128.0,Cairo Intl,Cairo,Egypt
+4G,Gazpromavia,Russia,8.0,12.0,0.0,2,2988.0,Vnukovo,Moscow,Russia
+4H,United Airways,Bangladesh,20.0,4.0,8.0,8,3076.0,Zia Intl,Dhaka,Bangladesh
+4K,Askari Aviation,Pakistan,2.0,0.0,0.0,1,128.0,Resolute Bay,Resolute,Canada
+4M,LAN Argentina,Argentina,2.0,0.0,8.0,3,3988.0,Ministro Pistarini,Buenos Aires,Argentina
+4N,Air North Charter - Canada,Canada,7.0,4.0,2.0,1,176.0,Whitehorse Intl,Whitehorse,Canada
+4O,Interjet (ABC Aerolineas),Mexico,86.0,22.0,4.0,6,1824.0,Licenciado Benito Juarez Intl,Mexico City,Mexico
+4Q,Safi Airlines,Afghanistan,10.0,4.0,0.0,4,2050.0,Kabul Intl,Kabul,Afghanistan
+4T,Belair Airlines,Switzerland,4.0,2.0,6.0,5,1678.0,Zurich,Zurich,Switzerland
+4U,Germanwings,Germany,366.0,100.0,4.0,26,344.0,Koln Bonn,Cologne,Germany
+4Y,Airbus France,France,29.0,0.0,2.0,1,3599.0,Bethel,Bethel,United States
+5C,CAL Cargo Air Lines,Israel,29.0,0.0,0.0,3,1885.0,Juan Santamaria Intl,San Jose,Costa Rica
+5G,Skyservice Airlines,Canada,2.0,0.0,0.0,1,248.0,Kotoka Intl,Accra,Ghana
+5H,Fly540,Kenya,18.0,0.0,0.0,3,4059.0,Jomo Kenyatta International,Nairobi,Kenya
+5J,Cebu Pacific,Philippines,132.0,44.0,6.0,15,2397.0,Ninoy Aquino Intl,Manila,Philippines
+5M,Sibaviatrans,Russia,2.0,0.0,0.0,2,2874.0,V C Bird Intl,Antigua,Antigua and Barbuda
+5N,Aeroflot-Nord,Russia,22.0,0.0,0.0,2,4362.0,Talagi,Arkhangelsk,Russia
+5P,Pal airlines,Chile,4.0,0.0,0.0,1,2650.0,Arturo Merino Benitez Intl,Santiago,Chile
+5Q,BQB Lineas Aereas,Uruguay,14.0,4.0,0.0,5,2816.0,Carrasco Intl,Montevideo,Uruguay
+5T,Canadian North,Canada,63.0,2.0,0.0,1,132.0,Rankin Inlet,Rankin Inlet,Canada
+5Z,VivaColombia,Colombia,4.0,0.0,0.0,1,813.0,Johannesburg Intl,Johannesburg,South Africa
+6E,IndiGo Airlines,India,179.0,48.0,0.0,6,3093.0,Indira Gandhi Intl,Delhi,India
+6H,Israir,Israel,6.0,6.0,0.0,5,1590.0,Ben Gurion,Tel-aviv,Israel
+6I,Fly 6ix,Sierra Leone,2.0,0.0,0.0,1,609.0,Kastrup,Copenhagen,Denmark
+6R,Alrosa Mirny Air Enterprise,Russia,18.0,4.0,8.0,1,2925.0,Mirny,Mirnyj,Russia
+6T,Air Mandalay,Burma,22.0,0.0,0.0,1,3239.0,Yangon Intl,Yangon,Burma
+6W,Saratov Aviation Division,Russia,8.0,2.0,0.0,3,4363.0,Central,Saratov,Russia
+6Y,SmartLynx Airlines,Latvia,0.0,0.0,2.0,2,1056.0,Tenerife Sur,Tenerife,Spain
+7C,Jeju Air,Republic of Korea,20.0,5.0,8.0,7,3930.0,Incheon Intl,Seoul,South Korea
+7E,Aeroline GmbH,Germany,2.0,0.0,0.0,1,342.0,Hamburg,Hamburg,Germany
+7F,First Air,Canada,72.0,2.0,0.0,1,55.0,Iqaluit,Iqaluit,Canada
+7G,Star Flyer,Japan,6.0,0.0,0.0,1,2359.0,Tokyo Intl,Tokyo,Japan
+7H,Era Alaska,United States,218.0,0.0,2.0,1,3599.0,Bethel,Bethel,United States
+7I,Insel Air (7I/INC) (Priv),Netherlands Antilles,37.0,8.0,0.0,10,2897.0,Hato,Willemstad,Netherlands Antilles
+7J,Tajik Air,Tajikistan,6.0,22.0,6.0,9,2979.0,Dushanbe,Dushanbe,Tajikistan
+7M,Mongolian International Air Lines ,Mongolia,8.0,0.0,0.0,1,1819.0,Licenciado Manuel Crescencio Rejon Int,Merida,Mexico
+7P,Metro Batavia,Indonesia,22.0,0.0,2.0,3,1869.0,Marcos A Gelabert Intl,Panama,Panama
+7R,BRA-Transportes Aereos,Brazil,64.0,8.0,0.0,4,4029.0,Domododevo,Moscow,Russia
+8B,BusinessAir,Thailand,2.0,4.0,6.0,3,3179.0,Phuket Intl,Phuket,Thailand
+8D,Astair,Russian Federation,8.0,0.0,0.0,1,3531.0,Kodiak,Kodiak,United States
+8E,Bering Air,United States,74.0,0.0,0.0,1,3615.0,Nome,Nome,United States
+8I,Myway Airlines,Italy,4.0,2.0,0.0,3,2895.0,Reina Beatrix Intl,Oranjestad,Aruba
+8L,Cargo Plus Aviation,United Arab Emirates,98.0,32.0,0.0,2,3382.0,Wujiaba,Kunming,China
+8M,Maxair,Sweden,4.0,6.0,2.0,7,3239.0,Yangon Intl,Yangon,Burma
+8P,Pacific Coastal Airline,Canada,30.0,0.0,0.0,1,156.0,Vancouver Intl,Vancouver,Canada
+8Q,Onur Air,Turkey,30.0,6.0,0.0,5,1701.0,Ataturk,Istanbul,Turkey
+8R,TRIP Linhas A,Brazil,35.0,0.0,0.0,2,2442.0,Aeroparque Jorge Newbery,Buenos Aires,Argentina
+8T,Air Tindi,Canadian Territories,8.0,0.0,0.0,1,196.0,Yellowknife,Yellowknife,Canada
+8U,Afriqiyah Airways,Libya,25.0,18.0,1.0,9,1157.0,Tripoli Intl,Tripoli,Libya
+8V,Astral Aviation,Kenya,37.0,0.0,0.0,1,3832.0,Fairbanks Intl,Fairbanks,United States
+9C,China SSS,China,95.0,50.0,6.0,10,3406.0,Pudong,Shanghai,China
+9E,Pinnacle Airlines,United States,36.0,6.0,0.0,1,3682.0,Hartsfield Jackson Atlanta Intl,Atlanta,United States
+9K,Cape Air,United States,86.0,0.0,0.0,6,3448.0,General Edward Lawrence Logan Intl,Boston,United States
+9Q,PB Air,Thailand,4.0,0.0,0.0,1,5807.0,JAGS McCartney International Airport,Cockburn Town,Turks and Caicos Islands
+9R,SATENA,Colombia,76.0,0.0,0.0,1,2709.0,Eldorado Intl,Bogota,Colombia
+9U,Air Moldova,Moldova,24.0,10.0,4.0,13,1735.0,Chisinau Intl,Chisinau,Moldova
+9W,Jet Airways,India,182.0,68.0,42.0,21,2997.0,Chhatrapati Shivaji Intl,Mumbai,India
+A2,Cielos Airlines,Peru,10.0,0.0,0.0,1,1486.0,Makedonia,Thessaloniki,Greece
+A3,Aegean Airlines,Greece,121.0,97.0,4.0,29,3941.0,Eleftherios Venizelos Intl,Athens,Greece
+A4,Southern Winds Airlines,Argentina,20.0,0.0,0.0,1,2769.0,Tte Av Jorge Henrich Arauz,Trinidad,Bolivia
+A5,Airlinair,France,150.0,0.0,0.0,8,1335.0,Saint Exupery,Lyon,France
+A8,Benin Golf Air,Benin,2.0,0.0,0.0,1,1187.0,Entebbe Intl,Entebbe,Uganda
+A9,Georgian Airways,Georgia,5.0,9.0,4.0,7,3973.0,Tbilisi,Tbilisi,Georgia
+AA,American Airlines,United States,1276.0,545.0,530.0,96,3670.0,Dallas Fort Worth Intl,Dallas-Fort Worth,United States
+AB,Air Berlin,Germany,408.0,245.0,145.0,42,345.0,Dusseldorf,Duesseldorf,Germany
+ABJ,Abaet,Brazil,3.0,0.0,0.0,1,2582.0,Bom Jesus Da Lapa,Bom Jesus Da Lapa,Brazil
+AC,Air Canada,Canada,353.0,155.0,197.0,68,193.0,Lester B Pearson Intl,Toronto,Canada
+AD,Azul,Brazil,355.0,36.0,2.0,2,2578.0,Viracopos,Campinas,Brazil
+AE,Mandarin Airlines,Taiwan,46.0,10.0,0.0,6,2268.0,Ching Chuang Kang,Taichung,Taiwan
+AF,Air France,France,697.0,109.0,265.0,126,1382.0,Charles De Gaulle,Paris,France
+AH,Air Algerie,Algeria,177.0,37.0,14.0,26,210.0,Houari Boumediene,Algier,Algeria
+AI,Air India Limited,India,235.0,63.0,95.0,31,3093.0,Indira Gandhi Intl,Delhi,India
+AK,AirAsia,Malaysia,104.0,76.0,0.0,15,3304.0,Kuala Lumpur Intl,Kuala Lumpur,Malaysia
+AM,AeroMéxico,Mexico,266.0,118.0,47.0,27,1824.0,Licenciado Benito Juarez Intl,Mexico City,Mexico
+AP,Air One,Italy,64.0,24.0,0.0,11,1509.0,Catania Fontanarossa,Catania,Italy
+AR,Aerolineas Argentinas,Argentina,111.0,25.0,18.0,13,2442.0,Aeroparque Jorge Newbery,Buenos Aires,Argentina
+AS,Alaska Airlines,ALASKA,298.0,118.0,114.0,3,3577.0,Seattle Tacoma Intl,Seattle,United States
+AT,Royal Air Maroc,Morocco,76.0,116.0,46.0,49,1074.0,Mohammed V Intl,Casablanca,Morocco
+AV,Avianca - Aerovias Nacionales de Colombia,AVIANCA,148.0,68.0,70.0,26,2709.0,Eldorado Intl,Bogota,Colombia
+AW,Asian Wings Airways,Burma,6.0,0.0,0.0,2,248.0,Kotoka Intl,Accra,Ghana
+AY,Finnair,Finland,131.0,58.0,139.0,41,421.0,Helsinki Vantaa,Helsinki,Finland
+AZ,Alitalia,Italy,571.0,135.0,171.0,88,1555.0,Fiumicino,Rome,Italy
+B2,Belavia Belarusian Airlines,Belarus,40.0,40.0,2.0,30,2954.0,Minsk 2,Minsk 2,Belarus
+B5,Flightline,United Kingdom,26.0,0.0,0.0,3,1147.0,Nairobi Wilson,Nairobi,Kenya
+B6,JetBlue Airways,United States,112.0,197.0,90.0,22,3797.0,John F Kennedy Intl,New York,United States
+B7,Uni Air,Taiwan,34.0,16.0,0.0,3,2276.0,Taoyuan Intl,Taipei,Taiwan
+B9,Air Bangladesh,Bangladesh,46.0,0.0,0.0,1,4331.0,Mashhad,Mashhad,Iran
+BA,British Airways,United Kingdom,263.0,70.0,214.0,92,507.0,Heathrow,London,United Kingdom
+BB,Seaborne Airlines,United States,32.0,0.0,2.0,10,2890.0,Luis Munoz Marin Intl,San Juan,Puerto Rico
+BC,Skymark Airlines,Japan,54.0,4.0,0.0,1,2287.0,New Chitose,Sapporo,Japan
+BE,Flybe,United Kingdom,256.0,12.0,0.0,15,469.0,Birmingham,Birmingham,United Kingdom
+BF,Aero-Service,Republic of the Congo,4.0,0.0,0.0,1,6270.0,Groote Eylandt Airport,Groote Eylandt,Australia
+BG,Biman Bangladesh Airlines,Bangladesh,15.0,8.0,23.0,16,3076.0,Zia Intl,Dhaka,Bangladesh
+BH,Hawkair,Canada,8.0,0.0,0.0,1,156.0,Vancouver Intl,Vancouver,Canada
+BI,Royal Brunei Airlines,Brunei,14.0,8.0,8.0,12,3272.0,Brunei Intl,Bandar Seri Begawan,Brunei
+BJ,Nouvel Air Tunisie,Tunisia,15.0,21.0,0.0,5,293.0,Zarzis,Djerba,Tunisia
+BK,Potomac Air,United States,84.0,22.0,0.0,2,3368.0,Binhai,Tianjin,China
+BL,Jetstar Pacific,Vietnam,18.0,0.0,0.0,1,3205.0,Tansonnhat Intl,Ho Chi Minh City,Vietnam
+BM,Air Sicilia,Italy,34.0,0.0,0.0,8,532.0,Dyce,Aberdeen,United Kingdom
+BP,Air Botswana,Botswana,22.0,2.0,0.0,4,881.0,Sir Seretse Khama Intl,Gaberone,Botswana
+BR,EVA Air,Taiwan,40.0,46.0,32.0,21,2276.0,Taoyuan Intl,Taipei,Taiwan
+BT,Air Baltic,Latvia,70.0,32.0,10.0,32,3953.0,Riga Intl,Riga,Latvia
+BU,Baikotovitchestrian Airlines ,American Samoa,29.0,4.0,0.0,2,1020.0,Ndjili Intl,Kinshasa,Congo (Kinshasa)
+BV,Blue Panorama Airlines,Italy,34.0,2.0,13.0,6,1555.0,Fiumicino,Rome,Italy
+BW,Caribbean Airlines,Trinidad and Tobago,30.0,18.0,16.0,14,2902.0,Piarco,Port-of-spain,Trinidad and Tobago
+BX,Air Busan,Republic of Korea,14.0,12.0,2.0,8,2372.0,Gimhae Intl,Busan,South Korea
+C8,Chicago Express,United States,8.0,0.0,0.0,3,891.0,Malabo,Malabo,Equatorial Guinea
+CA,Air China,China,845.0,276.0,135.0,43,3364.0,Capital Intl,Beijing,China
+CC,Air Atlanta Icelandic,Iceland,13.0,0.0,0.0,2,1776.0,Toncontin Intl,Tegucigalpa,Honduras
+CE,Nationwide Airlines,South Africa,10.0,0.0,0.0,1,1264.0,Merignac,Bordeaux,France
+CG,Airlines PNG,Papua New Guinea,79.0,2.0,0.0,2,5.0,Port Moresby Jacksons Intl,Port Moresby,Papua New Guinea
+CI,China Airlines,Taiwan,61.0,63.0,48.0,27,2276.0,Taoyuan Intl,Taipei,Taiwan
+CM,Copa Airlines,Panama,100.0,41.0,43.0,28,1871.0,Tocumen Intl,Panama City,Panama
+CN,Canadian National Airways,Canada,8.0,2.0,0.0,1,3364.0,Capital Intl,Beijing,China
+CU,Cubana de Aviación,Cuba,21.0,26.0,12.0,14,1909.0,Jose Marti Intl,Havana,Cuba
+CX,Cathay Pacific,Hong Kong SAR of China,70.0,56.0,87.0,36,3077.0,Hong Kong Intl,Hong Kong,Hong Kong
+CY,Cyprus Airways,Cyprus,15.0,14.0,2.0,13,1197.0,Larnaca,Larnaca,Cyprus
+CZ,China Southern Airlines,China,1028.0,310.0,92.0,39,3370.0,Baiyun Intl,Guangzhou,China
+D3,Daallo Airlines,Djibouti,4.0,2.0,0.0,3,4119.0,Ambouli International Airport,Djibouti,Djibouti
+D6,Interair South Africa,South Africa,2.0,0.0,0.0,2,813.0,Johannesburg Intl,Johannesburg,South Africa
+D7,AirAsia X,Malaysia,0.0,2.0,34.0,9,3304.0,Kuala Lumpur Intl,Kuala Lumpur,Malaysia
+DC,Golden Air,Sweden,20.0,0.0,0.0,1,738.0,Bromma,Stockholm,Sweden
+DD,Nok Air,Thailand,46.0,0.0,0.0,2,3157.0,Don Muang Intl,Bangkok,Thailand
+DE,Condor Flugdienst,Germany,34.0,160.0,140.0,30,340.0,Frankfurt Main,Frankfurt,Germany
+DG,South East Asian Airlines,Philippines,16.0,6.0,0.0,4,2397.0,Ninoy Aquino Intl,Manila,Philippines
+DH,Dennis Sky,Israel,13.0,0.0,0.0,7,1044.0,Senou,Bamako,Mali
+DL,Delta Air Lines,United States,1063.0,463.0,453.0,77,3682.0,Hartsfield Jackson Atlanta Intl,Atlanta,United States
+DN,Senegal Airlines,Senegal,26.0,4.0,2.0,13,1084.0,Leopold Sedar Senghor Intl,Dakar,Senegal
+DT,TAAG Angola Airlines,Angola,47.0,8.0,16.0,13,951.0,Luanda 4 De Fevereiro,Luanda,Angola
+DV,Scat Air,Kazakhstan,66.0,12.0,0.0,6,4367.0,Aktau,Aktau,Kazakhstan
+DX,DAT Danish Air Transport,Denmark,16.0,0.0,0.0,2,608.0,Billund,Billund,Denmark
+DY,Norwegian Air Shuttle,Norway,234.0,254.0,88.0,36,644.0,Gardermoen,Oslo,Norway
+DZ,Starline.kz,Kazakhstan,4.0,0.0,0.0,1,3387.0,Lishe,Ninbo,China
+E2,Kampuchea Airlines,Cambodia,12.0,0.0,0.0,5,1059.0,Freetown Lungi,Freetown,Sierra Leone
+E5,Air Arabia Egypt,Egypt,4.0,6.0,0.0,4,3410.0,Borg El Arab Intl,Alexandria,Egypt
+E7,Estafeta Carga Aerea,Mexico,4.0,0.0,0.0,2,886.0,Pointe Noire,Pointe-noire,Congo (Brazzaville)
+E8,Alpi Eagles,Italy,2.0,4.0,0.0,2,3157.0,Don Muang Intl,Bangkok,Thailand
+E9,Compagnie Africaine d\\'Aviation,Congo (Kinshasa),0.0,0.0,4.0,3,1229.0,Barajas,Madrid,Spain
+EF,Far Eastern Air Transport,Taiwan,8.0,0.0,0.0,1,3380.0,Chinggis Khaan Intl,Ulan Bator,Mongolia
+EG,Japan Asia Airways,Japan,1.0,4.0,4.0,3,7563.0,Kulob Airport,Kulyab,Tajikistan
+EI,Aer Lingus,Ireland,134.0,70.0,22.0,25,599.0,Dublin,Dublin,Ireland
+EK,Emirates,United Arab Emirates,34.0,69.0,186.0,74,2188.0,Dubai Intl,Dubai,United Arab Emirates
+EL,Air Nippon,Japan,2.0,4.0,0.0,3,1486.0,Makedonia,Thessaloniki,Greece
+EN,Air Dolomiti,Italy,12.0,0.0,0.0,2,346.0,Franz Josef Strauss,Munich,Germany
+EO,Express One International,United States,10.0,2.0,0.0,3,1128.0,Cairo Intl,Cairo,Egypt
+EP,Iran Aseman Airlines,Iran,159.0,8.0,2.0,10,2131.0,Mehrabad Intl,Teheran,Iran
+EQ,TAME,Ecuador,40.0,2.0,2.0,7,2688.0,Mariscal Sucre Intl,Quito,Ecuador
+ET,Ethiopian Airlines,Ethiopia,210.0,39.0,84.0,76,1107.0,Bole Intl,Addis Ababa,Ethiopia
+EU,Empresa Ecuatoriana De Aviacion,Ecuador,66.0,12.0,0.0,1,3395.0,Shuangliu,Chengdu,China
+EW,Eurowings,Germany,1.0,0.0,0.0,2,342.0,Hamburg,Hamburg,Germany
+EY,Etihad Airways,United Arab Emirates,57.0,57.0,114.0,61,2179.0,Abu Dhabi Intl,Abu Dhabi,United Arab Emirates
+F2,Fly Air,Turkey,14.0,0.0,0.0,2,1147.0,Nairobi Wilson,Nairobi,Kenya
+F5,Cosmic Air,Nepal,5.0,0.0,0.0,1,951.0,Luanda 4 De Fevereiro,Luanda,Angola
+F7,Flybaboo,Switzerland,38.0,0.0,0.0,7,1665.0,Geneve Cointrin,Geneva,Switzerland
+F9,Frontier Airlines,United States,126.0,88.0,8.0,5,3751.0,Denver Intl,Denver,United States
+FB,Bulgaria Air,Bulgaria,30.0,26.0,0.0,17,1194.0,Sofia,Sofia,Bulgaria
+FD,Thai AirAsia,Thailand,60.0,32.0,0.0,11,3157.0,Don Muang Intl,Bangkok,Thailand
+FE,Primaris Airlines,United States,8.0,10.0,0.0,2,2276.0,Taoyuan Intl,Taipei,Taiwan
+FG,Ariana Afghan Airlines,Afghanistan,13.0,8.0,1.0,8,2050.0,Kabul Intl,Kabul,Afghanistan
+FI,Icelandair,Iceland,5.0,30.0,18.0,13,16.0,Keflavik International Airport,Keflavik,Iceland
+FJ,Air Pacific,Fiji,40.0,10.0,16.0,11,1960.0,Nadi Intl,Nandi,Fiji
+FL,AirTran Airways,United States,465.0,220.0,41.0,7,3747.0,Chicago Midway Intl,Chicago,United States
+FM,Shanghai Airlines,China,153.0,34.0,4.0,7,3391.0,Hongqiao Intl,Shanghai,China
+FO,Airlines Of Tasmania,Australia,28.0,6.0,0.0,5,3980.0,Sanaa Intl,Sanaa,Yemen
+FR,Ryanair,Ireland,1346.0,1060.0,78.0,30,548.0,Stansted,London,United Kingdom
+FS,Servicios de Transportes A,Argentina,10.0,6.0,1.0,4,1157.0,Tripoli Intl,Tripoli,Libya
+FV,Rossiya-Russian Airlines,Russia,3.0,2.0,0.0,2,2948.0,Pulkovo,St. Petersburg,Russia
+FW,Ibex Airlines,Japan,32.0,0.0,0.0,1,2347.0,Sendai,Sendai,Japan
+FY,Firefly,Malaysia,40.0,0.0,0.0,4,3408.0,Subang-Sultan Abdul Aziz Shah Intl,Kuala Lumpur,Malaysia
+FZ,Fly Dubai,United Arab Emirates,41.0,73.0,34.0,35,2188.0,Dubai Intl,Dubai,United Arab Emirates
+G3,City Connexion Airlines,Burundi,242.0,76.0,14.0,10,2564.0,Guarulhos Gov Andre Franco Montouro,Sao Paulo,Brazil
+G4,Allegiant Air,United States,175.0,197.0,4.0,1,4167.0,Orlando Sanford Intl,Sanford,United States
+G5,Huaxia,China,92.0,0.0,0.0,1,3393.0,Jiangbei,Chongqing,China
+G8,Go Air,India,71.0,6.0,0.0,1,3093.0,Indira Gandhi Intl,Delhi,India
+G9,Air Arabia,United Arab Emirates,36.0,70.0,24.0,23,2191.0,Sharjah Intl,Sharjah,United Arab Emirates
+GA,Garuda Indonesia,Indonesia,152.0,36.0,60.0,17,3275.0,Soekarno Hatta Intl,Jakarta,Indonesia
+GE,TransAsia Airways,Taiwan,68.0,24.0,0.0,8,2276.0,Taoyuan Intl,Taipei,Taiwan
+GF,Gulf Air Bahrain,Bahrain,32.0,28.0,17.0,25,2057.0,Bahrain Intl,Bahrain,Bahrain
+GK,Genesis,Pakistan,26.0,2.0,0.0,1,2279.0,Narita Intl,Tokyo,Japan
+GL,Air Greenland,Denmark,60.0,0.0,4.0,3,8.0,Nuuk,Godthaab,Greenland
+GQ,Big Sky Airlines,United States,36.0,0.0,0.0,1,1452.0,Nikos Kazantzakis,Heraklion,Greece
+GR,Aurigny Air Services,United Kingdom,20.0,0.0,0.0,4,498.0,Guernsey,Guernsey,Guernsey
+GS,Air Foyle,United Kingdom,322.0,12.0,4.0,3,3368.0,Binhai,Tianjin,China
+GV,Aero Flight,Germany,30.0,0.0,0.0,1,3794.0,King Salmon,King Salmon,United States
+GY,Gabon Airlines,Gabon,0.0,2.0,0.0,2,2912.0,Manas,Bishkek,Kyrgyzstan
+GZ,Air Rarotonga,Cook Islands,13.0,0.0,0.0,2,1959.0,Rarotonga Intl,Avarua,Cook Islands
+H2,Sky Airline,Chile,47.0,2.0,0.0,4,2650.0,Arturo Merino Benitez Intl,Santiago,Chile
+H7,Eagle Air,Uganda,2.0,0.0,0.0,1,1187.0,Entebbe Intl,Entebbe,Uganda
+HA,Hawaiian Airlines,United States,21.0,0.0,53.0,9,3728.0,Honolulu Intl,Honolulu,United States
+HD,Hokkaido International Airlines,Japan,26.0,0.0,0.0,1,2287.0,New Chitose,Sapporo,Japan
+HF,Hapagfly,Germany,19.0,6.0,0.0,11,253.0,Abidjan Felix Houphouet Boigny Intl,Abidjan,Cote d'Ivoire
+HG,Niki,Austria,59.0,36.0,16.0,16,1613.0,Schwechat,Vienna,Austria
+HI,Papillon Grand Canyon Helicopters,United States,2.0,0.0,0.0,1,6448.0,Grand Canyon West Airport,Grand Canyon West,United States
+HK,Yangon Airways,Burma,2.0,0.0,4.0,3,345.0,Dusseldorf,Duesseldorf,Germany
+HM,Air Seychelles,Seychelles,2.0,2.0,6.0,5,994.0,Seychelles Intl,Mahe,Seychelles
+HN,Hankook Airline,South Korea,6.0,0.0,0.0,1,2050.0,Kabul Intl,Kabul,Afghanistan
+HO,Juneyao Airlines,China,109.0,28.0,4.0,7,3406.0,Pudong,Shanghai,China
+HQ,Harmony Airways,Canada,33.0,50.0,5.0,12,302.0,Brussels Natl,Brussels,Belgium
+HR,China United Airlines,China,2.0,0.0,0.0,2,345.0,Dusseldorf,Duesseldorf,Germany
+HU,Hainan Airlines,China,399.0,110.0,46.0,24,3364.0,Capital Intl,Beijing,China
+HV,Transavia Holland,Netherlands,99.0,116.0,18.0,20,580.0,Schiphol,Amsterdam,Netherlands
+HW,Hello,Switzerland,10.0,0.0,0.0,1,155.0,Norman Wells,Norman Wells,Canada
+HX,Hong Kong Airlines,Hong Kong SAR of China,36.0,11.0,2.0,7,3077.0,Hong Kong Intl,Hong Kong,Hong Kong
+HY,Uzbekistan Airways,Uzbekistan,31.0,68.0,52.0,23,2983.0,Yuzhny,Tashkent,Uzbekistan
+HZ,Sat Airlines,Kazakhstan,14.0,1.0,0.0,4,2933.0,Khomutovo,Yuzhno-sakhalinsk,Russia
+I4,Interstate Airline,Netherlands,2.0,0.0,0.0,1,3808.0,Ketchikan Intl,Ketchikan,United States
+I6,MexicanaLink,Mexico,20.0,0.0,0.0,1,2206.0,Jinnah Intl,Karachi,Pakistan
+I8,IzAvia,Russia,6.0,2.0,0.0,1,6141.0,Izhevsk Airport,Izhevsk,Russia
+I9,Air Italy,Italy,2.0,0.0,2.0,2,1524.0,Malpensa,Milano,Italy
+IB,Iberia Airlines,Spain,509.0,138.0,184.0,71,1218.0,Barcelona,Barcelona,Spain
+ID,Interlink Airlines,South Africa,10.0,4.0,2.0,1,3275.0,Soekarno Hatta Intl,Jakarta,Indonesia
+IE,Solomon Airlines,Solomon Islands,54.0,4.0,0.0,4,4074.0,Honiara International,Honiara,Solomon Islands
+IG,Meridiana,Italy,139.0,25.0,9.0,19,1520.0,Olbia Costa Smeralda,Olbia,Italy
+IL,Illinois Airways,United States,19.0,0.0,0.0,1,3910.0,Iskandar,Pangkalan Bun,Indonesia
+IOS,Isles of Scilly Skybus,United Kingdom,46.0,26.0,0.0,7,2937.0,Irkutsk,Irkutsk,Russia
+IR,Iran Air,Iran,145.0,15.0,26.0,23,4330.0,Imam Khomeini,Tehran,Iran
+IX,Air India Express,India,22.0,46.0,8.0,9,3137.0,Calicut,Calicut,India
+IY,Yemenia,Yemen,54.0,33.0,9.0,20,3980.0,Sanaa Intl,Sanaa,Yemen
+IZ,Arkia Israel Airlines,Israel,14.0,0.0,6.0,7,1590.0,Ben Gurion,Tel-aviv,Israel
+J2,Azerbaijan Airlines,Azerbaijan,14.0,28.0,12.0,18,2922.0,Heydar Aliyev,Baku,Azerbaijan
+J3,Northwestern Air,Canada,18.0,0.0,0.0,1,136.0,Fort Smith,Fort Smith,Canada
+J4,ALAK,Russia,8.0,0.0,0.0,1,1175.0,Khartoum,Khartoum,Sudan
+J5,Alaska Seaplane Service,United States,15.0,0.0,0.0,1,3492.0,Juneau Intl,Juneau,United States
+J8,Berjaya Air,Malaysia,4.0,0.0,0.0,2,4013.0,Redang,Redang,Malaysia
+J9,Jazeera Airways,Kuwait,18.0,12.0,0.0,10,2176.0,Kuwait Intl,Kuwait,Kuwait
+JA,Air Bosna,Bosnia and Herzegovina,10.0,0.0,0.0,5,1646.0,Sarajevo,Sarajevo,Bosnia and Herzegovina
+JB,Helijet,Canada,2.0,0.0,0.0,1,4106.0,Victoria Inner Harbour Airport,Victoria,Canada
+JD,Japan Air System,Japan,158.0,52.0,0.0,1,4030.0,Phoenix International,Sanya,China
+JE,Mango,South Africa,16.0,2.0,0.0,2,797.0,Cape Town Intl,Cape Town,South Africa
+JH,Fuji Dream Airlines,Japan,24.0,0.0,0.0,1,5997.0,Nagoya Airport,Nagoya,Japan
+JJ,TAM Brazilian Airlines,Brazil,193.0,80.0,60.0,18,2564.0,Guarulhos Gov Andre Franco Montouro,Sao Paulo,Brazil
+JL,Japan Airlines,Japan,217.0,61.0,110.0,27,2279.0,Narita Intl,Tokyo,Japan
+JN,Excel Airways,United Kingdom,8.0,0.0,0.0,2,1190.0,Tirana Rinas,Tirana,Albania
+JP,Adria Airways,Slovenia,38.0,2.0,0.0,17,1569.0,Ljubljana,Ljubljana,Slovenia
+JQ,Jetstar Airways,Australia,60.0,57.0,46.0,8,3339.0,Melbourne Intl,Melbourne,Australia
+JS,Air Koryo,Democratic People's Republic of Korea,6.0,0.0,2.0,4,3377.0,Pyongyang Intl,Pyongyang,Korea
+JT,Lion Mentari Airlines,Indonesia,222.0,20.0,3.0,5,3275.0,Soekarno Hatta Intl,Jakarta,Indonesia
+JU,Jat Airways,Serbia,63.0,12.0,2.0,28,1739.0,Beograd,Belgrade,Serbia
+JV,Bearskin Lake Air Service,Canada,39.0,0.0,0.0,1,121.0,Thunder Bay,Thunder Bay,Canada
+JW,Arrow Air,United States,4.0,4.0,0.0,3,2279.0,Narita Intl,Tokyo,Japan
+JY,Aereonautica militare,Italy,28.0,0.0,0.0,6,1754.0,Providenciales,Providenciales,Turks and Caicos Islands
+K2,Eurolot,Poland,36.0,0.0,0.0,8,668.0,Lech Walesa,Gdansk,Poland
+K5,SeaPort Airlines,United States,39.0,0.0,0.0,1,3492.0,Juneau Intl,Juneau,United States
+K6,Cambodia Angkor Air (K6),Cambodia,18.0,4.0,0.0,4,3035.0,Siem Reap,Siem-reap,Cambodia
+K8,Zambia Skyways,Zambia,8.0,0.0,0.0,1,3931.0,Chiang Mai Intl,Chiang Mai,Thailand
+KA,Dragonair,DRAGON,58.0,32.0,6.0,17,3077.0,Hong Kong Intl,Hong Kong,Hong Kong
+KB,Druk Air,Bhutan,12.0,8.0,0.0,6,3155.0,Paro,Thimphu,Bhutan
+KC,Air Astana,Kazakhstan,50.0,32.0,36.0,21,2908.0,Almaty,Alma-ata,Kazakhstan
+KE,Korean Air,Republic of Korea,136.0,35.0,121.0,46,3930.0,Incheon Intl,Seoul,South Korea
+KK,Atlasjet,Turkey,24.0,8.0,0.0,7,1701.0,Ataturk,Istanbul,Turkey
+KL,KLM Royal Dutch Airlines,Netherlands,510.0,110.0,210.0,97,3682.0,Hartsfield Jackson Atlanta Intl,Atlanta,United States
+KM,Air Malta,Malta,36.0,48.0,0.0,18,1606.0,Luqa,Malta,Malta
+KN,China United,China,72.0,18.0,0.0,1,6341.0,Beijing Nanyuan Airport,Beijing,China
+KQ,Kenya Airways,Kenya,63.0,46.0,33.0,44,4059.0,Jomo Kenyatta International,Nairobi,Kenya
+KR,Comores Airlines,Comoros,4.0,16.0,2.0,3,2912.0,Manas,Bishkek,Kyrgyzstan
+KS,Peninsula Airways,United States,28.0,0.0,0.0,1,3774.0,Ted Stevens Anchorage Intl,Anchorage,United States
+KU,Kuwait Airways,Kuwait,32.0,23.0,24.0,28,2176.0,Kuwait Intl,Kuwait,Kuwait
+KX,Cayman Airways,Cayman Islands,19.0,4.0,0.0,5,1926.0,Owen Roberts Intl,Georgetown,Cayman Islands
+KY,KSY,Greece,38.0,14.0,0.0,1,3382.0,Wujiaba,Kunming,China
+L6,Mauritania Airlines International,Mauritania,16.0,8.0,0.0,10,245.0,Cadjehoun,Cotonou,Benin
+LA,LAN Airlines,Chile,176.0,44.0,63.0,21,2650.0,Arturo Merino Benitez Intl,Santiago,Chile
+LC,Varig Log,Brazil,6.0,4.0,4.0,4,883.0,Maya Maya,Brazzaville,Congo (Brazzaville)
+LF,FlyNordic,Sweden,4.0,0.0,0.0,2,3120.0,Wattay Intl,Vientiane,Laos
+LG,Luxair,Luxembourg,66.0,38.0,6.0,20,629.0,Luxembourg,Luxemburg,Luxembourg
+LH,Lufthansa,Germany,515.0,111.0,297.0,96,340.0,Frankfurt Main,Frankfurt,Germany
+LI,Leeward Islands Air Transport,Antigua and Barbuda,62.0,0.0,0.0,17,2874.0,V C Bird Intl,Antigua,Antigua and Barbuda
+LJ,Jin Air,South Korea,10.0,6.0,10.0,9,3930.0,Incheon Intl,Seoul,South Korea
+LM,Linhas A,Mozambique,20.0,0.0,0.0,1,529.0,Kirkwall,Kirkwall,United Kingdom
+LN,Libyan Arab Airlines,Libya,54.0,20.0,0.0,10,1157.0,Tripoli Intl,Tripoli,Libya
+LO,LOT Polish Airlines,Poland,96.0,16.0,8.0,34,679.0,Okecie,Warsaw,Poland
+LR,LACSA,Costa Rica,24.0,0.0,0.0,3,1885.0,Juan Santamaria Intl,San Jose,Costa Rica
+LS,Jet2.com,United Kingdom,48.0,188.0,66.0,16,478.0,Manchester,Manchester,United Kingdom
+LT,LTU International,Germany,10.0,2.0,0.0,6,3959.0,Vilnius Intl,Vilnius,Lithuania
+LV,Albanian Airlines,Albania,0.0,0.0,4.0,2,3156.0,Male Intl,Male,Maldives
+LW,Pacific Wings,United States,10.0,0.0,0.0,1,3714.0,Washington Dulles Intl,Washington,United States
+LX,Swiss International Air Lines,Switzerland,166.0,50.0,74.0,50,1678.0,Zurich,Zurich,Switzerland
+LY,El Al Israel Airlines,Israel,5.0,34.0,34.0,26,1590.0,Ben Gurion,Tel-aviv,Israel
+M3,ABSA - Aerolinhas Brasileiras,Brazil,6.0,0.0,0.0,2,644.0,Gardermoen,Oslo,Norway
+M4,Marysya Airlines,Russia,19.0,0.0,0.0,2,1128.0,Cairo Intl,Cairo,Egypt
+M5,Kenmore Air,United States,14.0,0.0,0.0,2,6457.0,Kenmore Air Harbor Seaplane Base,Seattle,United States
+M6,Amerijet International,United States,7.0,0.0,0.0,1,2526.0,Val De Cans Intl,Belem,Brazil
+M9,Motor Sich,Ukraine,6.0,0.0,0.0,2,2944.0,Zhuliany Intl,Kiev,Ukraine
+MD,Air Madagascar,Madagascar,63.0,6.0,6.0,12,918.0,Ivato,Antananarivo,Madagascar
+ME,Middle East Airlines,Lebanon,33.0,20.0,12.0,24,2177.0,Rafic Hariri Intl,Beirut,Lebanon
+MF,Xiamen Airlines,China,306.0,70.0,8.0,9,3383.0,Gaoqi,Xiamen,China
+MH,Malaysia Airlines,Malaysia,192.0,47.0,97.0,41,3304.0,Kuala Lumpur Intl,Kuala Lumpur,Malaysia
+MI,SilkAir,Singapore,39.0,32.0,22.0,13,3316.0,Changi Intl,Singapore,Singapore
+MJ,L,Argentina,17.0,14.0,21.0,14,3024.0,Bandaranaike Intl Colombo,Colombo,Sri Lanka
+MK,Air Mauritius,Mauritius,13.0,2.0,28.0,15,893.0,Sir Seewoosagur Ramgoolam Intl,Plaisance,Mauritius
+MM,Peach Aviation,Japan,24.0,8.0,0.0,4,3992.0,Kansai,Osaka,Japan
+MN,Comair,South Africa,14.0,0.0,0.0,1,813.0,Johannesburg Intl,Johannesburg,South Africa
+MO,Abu Dhabi Amiri Flight,United Arab Emirates,50.0,1.0,1.0,1,132.0,Rankin Inlet,Rankin Inlet,Canada
+MR,Homer Air,Germany,15.0,2.0,2.0,4,3380.0,Chinggis Khaan Intl,Ulan Bator,Mongolia
+MS,Egyptair,Egypt,75.0,76.0,54.0,55,1128.0,Cairo Intl,Cairo,Egypt
+MU,China Eastern Airlines,China,936.0,231.0,76.0,34,3406.0,Pudong,Shanghai,China
+MW,Maya Island Air,Belize,19.0,0.0,0.0,1,3456.0,Kahului,Kahului,United States
+MY,Midwest Airlines (Egypt),Egypt,18.0,0.0,0.0,1,1957.0,Philip S W Goldson Intl,Belize City,Belize
+N3,Omskavia Airline,Russia,4.0,0.0,0.0,3,5811.0,Dr Joaquin Balaguer International Airport,La Isabela,Dominican Republic
+NF,Air Vanuatu,Vanuatu,84.0,8.0,0.0,5,1997.0,Port Vila Bauerfield,Port-vila,Vanuatu
+NH,All Nippon Airways,Japan,322.0,100.0,123.0,27,2359.0,Tokyo Intl,Tokyo,Japan
+NHG,NHT Lineas Aereas,Brazil,34.0,0.0,0.0,1,2599.0,Salgado Filho,Porto Alegre,Brazil
+NK,Spirit Airlines,United States,108.0,122.0,12.0,18,3533.0,Fort Lauderdale Hollywood Intl,Fort Lauderdale,United States
+NL,Shaheen Air International,Pakistan,20.0,36.0,8.0,6,2207.0,Allama Iqbal Intl,Lahore,Pakistan
+NP,Nile Air,Egypt,14.0,2.0,0.0,3,1128.0,Cairo Intl,Cairo,Egypt
+NS,Caucasus Airlines,Georgia,52.0,8.0,0.0,1,6347.0,Shijiazhuang Daguocun International Airport,Shijiazhuang,China
+NT,Binter Canarias,Spain,40.0,6.0,0.0,7,1054.0,Gran Canaria,Gran Canaria,Spain
+NU,Japan Transocean Air,Japan,16.0,6.0,0.0,1,2384.0,Naha,Okinawa,Japan
+NX,Air Macau,Macao,34.0,20.0,2.0,8,3121.0,Macau Intl,Macau,Macau
+NY,Air Iceland,Iceland,10.0,0.0,0.0,2,18.0,Reykjavik,Reykjavik,Iceland
+NZ,Air New Zealand,New Zealand,131.0,48.0,52.0,21,2006.0,Auckland Intl,Auckland,New Zealand
+O6,Oceanair,Brazil,80.0,24.0,0.0,1,2531.0,Presidente Juscelino Kubitschek,Brasilia,Brazil
+OA,Olympic Airlines,Greece,94.0,16.0,0.0,10,3941.0,Eleftherios Venizelos Intl,Athens,Greece
+OB,Astrakhan Airlines,Russia,21.0,5.0,2.0,4,2771.0,Viru Viru Intl,Santa Cruz,Bolivia
+OC,Catovair,Mauritius,8.0,0.0,0.0,1,2313.0,Nagasaki,Nagasaki,Japan
+OD,Malindo Air,Malaysia,28.0,12.0,6.0,5,3304.0,Kuala Lumpur Intl,Kuala Lumpur,Malaysia
+OJ,Overland Airways,Nigeria,0.0,6.0,2.0,4,1779.0,Norman Manley Intl,Kingston,Jamaica
+OK,Czech Airlines,Czech Republic,63.0,38.0,10.0,29,1587.0,Ruzyne,Prague,Czech Republic
+OM,MIAT Mongolian Airlines,Mongolia,2.0,6.0,4.0,7,3380.0,Chinggis Khaan Intl,Ulan Bator,Mongolia
+ON,Nauru Air Corporation,Nauru,6.0,0.0,2.0,4,4076.0,Nauru Intl,Nauru,Nauru
+OR,Arkefly,Netherlands,9.0,0.0,15.0,8,580.0,Schiphol,Amsterdam,Netherlands
+OS,Austrian Airlines,Austria,172.0,40.0,28.0,53,1613.0,Schwechat,Vienna,Austria
+OU,Croatia Airlines,Croatia,106.0,6.0,0.0,17,1208.0,Zagreb,Zagreb,Croatia
+OV,Estonian Air,Estonia,20.0,6.0,0.0,11,415.0,Tallinn,Tallinn-ulemiste International,Estonia
+OX,Orient Thai Airlines,Thailand,2.0,4.0,0.0,3,3157.0,Don Muang Intl,Bangkok,Thailand
+OY,Omni Air International,United States,4.0,0.0,0.0,1,2442.0,Aeroparque Jorge Newbery,Buenos Aires,Argentina
+OZ,Asiana Airlines,Republic of Korea,142.0,49.0,70.0,35,3930.0,Incheon Intl,Seoul,South Korea
+P0,Proflight Commuter Services,Zambia,14.0,0.0,0.0,2,907.0,Lusaka Intl,Lusaka,Zambia
+P4,Patriot Airways,United States,21.0,0.0,0.0,3,1771.0,Goloson Intl,La Ceiba,Honduras
+P9,Peruvian Airlines,Peru,16.0,0.0,0.0,1,2789.0,Jorge Chavez Intl,Lima,Peru
+PC,Pegasus Airlines,Turkey,144.0,92.0,6.0,32,4317.0,Sabiha Gokcen,Istanbul,Turkey
+PD,Porter Airlines,Canada,34.0,0.0,0.0,2,144.0,City Centre,Toronto,Canada
+PE,Air Europe,Italy,2.0,0.0,0.0,2,1613.0,Schwechat,Vienna,Austria
+PG,Bangkok Airways,Thailand,54.0,9.0,12.0,14,3885.0,Suvarnabhumi Intl,Bangkok,Thailand
+PI,Piedmont Airlines (1948-1989),United States,6.0,2.0,0.0,1,2923.0,Yakutsk,Yakutsk,Russia
+PJ,Air Saint Pierre,France,6.0,0.0,0.0,2,1441.0,St Pierre,St.-pierre,Saint Pierre and Miquelon
+PK,Pakistan International Airlines,Pakistan,113.0,69.0,60.0,23,2223.0,Chaklala,Islamabad,Pakistan
+PL,Aeroper,Peru,14.0,0.0,0.0,1,1953.0,Lynden Pindling Intl,Nassau,Bahamas
+PM,Tropic Air,Belize,14.0,0.0,0.0,3,1054.0,Gran Canaria,Gran Canaria,Spain
+PN,West Air China,China,76.0,14.0,0.0,1,3393.0,Jiangbei,Chongqing,China
+PQ,LSM Airlines,Russia,6.0,0.0,0.0,1,2397.0,Ninoy Aquino Intl,Manila,Philippines
+PR,Philippine Airlines,Philippines,70.0,36.0,38.0,20,2397.0,Ninoy Aquino Intl,Manila,Philippines
+PS,Ukraine International Airlines,Ukraine,62.0,51.0,14.0,29,2939.0,Boryspil Intl,Kiev,Ukraine
+PV,PAN Air,Spain,6.0,0.0,0.0,4,6460.0,Saint Barthelemy,Gustavia,France
+PW,Precision Air,Tanzania,29.0,0.0,0.0,4,1177.0,Mwalimu Julius K Nyerere Intl,Dar Es Salaam,Tanzania
+PX,Air Niugini,Papua New Guinea,74.0,8.0,14.0,9,5.0,Port Moresby Jacksons Intl,Port Moresby,Papua New Guinea
+PY,Surinam Airways,Suriname,12.0,4.0,4.0,9,2773.0,Johan A Pengel Intl,Zandery,Suriname
+PZ,TAM Mercosur,Paraguay,10.0,8.0,0.0,6,2699.0,Silvio Pettirossi Intl,Asuncion,Paraguay
+Q2,Maldivian,Maldives,22.0,2.0,0.0,4,3156.0,Male Intl,Male,Maldives
+Q3,SOCHI AIR CHATER,Russia,2.0,0.0,0.0,2,2899.0,Princess Juliana Intl,Philipsburg,Netherlands Antilles
+Q5,40-Mile Air,United States,2.0,0.0,0.0,1,3832.0,Fairbanks Intl,Fairbanks,United States
+Q6,Aero Condor Peru,Peru,58.0,0.0,0.0,1,3322.0,Cairns Intl,Cairns,Australia
+Q8,Pacific East Asia Cargo Airlines,Philippines,10.0,4.0,0.0,4,886.0,Pointe Noire,Pointe-noire,Congo (Brazzaville)
+Q9,Arik Niger,Niger,20.0,0.0,0.0,1,202.0,Sept Iles,Sept-iles,Canada
+QB,Georgian National Airlines,Georgia,10.0,0.0,0.0,2,2109.0,Kish Island,Kish Island,Iran
+QC,Camair-co,Cameroon,23.0,0.0,2.0,9,897.0,Douala,Douala,Cameroon
+QF,Qantas,Australia,186.0,81.0,163.0,37,3361.0,Sydney Intl,Sydney,Australia
+QG,Citilink Indonesia,Indonesia,54.0,4.0,0.0,2,3275.0,Soekarno Hatta Intl,Jakarta,Indonesia
+QH,Air Florida,United States,10.0,18.0,6.0,5,2912.0,Manas,Bishkek,Kyrgyzstan
+QL,Aero Lanka,Sri Lanka,14.0,0.0,0.0,2,2851.0,Simon Bolivar Intl,Caracas,Venezuela
+QN,Air Armenia,Armenia,2.0,12.0,2.0,4,3964.0,Zvartnots,Yerevan,Armenia
+QR,Qatar Airways,Qatar,81.0,51.0,145.0,71,2241.0,Doha Intl,Doha,Qatar
+QS,Travel Service,Czech Republic,50.0,11.0,6.0,20,1587.0,Ruzyne,Prague,Czech Republic
+QU,East African,Uganda,4.0,0.0,0.0,2,2988.0,Vnukovo,Moscow,Russia
+QV,Lao Airlines,Lao Peoples Democratic Republic,42.0,2.0,2.0,7,3120.0,Wattay Intl,Vientiane,Laos
+QZ,Indonesia AirAsia,Indonesia,42.0,20.0,0.0,5,3940.0,Bali Ngurah Rai,Denpasar,Indonesia
+R2,Orenburg Airlines,Russia,4.0,5.0,0.0,2,2991.0,Orenburg,Orenburg,Russia
+R3,Aircompany Yakutia,Russia,29.0,32.0,14.0,9,2923.0,Yakutsk,Yakutsk,Russia
+R7,Aserca Airlines,Venezuela,26.0,0.0,0.0,2,2851.0,Simon Bolivar Intl,Caracas,Venezuela
+RA,Nepal Airlines,Nepal,0.0,4.0,4.0,5,3125.0,Tribhuvan Intl,Kathmandu,Nepal
+RC,Atlantic Airways,Faroe Islands,9.0,0.0,0.0,3,625.0,Vagar,Vagar,Faroe Islands
+RG,VRG Linhas Aereas,Brazil,10.0,0.0,0.0,1,2180.0,Bateen,Abu Dhabi,United Arab Emirates
+RI,Mandala Airlines,Indonesia,10.0,4.0,2.0,4,3275.0,Soekarno Hatta Intl,Jakarta,Indonesia
+RJ,Royal Jordanian,Jordan,50.0,40.0,30.0,38,2170.0,Queen Alia Intl,Amman,Jordan
+RL,Royal Falcon,Jordan,7.0,0.0,0.0,4,2170.0,Queen Alia Intl,Amman,Jordan
+RO,Tarom,Romania,62.0,28.0,2.0,25,1657.0,Henri Coanda,Bucharest,Romania
+RQ,Kam Air,Afghanistan,3.0,2.0,0.0,4,2050.0,Kabul Intl,Kabul,Afghanistan
+RX,Rainbow Air Polynesia,United States,14.0,6.0,0.0,5,3076.0,Zia Intl,Dhaka,Bangladesh
+RZ,Euro Exec Express,Sweden,17.0,0.0,0.0,1,1885.0,Juan Santamaria Intl,San Jose,Costa Rica
+S2,Air Sahara,India,172.0,8.0,0.0,1,2997.0,Chhatrapati Shivaji Intl,Mumbai,India
+S3,Santa Barbara Airlines,Venezuela,2.0,2.0,2.0,4,2851.0,Simon Bolivar Intl,Caracas,Venezuela
+S4,SATA International,Portugal,37.0,29.0,15.0,11,1638.0,Lisboa,Lisbon,Portugal
+S5,Shuttle America,United States,14.0,0.0,0.0,1,2584.0,Maraba,Maraba,Brazil
+S6,Salmon Air,United States,6.0,0.0,0.0,3,1895.0,Cap Haitien Intl,Cap Haitien,Haiti
+S7,S7 Airlines,Russia,82.0,128.0,71.0,31,4029.0,Domododevo,Moscow,Russia
+S9,Starbow Airlines,Ghana,8.0,0.0,0.0,2,248.0,Kotoka Intl,Accra,Ghana
+SA,South African Airways,South Africa,114.0,35.0,53.0,42,813.0,Johannesburg Intl,Johannesburg,South Africa
+SB,Air Caledonie International,France,10.0,6.0,6.0,8,2005.0,La Tontouta,Noumea,New Caledonia
+SC,Shandong Airlines,China,276.0,34.0,4.0,5,3390.0,Liuting,Qingdao,China
+SD,Sudan Airways,Sudan,20.0,14.0,0.0,10,1175.0,Khartoum,Khartoum,Sudan
+SE,XL Airways France,France,10.0,2.0,20.0,11,1382.0,Charles De Gaulle,Paris,France
+SG,Spicejet,India,178.0,16.0,0.0,7,3093.0,Indira Gandhi Intl,Delhi,India
+SH,Sharp Airlines,Australia,10.0,0.0,0.0,1,3337.0,Launceston,Launceston,Australia
+SI,Skynet Airlines,Ireland,20.0,0.0,0.0,6,499.0,Jersey,Jersey,Jersey
+SJ,Sriwijaya Air,Indonesia,94.0,12.0,0.0,2,3275.0,Soekarno Hatta Intl,Jakarta,Indonesia
+SK,Scandinavian Airlines System,Sweden,344.0,114.0,46.0,42,609.0,Kastrup,Copenhagen,Denmark
+SN,Brussels Airlines,Belgium,111.0,32.0,47.0,50,302.0,Brussels Natl,Brussels,Belgium
+SP,SATA Air Acores,Portugal,28.0,0.0,0.0,1,1629.0,Lajes,Lajes (terceira Island),Portugal
+SQ,Singapore Airlines,Singapore,59.0,47.0,106.0,38,3316.0,Changi Intl,Singapore,Singapore
+SS,Corsairfly,France,11.0,0.0,19.0,13,1386.0,Orly,Paris,France
+ST,Germania,Germany,24.0,46.0,26.0,15,353.0,Neuenland,Bremen,Germany
+SU,Aeroflot Russian Airlines,Russia,145.0,216.0,112.0,57,2985.0,Sheremetyevo,Moscow,Russia
+SV,Saudi Arabian Airlines,Saudi Arabia,180.0,68.0,131.0,37,2072.0,King Abdulaziz Intl,Jeddah,Saudi Arabia
+SW,Air Namibia,Namibia,27.0,4.0,4.0,8,4105.0,Windhoek Hosea Kutako International Airport ,Windhoek,Namibia
+SX,SkyWork Airlines ,Switzerland,24.0,0.0,0.0,7,1676.0,Bern Belp,Bern,Switzerland
+SY,Sun Country Airlines,United States,10.0,26.0,2.0,3,3858.0,Minneapolis St Paul Intl,Minneapolis,United States
+SZ,Salzburg arrows,Austria,2.0,36.0,10.0,7,2979.0,Dushanbe,Dushanbe,Tajikistan
+T3,Eastern Airways,United Kingdom,32.0,0.0,0.0,3,532.0,Dyce,Aberdeen,United Kingdom
+T5,Turkmenistan Airlines,Turkmenistan,2.0,8.0,6.0,7,2976.0,Ashgabat,Ashkhabad,Turkmenistan
+T7,Twin Jet,France,24.0,0.0,0.0,3,1353.0,Provence,Marseille,France
+TA,Grupo TACA,Costa Rica,4.0,2.0,8.0,6,2789.0,Jorge Chavez Intl,Lima,Peru
+TCX,Thomas Cook Airlines,United Kingdom,5.0,58.0,62.0,12,478.0,Manchester,Manchester,United Kingdom
+TD,Atlantis European Airways,Armenia,0.0,4.0,0.0,3,3964.0,Zvartnots,Yerevan,Armenia
+TE,FlyLal,Lithuania,11.0,0.0,0.0,1,2612.0,Santos Dumont,Rio De Janeiro,Brazil
+TF,Malmö Aviation,Sweden,36.0,0.0,0.0,5,738.0,Bromma,Stockholm,Sweden
+TG,Thai Airways International,Thailand,64.0,46.0,83.0,46,3885.0,Suvarnabhumi Intl,Bangkok,Thailand
+TJ,T.J. Air,United States,14.0,0.0,0.0,7,2890.0,Luis Munoz Marin Intl,San Juan,Puerto Rico
+TK,Turkish Airlines,Turkey,313.0,212.0,127.0,110,1701.0,Ataturk,Istanbul,Turkey
+TL,Airnorth,Australia,27.0,6.0,0.0,2,3999.0,Darwin Intl,Darwin,Australia
+TM,Air Mozambique,Mozambique,48.0,6.0,0.0,5,979.0,Maputo,Maputo,Mozambique
+TN,Air Tahiti Nui,France,3.0,6.0,8.0,8,2006.0,Auckland Intl,Auckland,New Zealand
+TO,Transavia France,France,97.0,285.0,106.0,21,502.0,Gatwick,London,United Kingdom
+TOM,Thomsonfly,United Kingdom,9.0,73.0,57.0,15,478.0,Manchester,Manchester,United Kingdom
+TP,TAP Portugal,Portugal,71.0,83.0,75.0,37,1638.0,Lisboa,Lisbon,Portugal
+TR,Tiger Airways,Singapore,26.0,34.0,16.0,16,3316.0,Changi Intl,Singapore,Singapore
+TS,Air Transat,Canada,13.0,40.0,85.0,16,146.0,Pierre Elliott Trudeau Intl,Montreal,Canada
+TT,Tiger Airways Australia,Australia,22.0,18.0,2.0,1,3339.0,Melbourne Intl,Melbourne,Australia
+TU,Tunisair,Tunisia,75.0,60.0,16.0,27,287.0,Carthage,Tunis,Tunisia
+TV,Virgin Express,Belgium,30.0,12.0,0.0,1,4097.0,Lhasa-Gonggar,Lhasa,China
+TW,Tway Airlines,South Korea,14.0,0.0,2.0,5,3930.0,Incheon Intl,Seoul,South Korea
+TX,Air Caraïbes,France,14.0,0.0,14.0,11,1386.0,Orly,Paris,France
+TY,Iberworld,Spain,23.0,0.0,0.0,1,2001.0,Magenta,Noumea,New Caledonia
+TZ,Scoot,Singapore,6.0,4.0,14.0,8,3316.0,Changi Intl,Singapore,Singapore
+U2,easyJet,United Kingdom,710.0,364.0,56.0,35,502.0,Gatwick,London,United Kingdom
+U6,Ural Airlines,Russia,33.0,145.0,54.0,18,4029.0,Domododevo,Moscow,Russia
+U7,Northern Dene Airways,Canada,16.0,0.0,0.0,7,1187.0,Entebbe Intl,Entebbe,Uganda
+UA,United Airlines,United States,1153.0,488.0,539.0,97,3550.0,George Bush Intercontinental,Houston,United States
+UD,Hex'Air,France,2.0,0.0,0.0,1,1313.0,Loudes,Le Puy,France
+UE,Nasair,Eritrea,11.0,5.0,0.0,8,3967.0,Asmara Intl,Asmara,Eritrea
+UG,Tuninter,Tunisia,24.0,0.0,0.0,4,287.0,Carthage,Tunis,Tunisia
+UJ,AlMasria Universal Airlines,Egypt,28.0,4.0,0.0,6,2939.0,Boryspil Intl,Kiev,Ukraine
+UL,SriLankan Airlines,Sri Lanka,26.0,22.0,43.0,26,3024.0,Bandaranaike Intl Colombo,Colombo,Sri Lanka
+UM,Air Zimbabwe,Zimbabwe,12.0,0.0,0.0,2,813.0,Johannesburg Intl,Johannesburg,South Africa
+UN,Transaero Airlines,Russia,68.0,104.0,128.0,38,4029.0,Domododevo,Moscow,Russia
+UO,Hong Kong Express Airways,Hong Kong SAR of China,4.0,16.0,0.0,7,3077.0,Hong Kong Intl,Hong Kong,Hong Kong
+UP,Bahamasair,Bahamas,52.0,6.0,0.0,5,1953.0,Lynden Pindling Intl,Nassau,Bahamas
+UR,UTair-Express,Russia,74.0,0.0,0.0,2,4111.0,Roschino,Tyumen,Russia
+US,US Airways,United States,1105.0,479.0,376.0,65,3670.0,Dallas Fort Worth Intl,Dallas-Fort Worth,United States
+UU,Air Austral,France,14.0,6.0,4.0,9,916.0,St Denis Gillot,St.-denis,Reunion
+UX,Air Europa,Spain,84.0,34.0,40.0,25,1229.0,Barajas,Madrid,Spain
+UY,Cameroon Airlines,Cameroon,4.0,0.0,0.0,2,3973.0,Tbilisi,Tbilisi,Georgia
+V0,Conviasa,Venezuela,70.0,4.0,4.0,11,2851.0,Simon Bolivar Intl,Caracas,Venezuela
+V3,Carpatair,Romania,6.0,0.0,0.0,3,1555.0,Fiumicino,Rome,Italy
+V4,Reem Air,Kyrgyzstan,2.0,0.0,0.0,1,2890.0,Luis Munoz Marin Intl,San Juan,Puerto Rico
+V7,Air Senegal International,Senegal,128.0,8.0,0.0,6,1418.0,Nantes Atlantique,Nantes,France
+V9,Star1 Airlines,Lithuania,8.0,0.0,0.0,2,520.0,Isle Of Man,Isle Of Man,Isle of Man
+VA,Virgin Australia,Australia,133.0,88.0,67.0,24,3320.0,Brisbane Intl,Brisbane,Australia
+VB,Birmingham European,United Kingdom,98.0,4.0,0.0,2,1825.0,General Mariano Escobedo Intl,Monterrey,Mexico
+VF,Valuair,Singapore,4.0,2.0,0.0,2,3316.0,Changi Intl,Singapore,Singapore
+VH,Virgin Pacific,Fiji,12.0,0.0,0.0,1,2851.0,Simon Bolivar Intl,Caracas,Venezuela
+VJ,Royal Air Cambodge,Cambodia,34.0,0.0,0.0,2,3205.0,Tansonnhat Intl,Ho Chi Minh City,Vietnam
+VN,Vietnam Airlines,Vietnam,128.0,42.0,41.0,21,3205.0,Tansonnhat Intl,Ho Chi Minh City,Vietnam
+VQ,Viking Hellas,Greece,8.0,0.0,0.0,1,3076.0,Zia Intl,Dhaka,Bangladesh
+VR,TACV,Portugal,20.0,10.0,8.0,7,5674.0,Praia International Airport,"Praia, Santiago Island",Cape Verde
+VS,Virgin Atlantic Airways,United Kingdom,85.0,24.0,86.0,21,3682.0,Hartsfield Jackson Atlanta Intl,Atlanta,United States
+VT,Air Tahiti,French Polynesia,92.0,1.0,0.0,2,4075.0,Faa\\'a International,Papeete,French Polynesia
+VW,Aeromar,Mexico,42.0,0.0,0.0,2,1824.0,Licenciado Benito Juarez Intl,Mexico City,Mexico
+VX,Virgin America,United States,14.0,16.0,36.0,2,3469.0,San Francisco Intl,San Francisco,United States
+VY,Formosa Airlines,Taiwan,290.0,80.0,14.0,28,1218.0,Barcelona,Barcelona,Spain
+W2,Maastricht Airlines,Netherlands,34.0,16.0,12.0,16,737.0,Arlanda,Stockholm,Sweden
+W3,Arik Air,Nigeria,56.0,6.0,6.0,12,273.0,Murtala Muhammed,Lagos,Nigeria
+W4,AeroWorld ,Russia,10.0,0.0,0.0,1,2789.0,Jorge Chavez Intl,Lima,Peru
+W5,Mahan Air,Iran,6.0,8.0,10.0,10,4330.0,Imam Khomeini,Tehran,Iran
+W6,Wizz Air,Hungary,293.0,158.0,6.0,33,1657.0,Henri Coanda,Bucharest,Romania
+W9,Air Bagan,Myanmar,29.0,0.0,0.0,2,3239.0,Yangon Intl,Yangon,Burma
+WB,Rwandair Express,Rwanda,24.0,6.0,10.0,15,1165.0,Kigali Intl,Kigali,Rwanda
+WF,Widerøe,Norway,210.0,0.0,0.0,4,636.0,Flesland,Bergen,Norway
+WJ,WebJet Linhas A,Brazil,26.0,0.0,0.0,1,94.0,Natashquan,Natashquan,Canada
+WM,Windward Islands Airways,Netherlands Antilles,25.0,0.0,0.0,8,2899.0,Princess Juliana Intl,Philipsburg,Netherlands Antilles
+WN,Southwest Airlines,United States,703.0,394.0,48.0,7,3747.0,Chicago Midway Intl,Chicago,United States
+WP,Island Air (WP),United States,6.0,0.0,0.0,1,3728.0,Honolulu Intl,Honolulu,United States
+WS,WestJet,Canada,131.0,140.0,70.0,18,193.0,Lester B Pearson Intl,Toronto,Canada
+WU,Wizz Air Ukraine,Ukraine,24.0,18.0,0.0,9,2944.0,Zhuliany Intl,Kiev,Ukraine
+WW,bmibaby,United Kingdom,0.0,8.0,2.0,6,16.0,Keflavik International Airport,Keflavik,Iceland
+WX,CityJet,Ireland,30.0,0.0,0.0,8,503.0,City,London,United Kingdom
+WY,Oman Air,Oman,28.0,48.0,22.0,28,2194.0,Seeb Intl,Muscat,Oman
+X3,TUIfly,Germany,37.0,131.0,58.0,8,340.0,Frankfurt Main,Frankfurt,Germany
+X7,Chitaavia,Russia,2.0,0.0,0.0,1,3576.0,Miami Intl,Miami,United States
+XK,Corse-Mediterranee,France,42.0,0.0,0.0,3,1321.0,Poretta,Bastia,France
+XL,Aerolane,Ecuador,8.0,2.0,4.0,2,2673.0,Jose Joaquin De Olmedo Intl,Guayaquil,Ecuador
+XQ,SunExpress,Turkey,21.0,78.0,0.0,9,1706.0,Adnan Menderes,Izmir,Turkey
+XV,BVI Airways,British Virgin Islands,6.0,0.0,0.0,3,2877.0,Melville Hall,Dominica,Dominica
+XY,Nas Air,Saudi Arabia,68.0,28.0,14.0,12,2072.0,King Abdulaziz Intl,Jeddah,Saudi Arabia
+Y4,Volaris,Mexico,93.0,102.0,2.0,2,1847.0,General Abelardo L Rodriguez Intl,Tijuana,Mexico
+Y5,Asia Wings,Kazakhstan,2.0,2.0,0.0,3,3239.0,Yangon Intl,Yangon,Burma
+Y7,NordStar Airlines,Russia,27.0,28.0,19.0,6,4374.0,Emelyanovo,Krasnoyarsk,Russia
+Y8,Marusya Airways,Russia,30.0,0.0,0.0,1,2613.0,Leite Lopes,Ribeirao Preto,Brazil
+Y9,Kish Air,Iran,23.0,0.0,0.0,2,2109.0,Kish Island,Kish Island,Iran
+YC,Ciel Canadien,Canada,36.0,24.0,0.0,3,4111.0,Roschino,Tyumen,Russia
+YI,TUR Avrupa Hava YollarÄ±,Turkey,27.0,0.0,0.0,6,2883.0,Cyril E King,St. Thomas,Virgin Islands
+YK,Cyprus Turkish Airlines,Turkey,8.0,20.0,6.0,4,2912.0,Manas,Bishkek,Kyrgyzstan
+YM,Montenegro Airlines,Montenegro,20.0,6.0,0.0,10,1741.0,Podgorica,Podgorica,Montenegro
+YO,TransHolding System,Brazil,2.0,2.0,0.0,4,238.0,Oued Irara,Hassi Messaoud,Algeria
+YQ,Polet Airlines (Priv),Russia,12.0,2.0,0.0,4,2987.0,Chertovitskoye,Voronezh,Russia
+YR,SENIC AIRLINES,United States,2.0,0.0,0.0,1,4124.0,Page Municipal Airport,Page,United States
+YT,Yeti Airways,Nepal,16.0,0.0,0.0,1,3125.0,Tribhuvan Intl,Kathmandu,Nepal
+Z2,Zest Air,Philippines,18.0,12.0,2.0,6,2397.0,Ninoy Aquino Intl,Manila,Philippines
+Z3,Avient Aviation,Zimbabwe,10.0,0.0,0.0,1,3808.0,Ketchikan Intl,Ketchikan,United States
+Z4,Zoom Airlines,Canada,8.0,0.0,2.0,5,3989.0,Erbil Intl,Erbil,Iraq
+Z6,ZABAIKAL AIRLINES,Russia,20.0,0.0,0.0,6,2941.0,Dnipropetrovsk Intl,Dnepropetrovsk,Ukraine
+Z8,Amaszonas,Bolivia,36.0,0.0,0.0,3,2762.0,El Alto Intl,La Paz,Bolivia
+Z9,Flightlink Tanzania,Tanzania,6.0,2.0,0.0,1,2908.0,Almaty,Alma-ata,Kazakhstan
+ZB,Air Bourbon,Reunion,38.0,126.0,46.0,14,469.0,Birmingham,Birmingham,United Kingdom
+ZE,Eastar Jet,South Korea,16.0,2.0,4.0,7,3930.0,Incheon Intl,Seoul,South Korea
+ZH,Shenzhen Airlines,China,609.0,200.0,2.0,9,3364.0,Capital Intl,Beijing,China
+ZI,Aigle Azur,France,52.0,18.0,2.0,6,1386.0,Orly,Paris,France
+ZK,Great Lakes Airlines,United States,61.0,0.0,0.0,1,3751.0,Denver Intl,Denver,United States
+ZL,Regional Express,Australia,86.0,2.0,0.0,1,3361.0,Sydney Intl,Sydney,Australia
+ZM,Apache Air,United States,2.0,2.0,0.0,2,2912.0,Manas,Bishkek,Kyrgyzstan
