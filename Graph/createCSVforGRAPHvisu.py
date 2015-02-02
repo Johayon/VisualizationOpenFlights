@@ -14,7 +14,7 @@ def readAndMergeData(airportsDataFile, routesDataFile):
 	
 	# On ne garde que ce qui nous interesse
 	routesDF.drop([u'Codeshare',u'Source airport',u'Destination airport',u'Stops',u'Equipment'], axis=1, inplace=True)
-	airportsDF.drop([u'IATA/FAA', u'ICAO', u'Timezone', u'DST', u'Tz database time zone'], axis=1, inplace=True)
+	airportsDF.drop([u'ICAO', u'Timezone', u'DST', u'Tz database time zone'], axis=1, inplace=True)
 	
 	# On supprime les valeurs nan
 	routesDF.dropna(inplace=True)
@@ -84,12 +84,14 @@ airportsDatatmp = airportsData[['Source airport ID','OutFlight','InFlight','Tota
 airportsCompleteData = airportsDatatmp.merge(airportsrawData,left_on='Source airport ID',right_on='Airport ID')
 #dataForVisualization.merge(FlightbyAirports,)
 
+FinalLink=LinkCompleteData.merge(airportsCompleteData[['Source airport ID','IATA/FAA','TotalFlight','Country']],on='Source airport ID').merge(airportsCompleteData[['Source airport ID','IATA/FAA','TotalFlight','Country']], left_on='Destination airport ID', right_on='Source airport ID')
+FinalNode = airportsCompleteData
 
 # CutOff
-print "Edit"
-FinalNode = airportsCompleteData[airportsCompleteData.TotalFlight > 800]
-FinalLinktmp = LinkCompleteData[[x in FinalNode['Source airport ID'].values for x in LinkCompleteData['Source airport ID']]]
-FinalLink = FinalLinktmp[[x in FinalNode['Source airport ID'].values for x in FinalLinktmp['Destination airport ID']]]
+#print "Edit"
+#FinalNode = airportsCompleteData[airportsCompleteData.TotalFlight > 800]
+#FinalLinktmp = LinkCompleteData[[x in FinalNode['Source airport ID'].values for x in LinkCompleteData['Source airport ID']]]
+#FinalLink = FinalLinktmp[[x in FinalNode['Source airport ID'].values for x in FinalLinktmp['Destination airport ID']]]
 
 
 # Ecriture du csv qui servira pour la partie visu en Javascript ensuite

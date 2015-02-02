@@ -9,17 +9,26 @@
  
 <script>
 
+var Range = 800;
+
 d3.csv("NodeForGraphVisualization.csv",function(lines) {
     var numberOfLines = lines.length;
     var nodesData = [];
     for (var i = 0; i< numberOfLines;i++)
     {   
         // Recuperation des noeuds
-        var airportID = lines[i]['Source airport ID']
+        var airportID = lines[i]['IATA/FAA']
         var airportSize = lines[i].TotalFlight
-        nodesData.push({"name": airportID, "size": parseInt(airportSize)})
-        
+        var airportAirlines = lines[i].Airlines
+        var airportName = lines[i].Name
+        var airportCity = lines[i].City
+        var airportCountry = lines[i].Country
+        if (airportSize > Range){
+            nodesData.push({"name": airportID, "Complete Name" : airportName , "City, Country" : airportCity + ", " +  airportCountry  ,"size": parseInt(airportSize) })
+        }
     }
+
+
 
 
 
@@ -30,14 +39,17 @@ d3.csv("LinkForGraphVisualization.csv", function(lines)
     for (var i = 0; i < numberOfLines; i++) 
     {
         // Récupération des données brutes 
-        var airportID = lines[i]['Source airport ID'];
-        var airport2ID = lines[i]['Destination airport ID'];
+        var airportID = lines[i]['IATA/FAA_x'];
+        var airport2ID = lines[i]['IATA/FAA_y'];
+        var airportSize = lines[i]['TotalFlight_x']
+        var airport2Size = lines[i]['TotalFlight_y']
         var nbOperators = lines[i]['size'];
         console.log(parseInt(nbOperators))
         // Cas ou la ligne ne décrit qu'un seul marchand 
         // Sinon c'est que c'est une connexion 
-        connectionsData.push( {"source": airportID, "target": airport2ID, "strength":parseInt(nbOperators)} )
-        
+        if (airportSize > Range && airport2Size > Range){
+            connectionsData.push( {"source": airportID, "target": airport2ID, "strength":parseInt(nbOperators)} )
+        }
     }
     var visualization = d3plus.viz()
     .container("#viz")
@@ -45,6 +57,7 @@ d3.csv("LinkForGraphVisualization.csv", function(lines)
     .data(nodesData)
     .edges({"label": "strength", "size": "strength", "large": 1000, "value": connectionsData})
     .size("size")
+    .tooltip(["Complete Name","City, Country"])
     .id("name")
     .draw()
 
