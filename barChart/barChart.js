@@ -6,7 +6,6 @@ var data = [];
 var chart = null;
 var minimumNbRoutes = 0;
 var maximumNbRoutes = 10000;
-///// A DISCUTER AVEC ADRIEN => LIMITE D'AFFICHAGE DU NOMBRE DE COMPANGNIES + QUEL TRI POUR L'AFFICHAGE/////
 var overallNbRoutes= 67663; // assumption : same route operated by 2 airlines = 2 routes
 var overallNbAirports= 8107; 
 var totalNbRoutesDisplayed = 0; // To calculate the ratio of number of routes displayed
@@ -47,9 +46,9 @@ function loadDataAndDrawGraph()
     d3.csv(csvDataFilePath, function(companies)
     {   
         // Structure
-        var tab1 = {key:'Vols_Court_Courrier', values:[]};
-        var tab2 = {key:'Vols_Moyen_Courrier', values:[]};
-        var tab3 = {key:'Vols_Longs_Courrier', values:[]};
+        var tab1 = {key:'Short Haul', values:[]};
+        var tab2 = {key:'Medium Haul', values:[]};
+        var tab3 = {key:'Long Haul', values:[]};
         data = [tab1, tab2, tab3]
 
         var numberOfCompanies = companies.length;
@@ -118,12 +117,12 @@ function drawGraph()
             d3.selectAll(".nv-series")[0][2].onclick = selectLongFlight;
             
             //Added for managing clicks on bars 
-            chart.multibar.dispatch.on("elementClick", function(e) {
-            var position = e.pointIndex;
-            console.log(e);
-            refreshAirlinePanel(e.series.values[position].x);
-            }
-            )
+            chart.multibar.dispatch.on("elementClick", function(e) 
+            {
+                var position = e.pointIndex;
+                console.log(e);
+                refreshAirlinePanel(e.series.values[position].x);
+            })
 
             sortGraphData();
             filterGraphDataByTotalOfRoutes(500, 1500);
@@ -292,38 +291,7 @@ function filterGraphDataByTotalOfRoutes(minimum, maximum)
     
     refreshGeneralPanel(airportsWholeSet.size, totalNbRoutesDisplayed);
 }
+
+
 loadDataAndDrawGraph();
-
-
-///CODE TO REFRESH THE GAUGE
-// var gageValue = 100;
-
-//         var g = new JustGage({
-//             id: "gauge",
-//             value: gageValue,
-//             min: 0,
-//             max: 200,
-//             title: "BMI"
-//         });
-
-// function updateGage(n) {
-//   g.refresh(gageValue + n);
-//   gageValue += n;
-// }
-
-// function inc() {
-//   updateGage(20);
-// }
-
-// function dec() {
-//   updateGage(-20);
-// }
-
-// function incVar() {
-//   updateGage(parseInt(document.getElementById("change").value))
-// }
-
-// function decVar() {
-//   updateGage(-parseInt(document.getElementById("change").value))
-// }
 

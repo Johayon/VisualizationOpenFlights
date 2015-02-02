@@ -1,13 +1,18 @@
-#slider 
+/*#slider 
 {
   margin-left: 20px;
   width : 100%;
-}
+}*/
 
 #chart svg 
 {
   height: 400px;
   width: 100%;
+}
+
+#panel 
+{
+  height: 430px;
 }
 
 .d3-slider-range
@@ -26,3 +31,5 @@
     width: 100%;
     height: 50px;
 }
+
+/*div{ border: 1px solid black;}*/
