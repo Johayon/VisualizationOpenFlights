@@ -1,3 +1,9 @@
+////////////////////////////////////////////////////////////////////////////
+//COMMAND: tool_get_airports_from_distance <airportName> <distance>
+//         - return all the airports that coule be reach by exactly <distance> flights from <airportName>
+//         - airportName: no spaces, no special characters
+//         - distance: integer, >= 1
+////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <cstdio>
 #include <cstring>
