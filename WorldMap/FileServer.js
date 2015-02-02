@@ -7,10 +7,13 @@ var exec = require('child_process').exec,
 http.createServer(function (req, res) {
 	try {
 		console.log("req = '" + req.url + "'");
+		
+		//run commands and return the result
 		if (runCommand("tool_routes_from_country", req, res)) return;
 		if (runCommand("tool_get_airports_from_distance", req, res)) return;
 		if (runCommand("tool_routes_from_airport", req, res)) return;
 
+		//return the file requested
 		var filePath = path.join("." + req.url);
 		console.log(filePath);
 		res.writeHead(200, {
