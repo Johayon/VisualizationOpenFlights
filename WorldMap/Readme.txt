@@ -9,6 +9,6 @@ HOW TO RUN THE MAP
 
 - Run FileServer.js (Command: "node FileServer.js" or "nodejs FileServer.js")
 
-- Open GoogleChrome (not Firefox)
+- Open GoogleChrome (Chrome provides better performance than others)
 
 - URL: "localhost:1337/map_index.html"
