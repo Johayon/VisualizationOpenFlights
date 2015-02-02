@@ -41,6 +41,9 @@ d3.json("http://localhost:1337/data/world-topo-min.json", function(error, world)
 d3.select("body").append("p").attr("id", "info_log").text("Charles De Gaulle");
 
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// draw countries
+
 function draw_countries() {
   var country = g.selectAll(".country").data(topo);
   var allCountries = country.enter().insert("path")
@@ -85,7 +88,11 @@ function draw_countries() {
       layer_route.attr("visibility", "visible");
     });
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// draw all airports
+
 function draw_airports_all(color) {
   d3.csv("http://localhost:1337/data/airports.dat", function(err, airports) {
     airports.forEach(function(i) {
@@ -93,7 +100,11 @@ function draw_airports_all(color) {
     });
   });
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//draw all airports from an airport base on the distance (distance: number of flights)
+
 function draw_airports_from_distance(airport, reqlen, color, layer) {
   airport = typeof airport !== 'undefined' ? airport : "charles_de_gaulle";
   reqlen = typeof reqlen !== 'undefined' ? reqlen : 1;
@@ -104,7 +115,11 @@ function draw_airports_from_distance(airport, reqlen, color, layer) {
     });
   });
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//draw all routes which starts from a country
+
 function draw_routes_from_country(country, color, thickness) {
   color = typeof color !== 'undefined' ? color : "#FFFF00";
   thickness = typeof thickness !== 'undefined' ? thickness : "0.05px";
@@ -116,7 +131,11 @@ function draw_routes_from_country(country, color, thickness) {
     });
   });
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//draw all routes from "airport"
+
 function draw_routes_from_airport(airport, color, thickness) {
   color = typeof color !== 'undefined' ? color : "#FFFF00";
   thickness = typeof thickness !== 'undefined' ? thickness : "0.05px";
@@ -130,19 +149,8 @@ function draw_routes_from_airport(airport, color, thickness) {
     });
   });
 }
-////////////////////////////////////////////////////////////////////////////
-// function draw_routes_all(path, color, thickness) {
-//   //set default values
-//   path = typeof path !== 'undefined' ? path : "http://localhost:1337/data/lines.dat";
-//   color = typeof color !== 'undefined' ? color : "#FFEE00";
-//   thickness = typeof thickness !== 'undefined' ? thickness : "0.05px";
 
-//   d3.csv(path, function(err, lines) {
-//     lines.forEach(function(i) {
-//       addline(i, color, thickness);
-//     });
-//   });
-// }
+////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 function setup(width,height){
   projection = d3.geo.mercator()
@@ -161,7 +169,11 @@ function setup(width,height){
   g = svg.append("g");
 
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//Drawing function: run only one time
+
 function draw(topo) {
 
   svg.append("path")
@@ -195,7 +207,11 @@ function draw(topo) {
   // draw_routes_all();
   // draw_routes_from_country();
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//redraw when user change the size of the browser
+
 function redraw() {
   width = document.getElementById('container').offsetWidth;
   height = width / 2;
@@ -203,11 +219,18 @@ function redraw() {
   setup(width,height);
   draw(topo);
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//sqr
 function sqr(x) {
   return x * x;
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//process mouseMoved event
+
 function move() {
 
   var t = d3.event.translate;
@@ -248,6 +271,9 @@ function move() {
 }
 
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// calculate the distance between two point (lon1, lat1) and (lon2, lat2)
+
 function distance(lon1, lat1, lon2, lat2) {
   var R = 6371; // Radius of the earth in km
   var dLat = (lat2 - lat1) * Math.PI / 180;  // deg2rad below
@@ -259,7 +285,10 @@ function distance(lon1, lat1, lon2, lat2) {
 
   return R * 2 * Math.asin(Math.sqrt(a));
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//
 var throttleTimer;
 function throttle() {
   window.clearTimeout(throttleTimer);
@@ -267,13 +296,20 @@ function throttle() {
       redraw();
     }, 200);
 }
+
+////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 //geo translation on mouse click in map
+
 function click() {
   var latlon = projection.invert(d3.mouse(this));
   // console.log(latlon);
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//normalize the name so that the server can understand (removing spaces)
+
 function normalizeName(name) {
   s = name;
   var pos = 0;
@@ -284,8 +320,11 @@ function normalizeName(name) {
     else s = s.replace(' ','_');
   }
 }
+
 ////////////////////////////////////////////////////////////////////////////
-//function to add points and text to the map (used in plotting capitals)
+////////////////////////////////////////////////////////////////////////////
+//Draw an airports
+
 function addpoint(obj,color,layer) {
   // var gpoint = layer.append("g").attr("class", "gpoint");
   var gpoint = layer.append("g");
@@ -349,7 +388,11 @@ function addpoint(obj,color,layer) {
       });
 
 }
+
 ////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//Draw a routes
+
 function addline(obj, color, width, layer) {
 
   // var gpoint = g.append("line");
