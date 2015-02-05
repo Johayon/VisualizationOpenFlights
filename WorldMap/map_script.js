@@ -30,7 +30,7 @@ var tooltip = d3.select("#container").append("div").attr("class", "tooltip hidde
 
 setup(width,height);
 
-d3.json("http://localhost:1337/data/world-topo-min.json", function(error, world) {
+d3.json("http://localhost:1337/WorldMap/data/world-topo-min.json", function(error, world) {
 
   var countries = topojson.feature(world, world.objects.countries).features;
 

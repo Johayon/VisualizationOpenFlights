@@ -38,7 +38,7 @@ function runCommand(command, req, res) {
 	var pos = req.url.search(command);
 	if (pos != 1) return false;
 
-	var cmd = "./" + command + " " + req.url.substring(command.length + 2, req.url.length);
+	var cmd = "./WorldMap/" + command + " " + req.url.substring(command.length + 2, req.url.length);
 	console.log("cmd = " + cmd);
 	child = exec(cmd, function(error, stdout, stderr) {
 		if (error !== null)
