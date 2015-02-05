@@ -1,69 +1,142 @@
 <!doctype html>
-<meta charset="utf-8">
 
-<link href="http://www.d3plus.org/css/d3plus.css" rel="stylesheet" />
-<script src="http://www.d3plus.org/js/d3.js"></script>
-<script src="http://www.d3plus.org/js/d3plus.js"></script>
- 
-<div id="viz"></div>
- 
+<head>
+    <meta charset="utf-8">
+    <link href="http://www.d3plus.org/css/d3plus.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../lib/d3Slider.css" /> 
+    <link rel="stylesheet" href="../lib/ourCss.css" /> 
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />  
+    <link rel="stylesheet" href="../lib/bootstrap-theme.min.css" />   
+    <title>Airport Graph</title>
+</head>
+
+<body>
+
+<div class="container"> 
+    <div class="row"> 
+        
+        <div id="GraphContainer" class="col-md-7"> 
+            <div id="viz" style="height:620px"></div>
+            <h5 class="h5" style="margin-top:10px;">Number of total routes to and from an airport</h5>
+            <div id='slider'></div>
+        </div>
+
+        <div id="panel" class="col-md-5 panel panel-default"> 
+        </div>
+    
+    </div>
+</div>
+
+</body>
+<script src="../lib/d3.js"></script>
+<script src="../lib/d3plus.js"></script>
 <script>
 
-var Range = 800;
+var nodesData = [];
+var connectionsData = [];
 
-d3.csv("NodeForGraphVisualization.csv",function(lines) {
-    var numberOfLines = lines.length;
-    var nodesData = [];
-    for (var i = 0; i< numberOfLines;i++)
-    {   
-        // Recuperation des noeuds
-        var airportID = lines[i]['IATA/FAA']
-        var airportSize = lines[i].TotalFlight
-        var airportAirlines = lines[i].Airlines
-        var airportName = lines[i].Name
-        var airportCity = lines[i].City
-        var airportCountry = lines[i].Country
-        if (airportSize > Range){
-            nodesData.push({"name": airportID, "Complete Name" : airportName , "City, Country" : airportCity + ", " +  airportCountry  ,"size": parseInt(airportSize) })
-        }
-    }
-
-
-
-
-
-d3.csv("LinkForGraphVisualization.csv", function(lines)
-{  
-    var numberOfLines = lines.length;
-    var connectionsData = [];
-    for (var i = 0; i < numberOfLines; i++) 
-    {
-        // Récupération des données brutes 
-        var airportID = lines[i]['IATA/FAA_x'];
-        var airport2ID = lines[i]['IATA/FAA_y'];
-        var airportSize = lines[i]['TotalFlight_x']
-        var airport2Size = lines[i]['TotalFlight_y']
-        var nbOperators = lines[i]['size'];
-        console.log(parseInt(nbOperators))
-        // Cas ou la ligne ne décrit qu'un seul marchand 
-        // Sinon c'est que c'est une connexion 
-        if (airportSize > Range && airport2Size > Range){
-            connectionsData.push( {"source": airportID, "target": airport2ID, "strength":parseInt(nbOperators)} )
-        }
-    }
+function GraphDraw(nodes,connections)
+{
+    console.log(connections.length)
     var visualization = d3plus.viz()
-    .container("#viz")
-    .type("network")
-    .data(nodesData)
-    .edges({"label": "strength", "size": "strength", "large": 1000, "value": connectionsData})
-    .size("size")
-    .tooltip(["Complete Name","City, Country"])
-    .id("name")
-    .draw()
+                .container("#viz")
+                .type("network")
+                .data(nodes)
+                .edges({"label": "strength", "size": "strength", "large": 1000, "value": connections})
+                .size("size")
+                .tooltip(["Complete Name","City, Country"])
+                .id("name")
+                .draw()
+}
 
-    console.log("Node_Data: ", nodesData);
-    console.log("connectionsData: ", connectionsData);
 
-})})
+
+function UpdateData(inf,max)
+{
+    var UpdatedNodeData = [];
+    console.log(">>>>>>>>>>>>>> nodesData Update")
+    console.log(nodesData.length)
+    for(var i = 0; i < nodesData.length; i++) 
+    {
+        var node = nodesData[i];
+        if (node["size"] > inf && node["size"] < max) 
+        {
+            UpdatedNodeData.push(node)
+        }
+    }
+    console.log(">>>>>>>>>>>>>> nodesData Updated")
+    console.log(UpdatedNodeData.length)
+
+    var UpdatedConnectionData =[];
+    for(var i = 0; i < connectionsData.length; i++) 
+    {
+        var connect = connectionsData[i];
+        if (connect.size1 > inf && connect.size1 < max && connect.size2 > inf && connect.size2 < max) 
+        {
+            UpdatedConnectionData.push(connect)
+        }
+    } 
+
+    GraphDraw(UpdatedNodeData,UpdatedConnectionData)
+}
+
+
+
+
+
+
+function loadData()
+{
+    d3.csv("NodeForGraphVisualization.csv",function(lines) {
+        var numberOfLines = lines.length;
+        for (var i = 0; i< numberOfLines;i++)
+        {   
+            // Recuperation des noeuds
+            var airportID = lines[i]['IATA/FAA']
+            var airportSize = lines[i].TotalFlight
+            var airportAirlines = lines[i].Airlines
+            var airportName = lines[i].Name
+            var airportCity = lines[i].City
+            var airportCountry = lines[i].Country
+            nodesData.push({"name": airportID, "Complete Name" : airportName , "City, Country" : airportCity + ", " +  airportCountry  ,"size": parseInt(airportSize) })
+            
+        }
+        console.log(">>>>>>>>>>>>>> nodesData in Load")
+        console.log(nodesData.length)
+
+        // Load Data
+        d3.csv("LinkForGraphVisualization.csv", function(lines)
+        {  
+            var numberOfLines = lines.length;
+            for (var i = 0; i < numberOfLines; i++) 
+            {
+                // Récupération des données brutes 
+                var airportID = lines[i]['IATA/FAA_x'];
+                var airport2ID = lines[i]['IATA/FAA_y'];
+                var airportSize = lines[i]['TotalFlight_x']
+                var airport2Size = lines[i]['TotalFlight_y']
+                var nbOperators = lines[i]['size'];
+                // Cas ou la ligne ne décrit qu'un seul marchand 
+                // Sinon c'est que c'est une connexion 
+                
+                    connectionsData.push( {"source": airportID, "target": airport2ID, "strength":parseInt(nbOperators),"size1":airportSize,"size2":airport2Size})
+            }
+            UpdateData(750,2000)
+        })
+    })
+    
+}
+
+
+loadData()
+
 
 </script>
+<script src="../lib/d3Slider.js" charset="utf-8"></script>
+<script src="slider.js" charset="utf-8"></script>
+
+
+
+
+
+
