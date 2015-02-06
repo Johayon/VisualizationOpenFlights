@@ -1,12 +1,13 @@
 
 // Global Variable for Graph
 var nodesData = [];
+var UpdateNodeData =[];
 var connectionsData = [];
 var isGraphDrawn = true;
 
 // Global Variable for Table
 var overallNbRoutes= 67663; // assumption : same route operated by 2 airlines = 2 routes
-var overallNbAirports= 8107;  
+var overallNbAirlines= 507;  
 var totalNbRoutesDisplayed = 0; // To calculate the ratio of number of routes displayed
 var overallNbCountries=240;
 var gaugeAirlinesValue = 0;
@@ -19,7 +20,7 @@ var gaugeAirlines = new JustGage({
                     id: "gaugeAirlines",
                     value: gaugeAirlinesValue,
                     min: 0,
-                    max: overallNbAirports,
+                    max: overallNbAirlines,
             title: "Airlines Available"
          });
 
@@ -40,13 +41,43 @@ var gaugeCountries = new JustGage({
          });
 
 
-function refreshGaugeRoutes(totalNbRoutesDisplayed)
+function refreshGaugeCountry(name)
 {
-    gaugeRoutes.refresh(totalNbRoutesDisplayed);
-    gaugeRoutesValue=totalNbRoutesDisplayed;
+    var goodnode = {};
+    for (var i = 0; i < UpdateNodeData.length; i++) 
+    {
+        var node = UpdateNodeData[i];
+        if (node.name.toUpperCase() == name.toUpperCase()) 
+        {
+            goodnode = node
+        }
+    }
+    gaugeCountries.refresh(goodnode.NbCountry);
+    gaugeCountriesValue=goodnode.NbCountry;
 }
 
+function refreshGaugeRoutes()
+{
+    var routesinAirports = 0
+    var mySet = new Set();
+    for(var i = 0; i < UpdateNodeData.length; i++) 
+    {
+        var node = nodesData[i];
+        airlines = node.Airlines.split("'")
+        routesinAirports += node["size"]  
+        for (var j=0 ; j<airlines.length; j++){
+            if (j%2){
+                var airline = airlines[j];
+                mySet.add(airline);
+            }
+        }
+    }
 
+    gaugeRoutes.refresh(routesinAirports);
+    gaugeRoutesValue=routesinAirports;
+    gaugeAirlines.refresh(mySet.size);
+    gaugeAirlinesValue=mySet.size;
+}
 
 
 
@@ -54,8 +85,6 @@ function refreshGaugeRoutes(totalNbRoutesDisplayed)
 // Function to draw the graph
 function GraphDraw(nodes,connections)
 {
-    console.log(connections.length)
-    console.log(nodes.length)
     var visualization = d3plus.viz()
                 .container("#viz")
                 .type("network")
@@ -65,27 +94,40 @@ function GraphDraw(nodes,connections)
                 .tooltip(["Complete Name","City, Country"])
                 .id("name")
                 .draw()
+    
+}
+
+   
+
+
+function Graph2Draw(nodes,connections)
+{
+    var visualization = d3plus.viz()
+                .container("#viz")
+                .type("rings")
+                .edges({ "value": connections})
+                .id("name")
+                .focus("CDG")
+                .draw()
 
     //Added for managing clicks on bars 
     
 }
 
-
 // Function to Update the Data with max and min.
 function UpdateData(inf,max)
 {
     var UpdatedNodeData = [];
-    var routesinAirports = 0
+    
     for(var i = 0; i < nodesData.length; i++) 
     {
         var node = nodesData[i];
         if (node["size"] > inf && node["size"] < max) 
         {
-            UpdatedNodeData.push(node)
-            routesinAirports += node["size"]
+            UpdatedNodeData.push(node) 
         }
     }
-
+    UpdateNodeData = UpdatedNodeData
     var UpdatedConnectionData =[];
     for(var i = 0; i < connectionsData.length; i++) 
     {
@@ -95,8 +137,9 @@ function UpdateData(inf,max)
             UpdatedConnectionData.push(connect)
         }
     } 
+
     GraphDraw(UpdatedNodeData,UpdatedConnectionData)
-    refreshGaugeRoutes(routesinAirports)
+    refreshGaugeRoutes()
     
 }
 
@@ -118,7 +161,8 @@ function loadData()
             var airportName = lines[i].Name
             var airportCity = lines[i].City
             var airportCountry = lines[i].Country
-            nodesData.push({"name": airportID, "Complete Name" : airportName , "City, Country" : airportCity + ", " +  airportCountry  ,"size": parseInt(airportSize) })
+            var numberOfCountry = lines[i]["Number of Country"]
+            nodesData.push({"name": airportID, "Complete Name" : airportName , "City" : airportCity, "Country" : airportCountry  ,"size": parseInt(airportSize),"Airlines": airportAirlines,"NbCountry" : numberOfCountry})
             
         }
         console.log(">>>>>>>>>>>>>> nodesData in Load")
@@ -143,11 +187,14 @@ function loadData()
             }
             UpdateData(750,2000)
         })
-    })
-    
+    })    
 }
 
 loadData()
 
+d3.select("body").on("click", function(d,i) {
+        var selectedNode = d3.select("div.d3plus_tooltip_title")[0][0].textContent
+        refreshGaugeCountry(selectedNode)
+    })
 
 
