@@ -17,121 +17,40 @@
         
         <div id="GraphContainer" class="col-md-7"> 
             <div id="viz" style="height:620px"></div>
-            <h5 class="h5" style="margin-top:10px;">Number of total routes to and from an airport</h5>
+            <h5 class="h5" style="margin-top:0px;">Number of total routes to and from an airport</h5>
             <div id='slider'></div>
         </div>
 
         <div id="panel" class="col-md-5 panel panel-default"> 
-        </div>
+            <div id="generalInformation">
+                <h4 class="h4" style="text-align:center;">General Information</h5>
+                <div class="row">
+                    <div id="gaugeAirlines" class="200x160px col-md-6" style="margin-left: -10px; height:120px"></div>
+                    <div id="gaugeRoutes" class="200x160px col-md-6" style="margin-left: -10px; height:120px"></div>
+                </div>        
+            </div>
+        
     
+            <div id="airlineInformation" style="margin-top: 40px">
+                <h4 class="h4" style="text-align:center;">Airline Information</h5>
+                <div class="row">
+                    <div id="gaugeCountries" class="200x160px col-md-6" style="margin-left: -10px; height:120px"></div>
+                    <div id="gaugeCountriesText" class="col-md-6">
+                        <h6 class="h6" id="airlineName" style="text-align:left;">Airline Name: </h5>
+                        <h6 class="h6" id="country" style="text-align:left;">Country:</h5>
+                        <h6 class="h6" id="mainAirport" style="text-align:left;">Main Airport: </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
+<script src="../lib/raphael.2.1.0.min.js"></script>
+<script src="../lib/justgage.1.0.1.min.js"></script>
 <script src="../lib/d3.js"></script>
 <script src="../lib/d3plus.js"></script>
-<script>
-
-var nodesData = [];
-var connectionsData = [];
-
-function GraphDraw(nodes,connections)
-{
-    console.log(connections.length)
-    var visualization = d3plus.viz()
-                .container("#viz")
-                .type("network")
-                .data(nodes)
-                .edges({"label": "strength", "size": "strength", "large": 1000, "value": connections})
-                .size("size")
-                .tooltip(["Complete Name","City, Country"])
-                .id("name")
-                .draw()
-}
-
-
-
-function UpdateData(inf,max)
-{
-    var UpdatedNodeData = [];
-    console.log(">>>>>>>>>>>>>> nodesData Update")
-    console.log(nodesData.length)
-    for(var i = 0; i < nodesData.length; i++) 
-    {
-        var node = nodesData[i];
-        if (node["size"] > inf && node["size"] < max) 
-        {
-            UpdatedNodeData.push(node)
-        }
-    }
-    console.log(">>>>>>>>>>>>>> nodesData Updated")
-    console.log(UpdatedNodeData.length)
-
-    var UpdatedConnectionData =[];
-    for(var i = 0; i < connectionsData.length; i++) 
-    {
-        var connect = connectionsData[i];
-        if (connect.size1 > inf && connect.size1 < max && connect.size2 > inf && connect.size2 < max) 
-        {
-            UpdatedConnectionData.push(connect)
-        }
-    } 
-
-    GraphDraw(UpdatedNodeData,UpdatedConnectionData)
-}
-
-
-
-
-
-
-function loadData()
-{
-    d3.csv("NodeForGraphVisualization.csv",function(lines) {
-        var numberOfLines = lines.length;
-        for (var i = 0; i< numberOfLines;i++)
-        {   
-            // Recuperation des noeuds
-            var airportID = lines[i]['IATA/FAA']
-            var airportSize = lines[i].TotalFlight
-            var airportAirlines = lines[i].Airlines
-            var airportName = lines[i].Name
-            var airportCity = lines[i].City
-            var airportCountry = lines[i].Country
-            nodesData.push({"name": airportID, "Complete Name" : airportName , "City, Country" : airportCity + ", " +  airportCountry  ,"size": parseInt(airportSize) })
-            
-        }
-        console.log(">>>>>>>>>>>>>> nodesData in Load")
-        console.log(nodesData.length)
-
-        // Load Data
-        d3.csv("LinkForGraphVisualization.csv", function(lines)
-        {  
-            var numberOfLines = lines.length;
-            for (var i = 0; i < numberOfLines; i++) 
-            {
-                // Récupération des données brutes 
-                var airportID = lines[i]['IATA/FAA_x'];
-                var airport2ID = lines[i]['IATA/FAA_y'];
-                var airportSize = lines[i]['TotalFlight_x']
-                var airport2Size = lines[i]['TotalFlight_y']
-                var nbOperators = lines[i]['size'];
-                // Cas ou la ligne ne décrit qu'un seul marchand 
-                // Sinon c'est que c'est une connexion 
-                
-                    connectionsData.push( {"source": airportID, "target": airport2ID, "strength":parseInt(nbOperators),"size1":airportSize,"size2":airport2Size})
-            }
-            UpdateData(750,2000)
-        })
-    })
-    
-}
-
-
-loadData()
-
-
-</script>
+<script src="Rings.js"></script>
 <script src="../lib/d3Slider.js" charset="utf-8"></script>
 <script src="slider.js" charset="utf-8"></script>
 

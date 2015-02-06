@@ -43,7 +43,7 @@ def processLink(data):
 	return resultat
 
 def getNumberOfFlights(data) :
-	tmp = data.copy ()
+	tmp = data.copy()
 	tmp['OutFlight'] = data.groupby(['Source airport ID'])['Destination airport ID'].transform('count')
 	tmp['InFlight'] =  data.groupby(['Destination airport ID'])['Source airport ID'].transform('count')
 	tmp2 = tmp[['Source airport ID','OutFlight']].drop_duplicates()
@@ -60,6 +60,13 @@ def getNumberOfFlights(data) :
 	merger =  tmp2.merge(tmp3,right_on = 'Destination airport ID',left_on = 'Source airport ID')
 	merger['TotalFlight'] = merger.apply(lambda x : x['InFlight'] + x['OutFlight'],axis=1)
 	return merger
+
+def getNumberOfCountry(dataLink,dataNodes) :
+	tmp = dataLink.merge(dataNodes[['Source airport ID','Country']], left_on='Destination airport ID', right_on='Source airport ID')
+	tmp2 = tmp[['Source airport ID_x','Country']].drop_duplicates()
+	tmp3 = tmp[['Source airport ID_x']].drop_duplicates()
+	res = tmp3.merge(pd.DataFrame({'Number of Country':tmp2.groupby(['Source airport ID_x'])['Country'].count()}).reset_index(),on="Source airport ID_x") 
+	return res
 
 
 # Paramètres du programme
@@ -84,14 +91,14 @@ airportsDatatmp = airportsData[['Source airport ID','OutFlight','InFlight','Tota
 airportsCompleteData = airportsDatatmp.merge(airportsrawData,left_on='Source airport ID',right_on='Airport ID')
 #dataForVisualization.merge(FlightbyAirports,)
 
+# add cutoof in link
 FinalLink=LinkCompleteData.merge(airportsCompleteData[['Source airport ID','IATA/FAA','TotalFlight','Country']],on='Source airport ID').merge(airportsCompleteData[['Source airport ID','IATA/FAA','TotalFlight','Country']], left_on='Destination airport ID', right_on='Source airport ID')
-FinalNode = airportsCompleteData
 
-# CutOff
-#print "Edit"
-#FinalNode = airportsCompleteData[airportsCompleteData.TotalFlight > 800]
-#FinalLinktmp = LinkCompleteData[[x in FinalNode['Source airport ID'].values for x in LinkCompleteData['Source airport ID']]]
-#FinalLink = FinalLinktmp[[x in FinalNode['Source airport ID'].values for x in FinalLinktmp['Destination airport ID']]]
+# add number of country reached.
+NumberOfCountrybyAirport = getNumberOfCountry(UndirectedData,airportsCompleteData)
+FinalNode = airportsCompleteData.merge(NumberOfCountrybyAirport ,left_on='Source airport ID',right_on='Source airport ID_x')
+
+
 
 
 # Ecriture du csv qui servira pour la partie visu en Javascript ensuite
