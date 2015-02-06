@@ -48,7 +48,7 @@
     border: 1px solid #000000;
     border-radius: 2px;
     background: #FF8000;
-    background: linear-gradient(to bottom, #FF8000 0%, #FFAA00 100%);
+    /*background: linear-gradient(to bottom, #FF8000 0%, #FFAA00 100%);*/
     z-index: 3;
 }
 
