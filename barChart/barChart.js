@@ -1,6 +1,6 @@
 // Les variables globales 
-var csvDataFilePath = "dataForBarChartVisualization.csv"
-var csvAirportsListPerAirlineFilePath =  "dataAirportsListPerAirline.csv"
+var csvDataFilePath = "http://localhost:1337/barChart/dataForBarChartVisualization.csv"
+var csvAirportsListPerAirlineFilePath =  "http://localhost:1337/barChart/dataAirportsListPerAirline.csv"
 var alldata = new Array();
 var data = [];
 var chart = null;
