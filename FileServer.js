@@ -15,9 +15,11 @@ http.createServer(function (req, res) {
 
 		//return the file requested
 		var filePath = path.join("." + req.url);
-		console.log(filePath);
+		var ext = path.extname(req.url);
+		console.log("get file = " + filePath);
+		console.log("ext = " + ext);
 		res.writeHead(200, {
-			'Content-Type': 'text-plain',
+			'Content-Type': extensionToContentType(ext),
 		});
 
 		var content = fileSystem.readFileSync(filePath);
@@ -41,11 +43,11 @@ function runCommand(command, req, res) {
 	var cmd = "./WorldMap/" + command + " " + req.url.substring(command.length + 2, req.url.length);
 	console.log("cmd = " + cmd);
 	child = exec(cmd, function(error, stdout, stderr) {
-		if (error !== null)
+			if (error !== null)
 				console.log('exec error: ' + error);
 
 			res.writeHead(200, {
-			'Content-Type': 'text-plain',
+			'Content-Type': 'text/plain',
 		})
 		res.end(stdout);
 	}); 
@@ -53,3 +55,20 @@ function runCommand(command, req, res) {
 	return true;
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////
+function extensionToContentType(ext) {
+	switch (ext.toLowerCase()) {
+		case '.htm': return 'text/html';
+		case '.html': return 'text/html';
+		case '.jpg': return 'image/jpeg';
+		case '.js': return 'application/x-javascript';
+		case '.mp3': return 'audio/mpeg';
+		case '.mp4': return 'video/mp4';
+		case '.png': return 'image/png';
+		case '.txt': return 'text/plain';
+		case '.xml': return 'text/xml';
+		case '.svg': return 'image/svg+xml';
+		case '.css': return 'text/css';
+		case '.js': return 'text/javascript';
+	}
+	return 'unknown';
+}

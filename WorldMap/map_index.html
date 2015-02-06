@@ -4,58 +4,23 @@ HTML for loading the map
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>D3 World Map Template | TechSlides</title>
+
 <head>
-<style>
-.country:hover{
-  stroke: #fff;
-  stroke-width: 0.3px;
-  color: #00DB16;
-  background: #00DB16;
-  fill: #00DB16;
-}
-.text{
-  font-size:10px;
-  text-transform:capitalize;
-}
-#container {
-  margin:10px 10%;
-  border:2px solid #000;
-  border-radius: 5px;
-  height:100%;
-  overflow:hidden;
-  /*background: #F0F8FF;*/
-  background: #000000;
-}
-.hidden { 
-  display: none; 
-}
-div.tooltip {
-  color: #222; 
-  background: #fff; 
-  padding: .5em; 
-  text-shadow: #f5f5f5 0 1px 0;
-  border-radius: 2px; 
-  box-shadow: 0px 0px 2px 0px #a6a6a6; 
-  opacity: 0.9; 
-  position: absolute;
-}
-.graticule {
-  fill: none;
-  stroke: #bbb;
-  stroke-width: .3px;
-  stroke-opacity: .5;
-}
-.equator {
-  stroke: #ccc;
-  stroke-width: 1px;
-}
-</style>
+  <link rel="stylesheet" href="http://localhost:1337/lib/d3Slider.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost:1337/WorldMap/map_css.css" type="text/css"/>
 </head>
+
 <body>
-	<div id="container"></div>
+	<div id="container">
+    <div id="container_map"></div>
+  </div>
+  <div id="slider"></div>
+  
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="http://localhost:1337/lib/d3Slider.js" type="text/javascript"></script>
 	<script src="http://localhost:1337/WorldMap/map_script.js" type="text/javascript"></script>
 </body>
+
 </html>
