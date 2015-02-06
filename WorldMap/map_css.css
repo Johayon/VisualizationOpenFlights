@@ -18,7 +18,6 @@
   border:2px solid #000;
   /*border-radius: 5px;*/
   overflow:hidden;
-  /*float:left;*/
   /*background: #F0F8FF;*/
   background: #000000;
 }
@@ -37,17 +36,25 @@
   height: 8px;
   position: absolute;
   top: 3px;
+  background: #FF8000;
+  /*background: linear-gradient(to right, #FF8000 0%, #FFAA00 100%);*/
 }
 
 .d3-slider-handle {
+	margin-top: 2px;
     position: absolute;
     width: 0.5em;
-    height: 1.2em;
-    border: 1px solid #d3d3d3;
-    border-radius: 4px;
-    background: #D56A00;
-    /*background: linear-gradient(to bottom, #eee 0%, #ddd 100%);*/
+    height: 1em;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background: #FF8000;
+    background: linear-gradient(to bottom, #FF8000 0%, #FFAA00 100%);
     z-index: 3;
+}
+
+.d3-slider-handle:hover {
+    border: 1px solid #000000;
+    background: #FFAA00
 }
 
 .hidden { 

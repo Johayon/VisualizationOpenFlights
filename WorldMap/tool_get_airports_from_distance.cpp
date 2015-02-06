@@ -229,18 +229,19 @@ int main(int argc, char ** argv)
 	cost[source] = 1;
 	qu.push(source);
 
-	cout << "AirportID,Name,City,Country,Latitude,Longitude\n";
+	cout << "AirportID,Name,City,Country,Latitude,Longitude,nFlights\n";
 	while (qu.empty() == false)
 	{
 		int u = qu.front(); qu.pop();
-		if (cost[u] == reqlen + 1)
+		if (cost[u] <= reqlen + 1 || u == source)
 		{
 			cout << airports[u].id << ',';
 			cout << outputString(airports[u].name) << ',';
 			cout << outputString(airports[u].city) << ',';
 			cout << outputString(airports[u].country) << ',';
 			cout << airports[u].latitude << ',';
-			cout << airports[u].longitude << '\n';
+			cout << airports[u].longitude << ',';
+			cout << cost[u] - 1 << '\n';
 		}
 
 		for (int i = 0; i < sz(adj[u]); ++i)

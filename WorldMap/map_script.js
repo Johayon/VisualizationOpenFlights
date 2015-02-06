@@ -15,12 +15,12 @@ var airport_MaxNFlights = 2;
 var slider_CurrentDistance_Min = 0;
 var slider_CurrentDistance_Max = 2000;
 var slider_MinimumDistance = 0;
-var slider_MaximumDistance = 20000;
+var slider_MaximumDistance = 25000;
 
 var color_airport = ["#FFFF00","#FF8000", "#00FF80"];
 var airportR = [10, 25, 25];
 var airportOverviewR = [10, 25, 25];
-var airportDetailR = [1, 0.7, 0.7];
+var airportDetailR = [0.85, 0.7, 0.7];
 var airportOpacity = [0.8, 0.2, 0.05];
 var airportOverviewOpacity = [0.8, 0.2, 0.05];
 var airportDetailOpacity = [0.8, 0.7, 0.7];
@@ -47,7 +47,7 @@ d3.json("http://localhost:1337/WorldMap/data/world-topo-min.json", function(erro
   draw(topo);
 
 });
-d3.select("body").append("p").attr("id", "info_log").text("Charles De Gaulle");
+d3.select("body").append("p").attr("id", "info_log").text("charles_de_gaulle");
 
 slider.call(d3.slider()
               .min(slider_MinimumDistance)
@@ -57,22 +57,19 @@ slider.call(d3.slider()
               .on("slide", function(evt, value) {
 
                 if (flag_lock_slider == true) return;
-                flag_lock_slider = true;
-                d3.select("#info_log").text(slider_CurrentDistance_Min + "\n" + slider_CurrentDistance_Max);
                 slider_CurrentDistance_Min = value[0];
                 slider_CurrentDistance_Max = value[1];
 
                 list_airports.forEach(function(i) {
                   var dist = distance(i.Longitude, i.Latitude, chosen_airport.Longitude, chosen_airport.Latitude);
                   var temp = "#airport" + i.AirportID;
-                  if (i !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max)) {
+                  if (i.nFlights > airport_MaxNFlights || (i !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max)) ) {
                     d3.selectAll(temp).attr("visibility", "hidden");
                   }
                   else {
                     d3.selectAll(temp).attr("visibility", "visible"); 
                   }
                 });
-                flag_lock_slider = false;
               })
 );
 
@@ -89,7 +86,8 @@ function draw_countries() {
       .attr("title", function(d,i) { return d.properties.name; })
       // .style("fill", function(d, i) { return d.properties.color; }) 
       .style("fill", "#1C1C1C")
-      .attr("stroke", "#4A4A4A")
+      // .style("fill", "#F5F5F5")
+      .attr("stroke", "#999999")
       .attr("stroke-width", "0.3px");
 
   allCountries.attr("visibility", "visible");
@@ -113,15 +111,11 @@ function draw_countries() {
     .on("mouseout",  function(d,i) {
         tooltip.classed("hidden", true);
         d3.selectAll($('#' + d.id)).style("fill", "#1C1C1C");
+        // d3.selectAll($('#' + d.id)).style("fill", "#F5F5F5");
       })
 
     .on("click", function(d,i) {
       console.log("Click COUNTRY");
-      // layer_route.selectAll(".route").remove();
-      // draw_routes_from_country(normalizeName(d.properties.name), "#00FF00", "0.08px");
-      // layer_airport_all.attr("visibility", "hidden");
-      // layer_airport_from_distance.attr("visibility", "hidden");
-      // layer_route.attr("visibility", "visible");
     });
 }
 
@@ -240,7 +234,7 @@ function draw(topo) {
   layer_airport[0] = layer_airport[2];
   layer_airport[2] = temp;
 
-  draw_airports_from_distance("charles_de_gaulle", 2);
+  draw_airports_from_distance("charles_de_gaulle");
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -400,7 +394,7 @@ function addpoint(obj) {
           tooltip.classed("hidden", true);
       })
       .on("click", function() {
-          if (airportR[1] - 0.05 < airportDetailR[1])
+          // if (airportR[1] - 0.05 < airportDetailR[1])
           {
             console.log("CLICKED");
 
@@ -415,7 +409,8 @@ function addpoint(obj) {
       });
 
   var dist = distance(obj.Longitude, obj.Latitude, chosen_airport.Longitude, chosen_airport.Latitude);
-  if (airportObj !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max) ) {
+
+  if (obj.nFlights > airport_MaxNFlights || (obj !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max)) ) {
     airportObj.attr("visibility", "hidden");
   }
 }
