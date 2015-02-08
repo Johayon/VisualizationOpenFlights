@@ -5,6 +5,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #F2F2F2;
+  /*background-color: white;*/
   color: #585858;
   padding: 30px; }
 
@@ -90,7 +91,7 @@ h6 {
   font-weight: normal }
 
 p, blockquote, ul, ol, dl, li, table, pre {
-  margin: 5px 0px; }
+  margin: 0px 0px; }
 
 hr {
   background: #6E6E6E;
