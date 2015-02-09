@@ -247,7 +247,7 @@ function sortArray(a, b)
         bTotal += alldata[bName].longHaul;
     }
 
-    return (aTotal < bTotal)
+    return (bTotal - aTotal)
 }
 
 
