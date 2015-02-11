@@ -23,16 +23,18 @@ var slider_CurrentDistance_Max = 3000;
 var slider_MinimumDistance = 0;
 var slider_MaximumDistance = 25000;
 
-var color_Country = ["#1C1C1C","#710000","#005709"];
-
-var color_airport = ["#FFFF00","#FF8000", "#00FF80", "#FFFF00"];
-var airportR = [10, 25, 25, 1];
-var airportOverviewR = [10, 25, 25, 1];
-var airportDetailR = [0.7, 0.7, 0.7, 0.5];
-var airportOpacity = [0.8, 0.2, 0.05, 0.8];
-var airportOverviewOpacity = [0.8, 0.2, 0.05, 0.8];
-var airportDetailOpacity = [0.8, 0.7, 0.7, 0.8];
-var airportBorderOpacity = [0.5, 0.01, 0.01, 0.2];
+var color_Country = ["#050505","#710000","#005709"];
+var airport_color = ["#FFFF00","#FF3000", "#00FFCD", "#FFFF00"];
+var airport_centerSize = ["10%","12%","8%","10%"];
+// var airport_border_color = ["none", "#F5DA81", "none", "none"];
+var airport_border_color = ["none", "none", "none", "none"];
+var airportR = [10, 21, 21, 1];
+var airportOverviewR = [10, 21, 21, 1];
+var airportDetailR = [0.7, 1, 0.7, 0.5];
+var airportOpacity = [1, 0.1, 0.05, 0.8];
+var airportOverviewOpacity = [1, 0.2, 0.1, 0.8];
+var airportDetailOpacity = [1, 0.7, 0.7, 0.8];
+var airportBorderOpacity = [0.8, 0.01, 0.01, 0.2];
 
 var width = document.getElementById('container_map').offsetWidth;
 var height = width / 2;
@@ -42,11 +44,7 @@ var topo,projection,path,svg,g;
 var graticule = d3.geo.graticule();
 
 var tooltip = d3.select("#container_map").append("div").attr("class", "tooltip hidden");
-
-var slider = d3.select("#slider");
-
-var infoContainer = d3.selectAll("#information");
-var infoAirport = null;
+var slider;
 
 setup(width,height);
 
@@ -58,9 +56,19 @@ d3.json("http://localhost:1337/WorldMap/data/world-topo-min.json", function(erro
   draw(topo);
 
 });
-d3.select("body").append("div").append("p").attr("id", "info_log").text("charles_de_gaulle");
+// d3.select("body").append("div").append("p").attr("id", "info_log").text("charles_de_gaulle");
+createSlider(20000);
 
-slider.call(d3.slider()
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function createSlider(maxval) {
+  console.log("maxval = " + maxval);
+  slider_MinimumDistance = 0;
+  slider_MaximumDistance = maxval + 1;
+  slider_CurrentDistance_Min = 0;
+  slider_CurrentDistance_Max = maxval;
+
+  slider = d3.slider()
               .min(slider_MinimumDistance)
               .max(slider_MaximumDistance)
               .axis(true)
@@ -72,9 +80,13 @@ slider.call(d3.slider()
                 if (list_airports == null) return;
 
                 if (flag_airport_from_nFlightDistance) redraw_airports();
-              })
-);
+              });
 
+  var container = d3.select("#slider");
+  container.selectAll("*").remove();
+  var temp = container.call(slider);
+  console.log("temp = " + temp);
+}
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 function activate_airport_in_country(d) {
@@ -109,13 +121,13 @@ function activate_airport_from_distance(airportName) {
     d3.selectAll($('#' + chosen_country.id)).style("fill", color_Country[0]);
 
   for (var i = 0; i < 3; ++i) {
-    layer_airport[i].selectAll(".airport" + i).remove();
+    layer_airport[i].selectAll("*").remove();
     layer_airport[i].attr("visibility", "visible");
   }
 
   chosen_country = null;
   draw_airports_from_distance(normalizeName(airportName));
-  d3.select("#info_log").text(airportName);
+  // d3.select("#info_log").text(airportName);
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -130,7 +142,8 @@ function draw_countries() {
       .attr("id", function(d,i) { return d.id; })
       .attr("title", function(d,i) { return d.properties.name; })
       // .style("fill", function(d, i) { return d.properties.color; }) 
-      .style("fill", "#1C1C1C")
+      // .style("fill", "#1C1C1C")
+      .style("fill", color_Country[0])
       // .style("fill", "#F5F5F5")
       .attr("stroke", "#999999")
       .attr("stroke-width", "0.3px");
@@ -161,7 +174,7 @@ function draw_countries() {
       })
 
     .on("dblclick", function(d,i) {
-      console.log("Click COUNTRY");
+      console.log("Click COUNTRY: " + d.properties.name);
       if (chosen_country != null && d.properties.name == chosen_country.properties.name) return;
       if (chosen_country != null)
         d3.selectAll($('#' + chosen_country.id)).style("fill", color_Country[0]);
@@ -188,10 +201,9 @@ function draw_airports_all(color) {
 //draw all airports in the country
 
 function draw_airports_from_country() {
-  d3.csv("http://localhost:1337/tool_get_airports_from_country/" + chosen_country.properties.name, function(err, airports) {
+  d3.csv("http://localhost:1337/tool_get_airports_from_country/" + normalizeName(chosen_country.properties.name), function(err, airports) {
     list_airports = airports;
     chosen_airport = airports[0];
-    drawinfo_get_airports_from_country();
     airports.forEach(function(i) {
       draw_airport(i);
     });
@@ -206,13 +218,14 @@ function draw_airports_from_distance(airport) {
   airport = typeof airport !== 'undefined' ? airport : "charles_de_gaulle";
 
   d3.csv("http://localhost:1337/tool_get_airports_from_distance/" + airport + "/2", function(err, airports) {
-    list_airports = airports;
-    chosen_airport = list_airports[0];
-    drawinfo_get_airports_from_distance();
-    list_airports.forEach(function(i) {
-      draw_airport(i);
+      list_airports = airports;
+      chosen_airport = list_airports[0];
+      // createSlider(chosen_airport.DistanceToHost);
+      console.log(chosen_airport.DistanceToHost);
+      list_airports.forEach(function(i) {
+          draw_airport(i);
+        });
     });
-  });
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -264,7 +277,6 @@ function setup(width,height){
       .append("g");
 
   g = svg.append("g");
-
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -302,7 +314,7 @@ function draw(topo) {
   layer_airport[0] = layer_airport[2];
   layer_airport[2] = temp;
 
-  // draw_airports_from_distance("charles_de_gaulle");
+  draw_infoColorMeaning = g.append("div")
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -440,13 +452,16 @@ function draw_airport(obj) {
     .attr("fx", "50%")
     .attr("fy", "50%");
 
-  grads.append("stop").attr("class", "stop" + obj.nFlights + "_center").attr("offset", "0%").style("stop-color", color_airport[obj.nFlights]).style("stop-opacity", airportOpacity[obj.nFlights]);
-  grads.append("stop").attr("class", "stop" + obj.nFlights + "_border").attr("offset", "100%").style("stop-color", color_airport[obj.nFlights]).style("stop-opacity", airportBorderOpacity[obj.nFlights]);
+  grads.append("stop").attr("class", "stop" + obj.nFlights + "_asd").attr("offset", "0%").style("stop-color", airport_color[obj.nFlights]).style("stop-opacity", "1");
+  grads.append("stop").attr("class", "stop" + obj.nFlights + "_center").attr("offset", airport_centerSize[obj.nFlights]).style("stop-color", airport_color[obj.nFlights]).style("stop-opacity", airportOpacity[obj.nFlights]);
+  grads.append("stop").attr("class", "stop" + obj.nFlights + "_border").attr("offset", "100%").style("stop-color", airport_color[obj.nFlights]).style("stop-opacity", airportBorderOpacity[obj.nFlights]);
 
   var airportObj = layer_airport[obj.nFlights].append("svg:circle")
       .attr("id", "airport" + obj.AirportID)
       .attr("cx", x)
       .attr("cy", y)
+      .attr("stroke-width", "1px")
+      .attr("stroke", airport_border_color[obj.nFlights])
       .attr("class","airport" + obj.nFlights)
       .attr("r", airportR[obj.nFlights] + "px")
       .attr("fill", function() {
@@ -468,15 +483,15 @@ function draw_airport(obj) {
       })
       .on("dblclick", function() {
           console.log("Click AIRPORT");
-          if (flag_allow_chosing_airport)
+          if (flag_allow_chosing_airport) {
             activate_airport_from_distance(obj.Name);
+          }
       });
 
-  var dist = distance(obj.Longitude, obj.Latitude, chosen_airport.Longitude, chosen_airport.Latitude);
-
+  console.log("draw_airport " + slider_CurrentDistance_Min + " " + slider_CurrentDistance_Max);
   if (flag_airport_from_nFlightDistance && 
       (obj.nFlights > airport_MaxNFlights || 
-        (obj !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max)) )) {
+        (obj !== chosen_airport && (obj.DistanceToHost < slider_CurrentDistance_Min || obj.DistanceToHost > slider_CurrentDistance_Max)) )) {
     airportObj.attr("visibility", "hidden");
   }
 }
@@ -500,83 +515,6 @@ function draw_route(obj, color, width, layer) {
         .attr("stroke", color)
         .attr("stroke-width", width);
 }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-//Draw info: get_airports_from_country
-function drawinfo_get_airports_from_country() {
-  infoContainer.html("");
-  infoAirport = null;
-  infoContainer.append("h2").text("Airports in " + chosen_country.properties.name);
-  
-  //general information
-  infoContainer.append("h4").text("General information");
-  var ul1 = infoContainer.append("ul");
-  ul1.append("li").text("Number of airports: " + list_airports.length);
-
-  infoContainer.append("h4").text("Choose an airport");
-  var list_Items = infoContainer.append("select").attr("size", 5)
-                        .style("width", "325px")
-                        .on("change", function(d, i) {
-                          activate_airport_from_distance(this.options[this.selectedIndex].value);
-                        });
-
-  list_airports.forEach(function(i) {
-                list_Items.append("option").attr("value",i.Name).text(i.Name);
-              });
-}
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-//Draw info: get_airports_from_distance
-function drawinfo_get_airports_from_distance() {
-  if (infoAirport == null)
-    infoAirport = infoContainer.append("div").attr("id", "infoAirport");
-  else
-    infoAirport.html("");
-
-  infoAirport.html("");
-  infoAirport.append("h2").text("Airport: " + chosen_airport.Name);
-
-  count_Airports();
-
-  infoAirport.append("h4").text("General information");
-  var ul = infoAirport.append("ul");
-  ul.append("li").attr("id", "airportDistance_Min").text("Minimum distance: " + Number(slider_CurrentDistance_Min.toFixed(2)) + " km");
-  ul.append("li").attr("id", "airportDistance_Max").text("Maximum distance: " + Number(slider_CurrentDistance_Max.toFixed(2)) + " km");
-  ul.append("li").attr("id", "airportCount_1").text("Number of 1-flight airports: " + airport_Count[1]);
-  ul.append("li").attr("id", "airportCount_2").text("Number of 2-flight airports: " + airport_Count[2]);
-
-  infoAirport.append("h4").text("Display options");
-
-  // Create the shape selectors
-  var form = d3.select("body").append("form");
-
-  infoAirport.append("input").attr({ type:"radio", name:"choosingAirportType" })
-              .style("margin-left", "10px")
-              .on("click", function () {
-                var newValue = 1;
-                if (airport_MaxNFlights != newValue) {
-                  airport_MaxNFlights = newValue;
-                  console.log(airport_MaxNFlights);
-                  redraw_airports();
-                }
-              });
-  infoAirport.append("label").text("Display 1-flight airports");
-
-  infoAirport.append("br");
-
-  infoAirport.append("input").attr({ type:"radio", name:"choosingAirportType" })
-              .property("checked", true)
-              .style("margin-left", "10px")
-              .on("click", function () {
-                var newValue = 2;
-                if (airport_MaxNFlights != newValue) {
-                  airport_MaxNFlights = newValue;
-                  console.log(airport_MaxNFlights);
-                  redraw_airports();
-                }
-              });
-  infoAirport.append("label").text("Display 1-flight and 2-flight airports");
-}
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -584,11 +522,10 @@ function drawinfo_get_airports_from_distance() {
 function count_Airports() {
   airport_Count = [0, 0, 0];
   list_airports.forEach(function(i) {
-    var dist = distance(i.Longitude, i.Latitude, chosen_airport.Longitude, chosen_airport.Latitude);
     var temp = "#airport" + i.AirportID;
     if (  flag_airport_from_nFlightDistance &&
           (i.nFlights > airport_MaxNFlights || 
-          (i !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max)) )) {
+          (i !== chosen_airport && (i.DistanceToHost < slider_CurrentDistance_Min || i.DistanceToHost > slider_CurrentDistance_Max)) )) {
     }
     else {
       airport_Count[i.nFlights]++;
@@ -600,12 +537,12 @@ function count_Airports() {
 ////////////////////////////////////////////////////////////////////////////
 //Redraw airports
 function redraw_airports() {
+  if (list_airports == null) return;
   list_airports.forEach(function(i) {
-    var dist = distance(i.Longitude, i.Latitude, chosen_airport.Longitude, chosen_airport.Latitude);
     var temp = "#airport" + i.AirportID;
     if (  flag_airport_from_nFlightDistance &&
           (i.nFlights > airport_MaxNFlights || 
-          (i !== chosen_airport && (dist < slider_CurrentDistance_Min || dist > slider_CurrentDistance_Max)) )) {
+          (i !== chosen_airport && (i.DistanceToHost < slider_CurrentDistance_Min || i.DistanceToHost > slider_CurrentDistance_Max)) )) {
       d3.selectAll(temp).attr("visibility", "hidden");
     }
     else {
@@ -613,10 +550,4 @@ function redraw_airports() {
       airport_Count[i.nFlights]++;
     }
   });
-
-  count_Airports();
-  infoAirport.selectAll("#airportDistance_Min").text("Minimum distance: " + Number(slider_CurrentDistance_Min.toFixed(2)) + " km");
-  infoAirport.selectAll("#airportDistance_Max").text("Maximum distance: " + Number(slider_CurrentDistance_Max.toFixed(2)) + " km");
-  infoAirport.selectAll("#airportCount_1").text("Number of 1-flight airports: " + airport_Count[1]);
-  infoAirport.selectAll("#airportCount_2").text("Number of 1-flight airports: " + airport_Count[2]);
 }

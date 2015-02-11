@@ -1,3 +1,10 @@
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .country:hover{
   stroke: #fff;
   stroke-width: 0.3px;
@@ -12,16 +19,13 @@
 }
 
 #mainContainer {
-  margin: 0px 0px;
-  width: 70%%;
-  height: 450px;
-  float: left;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
 }
 
 #container_map {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
+  margin: 0 auto;
   margin-bottom: 5px;
   width: 100%;
   border:2px solid #000;
@@ -32,23 +36,15 @@
   border-radius: 3px;
 }
 
-#information {
-  width: 28%;
-  margin-left: 15px;
-  float: left;
-  border: 1px solid #000000;
-  border-radius: 3px;
-  float: left;
-}
-
 #slider {
+  margin: 0 auto;
 	width: 100%;
   border: 1px solid #000000;
   border-radius: 3px;
 }
 
 .hidden { 
-  display: none; 
+  display: none;
 }
 
 div.tooltip {

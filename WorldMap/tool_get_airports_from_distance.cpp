@@ -164,6 +164,19 @@ void readAirports(string path, vector <AIRPORT> &airports)
 	}
 }
 
+double distance(double lon1, double lat1, double lon2, double lat2) {
+  double R = 6371; // Radius of the earth in km
+  double PI = acos(-1);
+  double dLat = (lat2 - lat1) * PI / 180;  // deg2rad below
+  double dLon = (lon2 - lon1) * PI / 180;
+  double a = 
+     0.5 - cos(dLat)/2 + 
+     cos(lat1 * PI / 180) * cos(lat2 * PI / 180) * 
+     (1 - cos(dLon))/2;
+
+  return R * 2 * asin(sqrt(a));
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -212,9 +225,6 @@ int main(int argc, char ** argv)
 			source = i;
 	}
 
-	// ofstream output;
-	// output.open("result_routes.dat");
-
 	readRoutes("data/routes.dat", routes);
 	for (vector <ROUTE> :: iterator i = routes.begin(); i != routes.end(); ++i)
 	{
@@ -229,19 +239,17 @@ int main(int argc, char ** argv)
 	cost[source] = 1;
 	qu.push(source);
 
-	cout << "AirportID,Name,City,Country,Latitude,Longitude,nFlights\n";
+	vector <int> result;
+	double maxdist = 0;
+
+	cout << "AirportID,Name,City,Country,Latitude,Longitude,nFlights,DistanceToHost\n";
 	while (qu.empty() == false)
 	{
 		int u = qu.front(); qu.pop();
 		if (cost[u] <= reqlen + 1 || u == source)
 		{
-			cout << airports[u].id << ',';
-			cout << outputString(airports[u].name) << ',';
-			cout << outputString(airports[u].city) << ',';
-			cout << outputString(airports[u].country) << ',';
-			cout << airports[u].latitude << ',';
-			cout << airports[u].longitude << ',';
-			cout << cost[u] - 1 << '\n';
+			result.push_back(u);
+			maxdist = max(maxdist, distance(airports[source].longitude, airports[source].latitude, airports[u].longitude, airports[u].latitude));
 		}
 
 		for (int i = 0; i < sz(adj[u]); ++i)
@@ -252,6 +260,23 @@ int main(int argc, char ** argv)
 			if (cost[v] <= reqlen + 1)
 				qu.push(v);
 		}
+	}
+
+	for (vector <int> :: iterator i = result.begin(); i != result.end(); ++i)
+	{
+		int u = *i;;
+		cout << airports[u].id << ',';
+		cout << outputString(airports[u].name) << ',';
+		cout << outputString(airports[u].city) << ',';
+		cout << outputString(airports[u].country) << ',';
+		cout << airports[u].latitude << ',';
+		cout << airports[u].longitude << ',';
+		cout << cost[u] - 1 << ',';
+
+		if (u == source)
+			cout << maxdist << '\n';
+		else
+			cout << distance(airports[source].longitude, airports[source].latitude, airports[u].longitude, airports[u].latitude) << '\n';
 	}
 
 	return 0;
