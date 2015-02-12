@@ -3,6 +3,7 @@
 var nodesData = [];
 var UpdateNodeData =[];
 var connectionsData = [];
+var UpdateConnectionData =[];
 var isGraphDrawn = true;
 
 // Global Variable for Table
@@ -13,6 +14,9 @@ var overallNbCountries=240;
 var gaugeAirlinesValue = 0;
 var gaugeRoutesValue = 0;
 var gaugeCountriesValue = 0;
+var Graph = true;
+var selectedNode = "CDG";
+
 
 // refresh Gauge
 
@@ -54,17 +58,24 @@ function refreshGaugeCountry(name)
     }
     gaugeCountries.refresh(goodnode.NbCountry);
     gaugeCountriesValue=goodnode.NbCountry;
+    var country = goodnode["Country"];
+    var city= goodnode["City"];
+    d3.select("#airportName").text("Airport Name: " + goodnode["Complete Name"] );
+    d3.select("#country").text("Country: " + goodnode["Country"] );
+    d3.select("#city").text("City: " + goodnode["City"] );
+
 }
 
 function refreshGaugeRoutes()
 {
-    var routesinAirports = 0
+    var routesinAirports = 0;
     var mySet = new Set();
     for(var i = 0; i < UpdateNodeData.length; i++) 
     {
-        var node = nodesData[i];
-        airlines = node.Airlines.split("'")
-        routesinAirports += node["size"]  
+        var node = UpdateNodeData[i];
+        airlines = node.Airlines.split("'");
+        console.log(node.Size)
+        routesinAirports = routesinAirports + node.Size;
         for (var j=0 ; j<airlines.length; j++){
             if (j%2){
                 var airline = airlines[j];
@@ -89,8 +100,8 @@ function GraphDraw(nodes,connections)
                 .container("#viz")
                 .type("network")
                 .data(nodes)
-                .edges({"label": "strength", "size": "strength", "large": 1000, "value": connections})
-                .size("size")
+                .edges({"size": "strength", "value": connections})
+                .size("Size")
                 .tooltip(["Complete Name","City, Country"])
                 .id("name")
                 .draw()
@@ -107,12 +118,30 @@ function Graph2Draw(nodes,connections)
                 .type("rings")
                 .edges({ "value": connections})
                 .id("name")
-                .focus("CDG")
+                .focus(selectedNode)
                 .draw()
-
-    //Added for managing clicks on bars 
     
 }
+
+
+function SwitchGraph()
+{
+    if (Graph)
+        Graph = false;
+    else 
+        Graph = true;
+
+    if (Graph)
+        GraphDraw(UpdateNodeData,UpdateConnectionData)
+    else
+        Graph2Draw(UpdateNodeData,UpdateConnectionData)
+
+    
+}
+
+
+
+
 
 // Function to Update the Data with max and min.
 function UpdateData(inf,max)
@@ -122,9 +151,9 @@ function UpdateData(inf,max)
     for(var i = 0; i < nodesData.length; i++) 
     {
         var node = nodesData[i];
-        if (node["size"] > inf && node["size"] < max) 
+        if (node["Size"] > inf && node["Size"] < max) 
         {
-            UpdatedNodeData.push(node) 
+            UpdatedNodeData.push(node)
         }
     }
     UpdateNodeData = UpdatedNodeData
@@ -137,9 +166,16 @@ function UpdateData(inf,max)
             UpdatedConnectionData.push(connect)
         }
     } 
+    UpdateConnectionData = UpdatedConnectionData
 
-    GraphDraw(UpdatedNodeData,UpdatedConnectionData)
+    if (Graph)
+        GraphDraw(UpdatedNodeData,UpdatedConnectionData)
+    else
+        Graph2Draw(UpdatedNodeData,UpdatedConnectionData)
+
     refreshGaugeRoutes()
+
+    
     
 }
 
@@ -162,7 +198,7 @@ function loadData()
             var airportCity = lines[i].City
             var airportCountry = lines[i].Country
             var numberOfCountry = lines[i]["Number of Country"]
-            nodesData.push({"name": airportID, "Complete Name" : airportName , "City" : airportCity, "Country" : airportCountry  ,"size": parseInt(airportSize),"Airlines": airportAirlines,"NbCountry" : numberOfCountry})
+            nodesData.push({"name": airportID, "Complete Name" : airportName , "City" : airportCity, "Country" : airportCountry  ,"Size": parseInt(airportSize),"Airlines": airportAirlines,"NbCountry" : numberOfCountry})
             
         }
         console.log(">>>>>>>>>>>>>> nodesData in Load")
@@ -192,8 +228,8 @@ function loadData()
 
 loadData()
 
-d3.select("body").on("click", function(d,i) {
-        var selectedNode = d3.select("div.d3plus_tooltip_title")[0][0].textContent
+d3.select("div#GraphContainer").on("click", function(d,i) {
+        selectedNode = d3.select("div.d3plus_tooltip_title")[0][0].textContent.toUpperCase()
         refreshGaugeCountry(selectedNode)
     })
 
