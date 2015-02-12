@@ -35,9 +35,9 @@ var slider_CurrentDistance_Max = 3000;
 var slider_MinimumDistance = 0;
 var slider_MaximumDistance = 25000;
 
-var color_Country = ["#050505","#710000","#005709"];
+var color_Country = ["#101010","#710000","#005709"];
 // var airport_color = ["#FFFF00","#FF3000", "#00FFCD", "#FFFF00"];
-var airport_color = ["#FFFF00","#FF3000", "#00FFFF", "#FFFF00", "#FFFFFF"];
+var airport_color = ["#FFFF00","#FF7000", "#00FFCD", "#FFFF00", "#FF0000"];
 var airport_centerSize = ["100%","10%","8%","10%", "15%"];
 var airport_border_color = ["none", "none", "none", "none", "none"];
 var airportR = [10, 21, 21, 21, 25];
@@ -126,7 +126,7 @@ function activate_airport_from_distance(command, airportName) {
   flag_airport_from_nFlightDistance = true;
 
   if (command == "show") draw_colorMeaningShow(airportName, "1-flight airports", "2-flight airports");
-  else draw_colorMeaningShow(airportName, "Affected airports", "Unreachable airports");
+  else draw_colorMeaningShow(airportName, "Unreachable airports", "Affected airports");
 
   layer_airport[3].selectAll(".airport3").remove();
   layer_airport[3].attr("visibility", "hidden");
@@ -729,6 +729,7 @@ function activate_remove_airports() {
   flag_removing_airports = true;
   flag_showing_airports = false;
   flag_impact_airports = false;
+  resetImages();
 
   svg.style("cursor", "pointer");
   for (var i = 0; i < 4; ++i) {
@@ -745,6 +746,7 @@ function activate_show_airports() {
   flag_showing_airports = true;
   flag_removing_airports = false;
   flag_impact_airports = false;
+  resetImages();
 
   console.log("list_removed_airport = " + listToString(list_removed_airport));
 
@@ -763,6 +765,7 @@ function activate_impact_airports() {
   flag_removing_airports = false;
   flag_showing_airports = false;
   flag_impact_airports = true;
+  resetImages();
 
   svg.style("cursor", null);
   for (var i = 0; i < 4; ++i) {
@@ -771,6 +774,24 @@ function activate_impact_airports() {
       layer_airport[i].attr("visibility", "hidden");
     }
   }
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function resetImages() {
+  if (flag_removing_airports)
+    d3.select("#buttonRemove").attr("src", "http://localhost:1337/WorldMap/images/remove_hover.jpg");
+  else
+    d3.select("#buttonRemove").attr("src", "http://localhost:1337/WorldMap/images/remove.jpg");
+
+  if (flag_showing_airports)
+    d3.select("#buttonShow").attr("src", "http://localhost:1337/WorldMap/images/show_hover.jpg");
+  else
+    d3.select("#buttonShow").attr("src", "http://localhost:1337/WorldMap/images/show.jpg");
+
+  if (flag_impact_airports)
+    d3.select("#buttonImpact").attr("src", "http://localhost:1337/WorldMap/images/impact_hover.jpg");
+  else
+    d3.select("#buttonImpact").attr("src", "http://localhost:1337/WorldMap/images/impact.jpg");
 }
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
