@@ -186,7 +186,7 @@ void read(int argc, char ** argv, string &sourceAirport)
 {
 	string s;
 	for (int j = 0; j < strlen(argv[1]); ++j)
-		if (argv[1][j] == '/' || argv[1][j] == '_')
+		if (argv[1][j] == '/')
 			s.push_back(' ');
 		else
 			s.push_back(tolower(argv[1][j]));

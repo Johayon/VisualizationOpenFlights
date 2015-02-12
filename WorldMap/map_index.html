@@ -13,10 +13,6 @@ HTML for loading the map
 
 <body>
   <div id="rootContainer">
-    <div id="mainContainer">
-      <div id="container_map"></div>
-      <div id="slider"></div>
-    </div>
     <div id="container_menu">
       <input class="myButton" id="buttonRemove" type="image"
               onMouseOver="this.src='http://localhost:1337/WorldMap/images/remove_hover.jpg'"
@@ -30,6 +26,10 @@ HTML for loading the map
               onMouseOver="this.src='http://localhost:1337/WorldMap/images/impact_hover.jpg'"
               onMouseOut="this.src='http://localhost:1337/WorldMap/images/impact.jpg'"
               src="http://localhost:1337/WorldMap/images/impact.jpg" onClick="activate_impact_airports();">
+    </div>
+    <div id="mainContainer">
+      <div id="container_map"></div>
+      <div id="slider"></div>
     </div>
   </div>
   

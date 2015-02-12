@@ -34,15 +34,15 @@ var slider_MaximumDistance = 25000;
 
 var color_Country = ["#050505","#710000","#005709"];
 // var airport_color = ["#FFFF00","#FF3000", "#00FFCD", "#FFFF00"];
-var airport_color = ["#FFFF00","#FF3000", "#00FFFF", "#FFFF00", "#FF0000"];
-var airport_centerSize = ["50%","12%","8%","10%", "15%"];
+var airport_color = ["#FFFF00","#FF3000", "#00FFFF", "#FFFF00", "#FFFFFF"];
+var airport_centerSize = ["100%","10%","8%","10%", "15%"];
 var airport_border_color = ["none", "none", "none", "none", "none"];
-var airportR = [21, 21, 21, 21, 25];
-var airportOverviewR = [21, 21, 21, 21, 25];
+var airportR = [10, 21, 21, 21, 25];
+var airportOverviewR = [10, 21, 21, 21, 25];
 var airportDetailR = [1, 1, 0.7, 0.7, 0.7];
-var airportOpacity = [0.2, 0.2, 0.1, 0.1, 0.2];
-var airportOverviewOpacity = [0.2, 0.2, 0.1, 0.1, 0.2];
-var airportDetailOpacity = [0.9, 0.7, 0.7, 0.7, 0.7];
+var airportOpacity = [0.5, 0.2, 0.1, 0.1, 0.2];
+var airportOverviewOpacity = [0.5, 0.2, 0.1, 0.1, 0.2];
+var airportDetailOpacity = [0.5, 0.7, 0.7, 0.7, 0.7];
 var airportBorderOpacity = [0.01, 0.01, 0.01, 0.01, 0.01];
 
 var width = document.getElementById('container_map').offsetWidth;
