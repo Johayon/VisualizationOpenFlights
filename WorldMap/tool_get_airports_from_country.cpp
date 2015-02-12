@@ -181,11 +181,12 @@ string normalize(string s)
 	return s;
 }
 
+set <int> removedAirport;
 void read(int argc, char ** argv, string &sourceAirport)
 {
 	string s;
 	for (int j = 0; j < strlen(argv[1]); ++j)
-		if (argv[1][j] == '/')
+		if (argv[1][j] == '/' || argv[1][j] == '_')
 			s.push_back(' ');
 		else
 			s.push_back(tolower(argv[1][j]));
@@ -193,6 +194,12 @@ void read(int argc, char ** argv, string &sourceAirport)
 	stringstream ss;
 	ss << s;
 	ss >> sourceAirport;
+
+	int x;
+	while (ss >> x)
+	{
+		removedAirport.insert(x);
+	}
 }
 
 bool compare_CountryName(string a, string b)
@@ -251,7 +258,11 @@ int main(int argc, char ** argv)
 		cout << outputString(airports[u].country) << ',';
 		cout << airports[u].latitude << ',';
 		cout << airports[u].longitude << ',';
-		cout << "3\n";
+
+		if (removedAirport.find(airports[u].id) == removedAirport.end())
+			cout << "3\n";
+		else
+			cout << "4\n";
 	}
 
 	return 0;

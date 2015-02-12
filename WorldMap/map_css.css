@@ -18,10 +18,16 @@ body {
   text-transform:capitalize;
 }
 
+#rootContainer {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
 #mainContainer {
   margin: 0 auto;
-  width: 90%;
-  height: 100%;
+  width: 89.5%;
+  float: left;
 }
 
 #container_map {
@@ -31,14 +37,30 @@ body {
   border:2px solid #000;
   overflow:hidden;
   background: #000000;
-  /*float: left;*/
-  border: 1px solid #000000;
-  border-radius: 3px;
+  border: 3px solid #808080;
+  border-radius: 12px;
+}
+
+.myButton {
+  margin: 60% auto;
+  display: block;
+  width: 100%;
+  outline: 0 none;
+}
+
+#container_menu {
+  width: 8%;
+  margin-left: 2%;
+  background: none;
+  float: left;
+  /*border: 2px solid #808080;*/
+  border-radius: 20px;
+
 }
 
 #slider {
   margin: 0 auto;
-	width: 100%;
+	width: 98.5%;
   border: 1px solid #000000;
   border-radius: 3px;
 }
@@ -56,6 +78,23 @@ div.tooltip {
   box-shadow: 0px 0px 2px 0px #a6a6a6; 
   opacity: 0.9; 
   position: absolute;
+}
+
+div.cssinfo {
+  pointer-events: none;
+  border-style: solid;
+  border-color: #FFFFFF;
+  background: #050505;
+  opacity: 0.9;
+  border: 2px solid #808080;
+  border-radius: 10px; 
+  position: absolute;
+}
+
+div.colorSample {
+  border-radius: 1px;
+  height: 30px;
+  margin-top: 10px;
 }
 
 .graticule {

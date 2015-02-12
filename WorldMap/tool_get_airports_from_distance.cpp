@@ -191,11 +191,12 @@ vector <int> adj[nAirports];
 map <int, int> ma;
 queue <int> qu;
 
+set <int> removedAirport;
 void read(int argc, char ** argv, string &sourceAirport, int &reqlen)
 {
 	string s;
 	for (int j = 0; j < strlen(argv[1]); ++j)
-		if (argv[1][j] == '/')
+		if (argv[1][j] == '/' || argv[1][j] == '/')
 			s.push_back(' ');
 		else
 			s.push_back(tolower(argv[1][j]));
@@ -203,6 +204,10 @@ void read(int argc, char ** argv, string &sourceAirport, int &reqlen)
 	stringstream ss;
 	ss << s;
 	ss >> sourceAirport >> reqlen;
+	int x;
+	while (ss >> x) {
+		removedAirport.insert(x);
+	}
 }
 
 int main(int argc, char ** argv)
@@ -216,7 +221,11 @@ int main(int argc, char ** argv)
 	readAirports("data/airports.dat", airports);
 	for (int i = 0; i < sz(airports); ++i)
 	{
+		if (removedAirport.find(airports[i].id) != removedAirport.end())
+				continue;
+
 		ma[airports[i].id] = i;
+
 		string lowername = "";
 		for (int j = 0; j < sz(airports[i].name); ++j)
 			lowername.push_back(tolower(airports[i].name[j]));

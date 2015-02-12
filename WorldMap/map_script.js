@@ -1,9 +1,18 @@
+// nFlights
+// - 0: chosen airport
+// - 1: 1-flight airport
+// - 2: 2-flight airport
+// - 3: airport from country
+// - 4: removed airport
+
 d3.select(window).on("resize", throttle);
 
 var flag_airport_from_nFlightDistance = false;
 var flag_airport_from_country = false;
 var flag_allow_chosing_airport = false;
-
+var flag_removing_airports = false;
+var flag_showing_airports = true;
+var list_removed_airport = [];
 var airport_Count = [0, 0, 0];
 
 var zoom = d3.behavior.zoom()
@@ -24,22 +33,23 @@ var slider_MinimumDistance = 0;
 var slider_MaximumDistance = 25000;
 
 var color_Country = ["#050505","#710000","#005709"];
-var airport_color = ["#FFFF00","#FF3000", "#00FFCD", "#FFFF00"];
-var airport_centerSize = ["10%","12%","8%","10%"];
-// var airport_border_color = ["none", "#F5DA81", "none", "none"];
-var airport_border_color = ["none", "none", "none", "none"];
-var airportR = [10, 21, 21, 1];
-var airportOverviewR = [10, 21, 21, 1];
-var airportDetailR = [0.7, 1, 0.7, 0.5];
-var airportOpacity = [1, 0.1, 0.05, 0.8];
-var airportOverviewOpacity = [1, 0.2, 0.1, 0.8];
-var airportDetailOpacity = [1, 0.7, 0.7, 0.8];
-var airportBorderOpacity = [0.8, 0.01, 0.01, 0.2];
+// var airport_color = ["#FFFF00","#FF3000", "#00FFCD", "#FFFF00"];
+var airport_color = ["#FFFF00","#FF3000", "#00FFFF", "#FFFF00", "#FF0000"];
+var airport_centerSize = ["50%","12%","8%","10%", "15%"];
+var airport_border_color = ["none", "none", "none", "none", "none"];
+var airportR = [21, 21, 21, 21, 25];
+var airportOverviewR = [21, 21, 21, 21, 25];
+var airportDetailR = [1, 1, 0.7, 0.7, 0.7];
+var airportOpacity = [0.2, 0.2, 0.1, 0.1, 0.2];
+var airportOverviewOpacity = [0.2, 0.2, 0.1, 0.1, 0.2];
+var airportDetailOpacity = [0.9, 0.7, 0.7, 0.7, 0.7];
+var airportBorderOpacity = [0.01, 0.01, 0.01, 0.01, 0.01];
 
 var width = document.getElementById('container_map').offsetWidth;
 var height = width / 2;
 
 var topo,projection,path,svg,g;
+var infoColorMeaning;
 
 var graticule = d3.geo.graticule();
 
@@ -62,7 +72,6 @@ createSlider(20000);
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 function createSlider(maxval) {
-  console.log("maxval = " + maxval);
   slider_MinimumDistance = 0;
   slider_MaximumDistance = maxval + 1;
   slider_CurrentDistance_Min = 0;
@@ -85,7 +94,6 @@ function createSlider(maxval) {
   var container = d3.select("#slider");
   container.selectAll("*").remove();
   var temp = container.call(slider);
-  console.log("temp = " + temp);
 }
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -108,11 +116,13 @@ function activate_airport_in_country(d) {
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
-function activate_airport_from_distance(airportName) {
+function activate_airport_from_distance(command, airportName) {
   console.log("activate airport " + airportName);
 
   flag_airport_from_country = false;
   flag_airport_from_nFlightDistance = true;
+
+  draw_colorMeaningClickAirport(airportName);
 
   layer_airport[3].selectAll(".airport3").remove();
   layer_airport[3].attr("visibility", "hidden");
@@ -126,7 +136,7 @@ function activate_airport_from_distance(airportName) {
   }
 
   chosen_country = null;
-  draw_airports_from_distance(normalizeName(airportName));
+  draw_airports_from_distance(command, normalizeName(airportName));
   // d3.select("#info_log").text(airportName);
 }
 
@@ -181,6 +191,7 @@ function draw_countries() {
 
       d3.selectAll($('#' + d.id)).style("fill", color_Country[1]);
       activate_airport_in_country(d);
+      draw_colorMeaningClickCountry(d.properties.name);
     });
 }
 
@@ -201,7 +212,7 @@ function draw_airports_all(color) {
 //draw all airports in the country
 
 function draw_airports_from_country() {
-  d3.csv("http://localhost:1337/tool_get_airports_from_country/" + normalizeName(chosen_country.properties.name), function(err, airports) {
+  d3.csv("http://localhost:1337/tool_get_airports_from_country/" + normalizeName(chosen_country.properties.name) + "/" + getParameters(), function(err, airports) {
     list_airports = airports;
     chosen_airport = airports[0];
     airports.forEach(function(i) {
@@ -214,18 +225,16 @@ function draw_airports_from_country() {
 ////////////////////////////////////////////////////////////////////////////
 //draw all airports from an airport base on the distance (distance: number of flights)
 
-function draw_airports_from_distance(airport) {
+function draw_airports_from_distance(command, airportName) {
   airport = typeof airport !== 'undefined' ? airport : "charles_de_gaulle";
 
-  d3.csv("http://localhost:1337/tool_get_airports_from_distance/" + airport + "/2", function(err, airports) {
-      list_airports = airports;
-      chosen_airport = list_airports[0];
-      // createSlider(chosen_airport.DistanceToHost);
-      console.log(chosen_airport.DistanceToHost);
-      list_airports.forEach(function(i) {
-          draw_airport(i);
-        });
-    });
+  d3.csv("http://localhost:1337/tool_get_airports_from_distance/" + airportName + "/2/" + getParameters(), function(err, airports) {
+    list_airports = airports;
+    chosen_airport = list_airports[0];
+    list_airports.forEach(function(i) {
+        draw_airport(i);
+      });
+  });
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -308,13 +317,21 @@ function draw(topo) {
   layer_airport.push(g.append("g").attr("id", "layer_airport_1").attr("visibility", "hidden"));  
   layer_airport.push(g.append("g").attr("id", "layer_airport_2").attr("visibility", "hidden"));
   layer_airport.push(g.append("g").attr("id", "layer_airport_3").attr("visibility", "hidden"));
+  layer_airport.push(g.append("g").attr("id", "layer_airport_4").attr("visibility", "visible"));
 
   //swap
   var temp = layer_airport[0];
   layer_airport[0] = layer_airport[2];
   layer_airport[2] = temp;
 
-  draw_infoColorMeaning = g.append("div")
+  infoColorMeaning = d3.select("#container_map").append("div").attr("class", "cssinfo hidden");
+
+  var offsetL = document.getElementById("container_map").offsetLeft + 20;
+  var offsetT = document.getElementById("container_map").offsetTop + 20;
+
+  infoColorMeaning.classed("hidden", false)
+                  .attr("style", "left:" + offsetL + "px;top:" + offsetT + "px")
+                  .html("meanings of the colors");
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -368,12 +385,12 @@ function interact_map(t, s) {
   //adjust the country hover stroke width based on zoom level
   d3.selectAll(".country").style("stroke-width", 1 / s);
 
-  for (var i = 0; i < 3; ++i) {
+  for (var i = 0; i < 5; ++i) {
     airportR[i] = airportOverviewR[i] - (s - 1) * (airportOverviewR[i] - airportDetailR[i]) / 8;
     d3.selectAll(".airport" + i).attr("r", airportR[i] + "px");
   }
 
-  for (var i = 0; i < 3; ++i) {
+  for (var i = 0; i < 5; ++i) {
     airportOpacity[i] = airportOverviewOpacity[i] - (s - 1) * (airportOverviewOpacity[i] - airportDetailOpacity[i]) / 8;
     d3.selectAll(".stop" + i + "_center").style("stop-opacity", airportOpacity[i]);
   }
@@ -444,7 +461,6 @@ function draw_airport(obj) {
 
   var grads = svg.append("defs")
     .append("radialGradient")
-    // .attr("gradientUnits", "userSpaceOnUse")
     .attr("id", "grad" + obj.nFlights)
     .attr("cx", "50%")
     .attr("cy", "50%")
@@ -460,35 +476,83 @@ function draw_airport(obj) {
       .attr("id", "airport" + obj.AirportID)
       .attr("cx", x)
       .attr("cy", y)
-      .attr("stroke-width", "1px")
+      .attr("stroke-width", "0.2px")
       .attr("stroke", airport_border_color[obj.nFlights])
       .attr("class","airport" + obj.nFlights)
       .attr("r", airportR[obj.nFlights] + "px")
       .attr("fill", function() {
         return "url(#" + grads.attr("id") + ")";
-      })
-      .on("mouseover", function() {
-          if (flag_allow_chosing_airport == false) return;
-          var offsetL = document.getElementById('container_map').offsetLeft+20;
-          var offsetT = document.getElementById('container_map').offsetTop+10;
-
-          var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
-          var text = obj.Name + ", " + obj.City + ", " + obj.Country;
-          tooltip.classed("hidden", false)
-                     .attr("style", "left:"+(mouse[0]+offsetL)+"px;top:"+(mouse[1]+offsetT)+"px")
-                     .html(text);
-      })
-      .on("mouseout", function() {
-          tooltip.classed("hidden", true);
-      })
-      .on("dblclick", function() {
-          console.log("Click AIRPORT");
-          if (flag_allow_chosing_airport) {
-            activate_airport_from_distance(obj.Name);
-          }
       });
 
-  console.log("draw_airport " + slider_CurrentDistance_Min + " " + slider_CurrentDistance_Max);
+  airportObj.on("mouseover", function() {
+                if (flag_allow_chosing_airport == false) return;
+                var offsetL = document.getElementById('container_map').offsetLeft+20;
+                var offsetT = document.getElementById('container_map').offsetTop+10;
+
+                var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
+                var text = obj.Name + ", " + obj.City + ", " + obj.Country;
+                tooltip.classed("hidden", false)
+                           .attr("style", "left:"+(mouse[0]+offsetL)+"px;top:"+(mouse[1]+offsetT)+"px")
+                           .html(text);
+            })
+            .on("mouseout", function() {
+              tooltip.classed("hidden", true);
+            })
+            .on("dblclick", function() {
+              console.log("Click AIRPORT");
+              if (flag_removing_airports == true) remove_airport(obj);
+              if (flag_showing_airports == true) activate_airport_from_distance("country", obj.Name);
+            });
+
+  if (obj.nFlights == 3) {
+    console.log("add hidden airport");
+    var gradsRemoved = svg.append("defs")
+      .append("radialGradient")
+      .attr("id", "gradRemoved" + obj.nFlights)
+      .attr("cx", "50%")
+      .attr("cy", "50%")
+      .attr("r", "50%")
+      .attr("fx", "50%")
+      .attr("fy", "50%");
+
+    gradsRemoved.append("stop").attr("class", "stop" + "4" + "_asd").attr("offset", "0%").style("stop-color", airport_color[4]).style("stop-opacity", "1");
+    gradsRemoved.append("stop").attr("class", "stop" + "4" + "_center").attr("offset", airport_centerSize[4]).style("stop-color", airport_color[4]).style("stop-opacity", airportOpacity[4]);
+    gradsRemoved.append("stop").attr("class", "stop" + "4" + "_border").attr("offset", "100%").style("stop-color", airport_color[4]).style("stop-opacity", airportBorderOpacity[4]);
+
+    var removedAirportObj = layer_airport[4].append("svg:circle")
+        .attr("id", "removedAirport" + obj.AirportID)
+        .attr("cx", x)
+        .attr("cy", y)
+        .attr("stroke-width", "0.5px")
+        .attr("stroke", airport_border_color[4])
+        .attr("class","airport4")
+        .attr("r", airportR[4] + "px")
+        .attr("fill", function() {
+          return "url(#" + gradsRemoved.attr("id") + ")";
+        })
+        .attr("visibility", "hidden");
+
+    removedAirportObj
+              .on("mouseover", function() {
+                  if (flag_allow_chosing_airport == false) return;
+                  var offsetL = document.getElementById('container_map').offsetLeft+20;
+                  var offsetT = document.getElementById('container_map').offsetTop+10;
+
+                  var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
+                  var text = obj.Name + ", " + obj.City + ", " + obj.Country;
+                  tooltip.classed("hidden", false)
+                             .attr("style", "left:"+(mouse[0]+offsetL)+"px;top:"+(mouse[1]+offsetT)+"px")
+                             .html(text);
+              })
+              .on("mouseout", function() {
+                tooltip.classed("hidden", true);
+              })
+              .on("dblclick", function() {
+                console.log("Click REMOVEDAIRPORT");
+                if (flag_removing_airports == true) restore_airport(obj);
+              });
+  }
+
   if (flag_airport_from_nFlightDistance && 
       (obj.nFlights > airport_MaxNFlights || 
         (obj !== chosen_airport && (obj.DistanceToHost < slider_CurrentDistance_Min || obj.DistanceToHost > slider_CurrentDistance_Max)) )) {
@@ -550,4 +614,144 @@ function redraw_airports() {
       airport_Count[i.nFlights]++;
     }
   });
+}
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function draw_colorMeaningClickCountry(countryName) {
+  infoColorMeaning.html("");
+
+  var tempDiv3 = infoColorMeaning.append("div").attr("class", "colorSample");
+  var svg3 = tempDiv3.append("div").style("margin-left", "10px").style("float", "left").append("svg").attr({ width: "20px", height: "20px" });
+  var grads3 = createGradient(svg3, 3);
+
+  svg3.append("svg:circle").attr({ cx: "10", cy: "10", r: "10" }).style("float", "left")
+      .attr("fill", function() {
+        return "url(#" + grads3.attr("id") + ")";
+      });
+  tempDiv3.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[3]).html("Airport in " + countryName);
+}
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function createGradient(svglayer, flag) {
+  var grads = svglayer.append("defs")
+    .append("radialGradient")
+    .attr("id", "gradinfo" + flag)
+    .attr("cx", "50%")
+    .attr("cy", "50%")
+    .attr("r", "50%")
+    .attr("fx", "50%")
+    .attr("fy", "50%");
+
+  grads.append("stop").attr("class", "stop" + flag + "_asdinfo").attr("offset", "0%").style("stop-color", airport_color[flag]).style("stop-opacity", "1");
+  grads.append("stop").attr("class", "stop" + flag + "_centerinfo").attr("offset", airport_centerSize[flag]).style("stop-color", airport_color[flag]).style("stop-opacity", airportOpacity[flag]);
+  grads.append("stop").attr("class", "stop" + flag + "_borderinfo").attr("offset", "100%").style("stop-color", airport_color[flag]).style("stop-opacity", airportBorderOpacity[flag]);
+
+  return grads;
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function draw_colorMeaningClickAirport(airportName) {
+  infoColorMeaning.html("");
+
+  var tempDiv = infoColorMeaning.append("div").attr("class", "colorSample");
+  tempDiv.append("div").style("margin-left", "10px").style("float", "left").append("svg").attr({ width: "20px", height: "20px" }).append("circle").attr({ cx: "10", cy: "10", r: "7", fill: airport_color[0] }).style("float", "left");
+  tempDiv.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[0]).html("Host: " + airportName);
+
+  var tempDiv1 = infoColorMeaning.append("div").attr("class", "colorSample");
+  var svg1 = tempDiv1.append("div").style("margin-left", "10px").style("float", "left").append("svg").attr({ width: "20px", height: "20px" });
+  var grads1 = createGradient(svg1, 1);
+
+  svg1.append("svg:circle").attr({ cx: "10", cy: "10", r: "10" }).style("float", "left")
+      .attr("fill", function() {
+        return "url(#" + grads1.attr("id") + ")";
+      });
+  tempDiv1.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[1]).html("1-flight airports");
+
+  var tempDiv2 = infoColorMeaning.append("div").attr("class", "colorSample");
+  var svg2 = tempDiv2.append("div").style("margin-left", "10px").style("float", "left").append("svg").attr({ width: "20px", height: "20px" });
+  var grads2 = createGradient(svg2, 2);
+
+  svg2.append("svg:circle").attr({ cx: "10", cy: "10", r: "10" }).style("float", "left")
+      .attr("fill", function() {
+        return "url(#" + grads2.attr("id") + ")";
+      });
+  tempDiv2.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[2]).html("2-flight airports");
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function check_removedAirport(id) {
+  for (var i = 0; i < list_removed_airport.length; ++i)
+    if (list_removed_airport[i] == id)
+      return true;
+
+  return false;
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function getParameters() {
+  var result = "";
+  for (var i = 0; i < list_removed_airport.length; ++i)
+    result += list_removed_airport[i] + "/";
+  return result;
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function remove_airport(obj) {
+  console.log("REMOVE " + obj.Name + " " + obj.nFlights + " " + obj.AirportID);
+  layer_airport[3].selectAll("#airport" + obj.AirportID).attr("visibility", "hidden");
+  layer_airport[4].selectAll("#removedAirport" + obj.AirportID).attr("visibility", "visible");
+  list_removed_airport.push(parseInt(obj.AirportID));
+  console.log("list = " + list_removed_airport.length);
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function restore_airport(obj) {
+  console.log("RESTORE " + obj.Name + " " + obj.nFlights + " " + obj.AirportID);
+  layer_airport[3].selectAll("#airport" + obj.AirportID).attr("visibility", "visible");
+  layer_airport[4].selectAll("#removedAirport" + obj.AirportID).attr("visibility", "hidden");
+  list_removed_airport.splice(list_removed_airport.indexOf(parseInt(obj.AirportID)), 1);
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function activate_remove_airports() {
+  flag_removing_airports = true;
+  flag_showing_airports = false;
+  for (var i = 0; i < 4; ++i) {
+    if (i < 3 || flag_airport_from_country == false) {
+      layer_airport[i].selectAll(".airport" + i).remove();
+      layer_airport[i].attr("visibility", "hidden");
+    }
+  }
+  svg.style("cursor", "pointer");
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function activate_show_airports() {
+  flag_showing_airports = true;
+  flag_removing_airports = false;
+  console.log("list_removed_airport = " + listToString(list_removed_airport));
+
+  svg.style("cursor", null);
+  for (var i = 0; i < 5; ++i) {
+      if (i != 3) {
+        if (i < 4) layer_airport[i].selectAll(".airport" + i).remove();
+        layer_airport[i].attr("visibility", "hidden");
+      }
+  }
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function activate_impact_airports() {
+  svg.style("cursor", null);
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+function listToString(list) {
+  var s = "[";
+  for (var i = 0; i < list.length; ++i)
+    s += list[i];
+  s += "]";
+  return s;
 }

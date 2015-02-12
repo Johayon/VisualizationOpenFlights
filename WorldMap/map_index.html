@@ -12,13 +12,29 @@ HTML for loading the map
 </head>
 
 <body>
-  <div id="mainContainer">
-    <div id="container_map"></div>
-    <div id="slider"></div>
+  <div id="rootContainer">
+    <div id="mainContainer">
+      <div id="container_map"></div>
+      <div id="slider"></div>
+    </div>
+    <div id="container_menu">
+      <input class="myButton" id="buttonRemove" type="image"
+              onMouseOver="this.src='http://localhost:1337/WorldMap/images/remove_hover.jpg'"
+              onMouseOut="this.src='http://localhost:1337/WorldMap/images/remove.jpg'"
+              src="http://localhost:1337/WorldMap/images/remove.jpg" onClick="activate_remove_airports();">
+      <input class="myButton" id="buttonShow" type="image"
+              onMouseOver="this.src='http://localhost:1337/WorldMap/images/show_hover.jpg'"
+              onMouseOut="this.src='http://localhost:1337/WorldMap/images/show.jpg'"
+              src="http://localhost:1337/WorldMap/images/show.jpg" onClick="activate_show_airports();">
+      <input class="myButton" id="buttonRemove" type="image"
+              onMouseOver="this.src='http://localhost:1337/WorldMap/images/impact_hover.jpg'"
+              onMouseOut="this.src='http://localhost:1337/WorldMap/images/impact.jpg'"
+              src="http://localhost:1337/WorldMap/images/impact.jpg" onClick="activate_impact_airports();">
+    </div>
   </div>
   
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="http://localhost:1337/lib/d3min.js"></script>
+	<script src="http://localhost:1337/lib/topojson.v1.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="http://localhost:1337/lib/d3Slider.js" type="text/javascript"></script>
 	<script src="http://localhost:1337/WorldMap/map_script.js" type="text/javascript"></script>
