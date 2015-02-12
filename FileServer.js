@@ -13,6 +13,7 @@ http.createServer(function (req, res) {
 		if (runCommand("tool_get_airports_from_distance", req, res)) return;
 		if (runCommand("tool_routes_from_airport", req, res)) return;
 		if (runCommand("tool_get_airports_from_country", req, res)) return;
+		if (runCommand("tool_get_airports_from_impact", req, res)) return;
 
 		//return the file requested
 		var filePath = path.join("." + req.url);

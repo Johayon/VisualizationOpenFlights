@@ -19,14 +19,15 @@ body {
 }
 
 #rootContainer {
-  float: left;
+  margin: auto 0;
   width: 100%;
   height: 100%;
 }
 
 #mainContainer {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
+  float: left;
 }
 
 #container_map {
@@ -41,28 +42,27 @@ body {
 }
 
 .myButton {
-  margin: auto 10%;
+  margin: 0 auto;
   margin-bottom: 20px;
   display: block;
-  height: 100%;
+  width: 100%;
   outline: 0 none;
-  float: left;
+  /*float: left;*/
 }
 
 #container_menu {
-  width: 100%;
-  height: 100px;
-  margin-left: 2%;
+  width: 7%;
+  margin-left: 25px;
   background: none;
   /*float: left;*/
   /*border: 2px solid #808080;*/
   border-radius: 20px;
-
+  float: left;
 }
 
 #slider {
   margin: 0 auto;
-	width: 98.5%;
+	width: 100%;
   border: 1px solid #000000;
   border-radius: 3px;
 }
@@ -87,7 +87,7 @@ div.cssinfo {
   border-style: solid;
   border-color: #FFFFFF;
   background: #050505;
-  opacity: 0.6;
+  opacity: 0.8;
   border: 2px solid #808080;
   border-radius: 10px; 
   position: absolute;

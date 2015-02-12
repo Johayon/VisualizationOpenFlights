@@ -10,8 +10,11 @@ d3.select(window).on("resize", throttle);
 var flag_airport_from_nFlightDistance = false;
 var flag_airport_from_country = false;
 var flag_allow_chosing_airport = false;
+
 var flag_removing_airports = false;
 var flag_showing_airports = true;
+var flag_impact_airports = false;
+
 var list_removed_airport = [];
 var airport_Count = [0, 0, 0];
 
@@ -122,7 +125,8 @@ function activate_airport_from_distance(command, airportName) {
   flag_airport_from_country = false;
   flag_airport_from_nFlightDistance = true;
 
-  draw_colorMeaningClickAirport(airportName);
+  if (command == "show") draw_colorMeaningShow(airportName, "1-flight airports", "2-flight airports");
+  else draw_colorMeaningShow(airportName, "Affected airports", "Unreachable airports");
 
   layer_airport[3].selectAll(".airport3").remove();
   layer_airport[3].attr("visibility", "hidden");
@@ -137,7 +141,6 @@ function activate_airport_from_distance(command, airportName) {
 
   chosen_country = null;
   draw_airports_from_distance(command, normalizeName(airportName));
-  // d3.select("#info_log").text(airportName);
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -226,9 +229,14 @@ function draw_airports_from_country() {
 //draw all airports from an airport base on the distance (distance: number of flights)
 
 function draw_airports_from_distance(command, airportName) {
+  console.log("COMMAND = " + command);
   airport = typeof airport !== 'undefined' ? airport : "charles_de_gaulle";
 
-  d3.csv("http://localhost:1337/tool_get_airports_from_distance/" + airportName + "/2/" + getParameters(), function(err, airports) {
+  var url = "http://localhost:1337/";
+  if (command == "show") url += "tool_get_airports_from_distance/" + airportName + "/2/" + getParameters();
+  else url += "tool_get_airports_from_impact/" + airportName + "/" + getParameters();
+
+  d3.csv(url, function(err, airports) {
     list_airports = airports;
     chosen_airport = list_airports[0];
     list_airports.forEach(function(i) {
@@ -501,7 +509,8 @@ function draw_airport(obj) {
             .on("dblclick", function() {
               console.log("Click AIRPORT");
               if (flag_removing_airports == true) remove_airport(obj);
-              if (flag_showing_airports == true) activate_airport_from_distance("country", obj.Name);
+              if (flag_showing_airports == true) activate_airport_from_distance("show", obj.Name);
+              if (flag_impact_airports == true) activate_airport_from_distance("impact", obj.Name);
             });
 
   if (obj.nFlights == 3) {
@@ -652,7 +661,7 @@ function createGradient(svglayer, flag) {
 }
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
-function draw_colorMeaningClickAirport(airportName) {
+function draw_colorMeaningShow(airportName, text1, text2) {
   infoColorMeaning.html("");
 
   var tempDiv = infoColorMeaning.append("div").attr("class", "colorSample");
@@ -667,7 +676,7 @@ function draw_colorMeaningClickAirport(airportName) {
       .attr("fill", function() {
         return "url(#" + grads1.attr("id") + ")";
       });
-  tempDiv1.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[1]).html("1-flight airports");
+  tempDiv1.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[1]).html(text1);
 
   var tempDiv2 = infoColorMeaning.append("div").attr("class", "colorSample");
   var svg2 = tempDiv2.append("div").style("margin-left", "10px").style("float", "left").append("svg").attr({ width: "20px", height: "20px" });
@@ -677,7 +686,7 @@ function draw_colorMeaningClickAirport(airportName) {
       .attr("fill", function() {
         return "url(#" + grads2.attr("id") + ")";
       });
-  tempDiv2.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[2]).html("2-flight airports");
+  tempDiv2.append("div").style("margin-left", "40px").style("margin-right", "10px").style("color", airport_color[2]).html(text2);
 }
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -716,21 +725,27 @@ function restore_airport(obj) {
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 function activate_remove_airports() {
+  console.log("activate_remove_airports");
   flag_removing_airports = true;
   flag_showing_airports = false;
+  flag_impact_airports = false;
+
+  svg.style("cursor", "pointer");
   for (var i = 0; i < 4; ++i) {
     if (i < 3 || flag_airport_from_country == false) {
       layer_airport[i].selectAll(".airport" + i).remove();
       layer_airport[i].attr("visibility", "hidden");
     }
   }
-  svg.style("cursor", "pointer");
 }
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 function activate_show_airports() {
+  console.log("activate_show_airports");
   flag_showing_airports = true;
   flag_removing_airports = false;
+  flag_impact_airports = false;
+
   console.log("list_removed_airport = " + listToString(list_removed_airport));
 
   svg.style("cursor", null);
@@ -744,7 +759,18 @@ function activate_show_airports() {
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 function activate_impact_airports() {
+  console.log("activate_impact_airports");
+  flag_removing_airports = false;
+  flag_showing_airports = false;
+  flag_impact_airports = true;
+
   svg.style("cursor", null);
+  for (var i = 0; i < 4; ++i) {
+    if (i < 3 || flag_airport_from_country == false) {
+      layer_airport[i].selectAll(".airport" + i).remove();
+      layer_airport[i].attr("visibility", "hidden");
+    }
+  }
 }
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
