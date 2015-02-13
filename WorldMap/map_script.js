@@ -37,7 +37,7 @@ var slider_MaximumDistance = 25000;
 
 var color_Country = ["#101010","#710000","#005709"];
 // var airport_color = ["#FFFF00","#FF3000", "#00FFCD", "#FFFF00"];
-var airport_color = ["#FFFF00","#FF7000", "#00FFCD", "#FFFF00", "#FF0000"];
+var airport_color = ["#FFFF00","#FF5000", "#00FFCD", "#FFFF00", "#FF0000"];
 var airport_centerSize = ["100%","10%","8%","10%", "15%"];
 var airport_border_color = ["none", "none", "none", "none", "none"];
 var airportR = [10, 21, 21, 21, 25];
@@ -339,7 +339,7 @@ function draw(topo) {
 
   infoColorMeaning.classed("hidden", false)
                   .attr("style", "left:" + offsetL + "px;top:" + offsetT + "px")
-                  .html("meanings of the colors");
+                  .html("");
 }
 
 ////////////////////////////////////////////////////////////////////////////
