@@ -1,5 +1,5 @@
 
-#Visualization Project Design 
+# Visualization Project Design 
 
 
 Team-Members:
@@ -9,10 +9,10 @@ Team-Members:
 -Yoann Janvier (MS BGD)
 -Jonathan Ohayon (MS BGD)
 
-##Datasets
+## Datasets
 As part of this project we are going to leverage 3 datasets containing the airports, airlines and routes over the world.
 
-##Refined Problem Statement
+## Refined Problem Statement
 Here are a couple of questions we will try to be answer through the visualizations:
 
 | Audience  						| Question / Problem  											|
@@ -25,9 +25,9 @@ Here are a couple of questions we will try to be answer through the visualizatio
 | All | What are airports/airlines main characteristics (country )|
 
 
-##Design Proposals
-###Interactive Worldwide map 
-####Overview
+## Design Proposals
+### Interactive Worldwide map 
+#### Overview
 Initially, we had planned to base our project on a worldwide map visualization representing:
 -The overall airline traffic on the basis of the routes
 -The impact on the airline traffic if one or more airline(s) stop operating and/or if one or more airports stop their activity.
@@ -57,7 +57,7 @@ In order to address these problems, 2 additional visualizations have been identi
 -Airport’s centrality
 -Histogram of Short/Medium/Long Haul airlines capacities 
 
-###Airports’ graph centrality
+### Airports’ graph centrality
 In order to know which are the biggest or central hubs, we propose to perform a graph visualization where the nodes are the airports and the links are the routes between the airports. The layout would be as follows:
 
 Features to implement:
